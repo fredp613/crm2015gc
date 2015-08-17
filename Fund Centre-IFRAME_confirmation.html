@@ -14,21 +14,24 @@
 </style>
 </head>
 <body>
-  
+
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+<button type="button" id="confirmationBtnText" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
   Click here to activate fund centre
 </button>
+<p id="statusText">
+ To activate fund centre, please ensure to complete the wizard
+</p>
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Confirmation</h4>
+        <h4 class="modal-title" id="confirmationLabelText">Confirmation</h4>
       </div>
       <div class="modal-body">
-         <p>By clicking the activate button, the fund centre will be active and ready to be used in production for new applications and new budget entries. You will be able to edit the details of this fund centre after activating however the changes will be saved as amendments to the fund centre for auditing and data integrity purposes.
+         <p id="confirmationText">By clicking the activate button, the fund centre will be active and ready to be used in production for new applications and new budget entries. You will be able to edit the details of this fund centre after activating however the changes will be saved as amendments to the fund centre for auditing and data integrity purposes.
       </p>
       </div>
       <div class="modal-footer">
@@ -42,23 +45,53 @@
 
 <script type="text/javascript">
 var context = parent.window
+var ctxJquery = window.opener
 var entityId = context.Xrm.Page.data.entity.getId()
 context.Xrm.Page.getAttribute("statuscode").setSubmitMode("always");
+var statusReason = context.Xrm.Page.getAttribute("statuscode").getValue()
+
+// var statusR = context.$("#header_statuscode_i").attr("defaultvalue")
+
+toggleState(statusReason)
 // context.Xrm.Page.getAttribute("statuscode").addOnChange(refreshStatus)
 
-function refreshStatus() {
-  console.log("refreshed");
-  // context.Xrm.Page.data.entity.save()
-  // var subgrid = Xrm.Page.ui.controls.get("AnnualBudgets");
-  // subgrid .refresh();
+function toggleState(statusReason) {
+
+  if (statusReason == 148030011) {
+    console.log("status is closed") 
+    $("#confirmationBtnText").text(" Click here to de-activate fund centre")
+    $("#confirmationText").text("By clicking the de-activate button, the fund centre will be de-activated and users will not be able to create new cases or approve existing cases. You will be able to edit the details of this fund centre after de-activating however the changes will be saved as amendments to the fund centre for auditing and data integrity purposes.")
+
+    return false
+
+  } else {
+    console.log("status is open")  
+     $("#confirmationBtnText").text(" Click here to activate fund centre")
+     $("#confirmationText").text("By clicking the activate button, the fund centre will be active and ready to be used in production for new applications and new budget entries. You will be able to edit the details of this fund centre after activating however the changes will be saved as amendments to the fund centre for auditing and data integrity purposes.") 
+     console.log(statusReason)
+     if (statusReason == 148030009) {
+      $("#confirmationBtnText").attr("disabled", "disabled")
+      $("#statusText").show()
+      console.log("disabled")
+     } else {     
+      $("#confirmationBtnText").removeAttr("disabled")
+      $("#statusText").hide()
+      console.log("enabled")
+     }
+     return true
+  }
+
 }
+
 $(document).on("click", "#confirmActivate", function() {
-  // context.Xrm.Page.getAttribute("statuscode").setDisabled(false)
-  context.Xrm.Page.getAttribute("statuscode").setValue(148030011);  
-  // context.Xrm.Page.data.entity.save()
-  context.Xrm.Page.getAttribute("statuscode").fireOnChange();
-  // context.Xrm.Page.getAttribute("statuscode").setDisabled(true)
-  context.Xrm.Utility.openEntityForm("gcbase_fundcentre", entityId);
+
+  if (toggleState(statusReason)) {     
+    context.Xrm.Page.getAttribute("statuscode").setValue(148030011);  
+  } else {
+    context.Xrm.Page.getAttribute("statuscode").setValue(148030010); 
+  }
+    context.Xrm.Page.getAttribute("statuscode").fireOnChange();
+    context.Xrm.Utility.openEntityForm("gcbase_fundcentre", entityId);  
 
 })
 
