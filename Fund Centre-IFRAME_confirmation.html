@@ -1,4 +1,6 @@
 <html>
+
+<head><meta charset="utf-8">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -9,7 +11,6 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-<head><meta charset="utf-8">
 <style>
 </style>
 </head>
@@ -44,32 +45,44 @@
  
 
 <script type="text/javascript">
+
+
+var fundCentreState = {
+  "Open": 148030012,
+  "Budget": 148030009,
+  "Confirmed": 148030010,
+  "Final": 148030011,
+  "Pending": 148030013,
+  "Expired": 148030014
+}
+
+
+
 var context = parent.window
 var ctxJquery = window.opener
 var entityId = context.Xrm.Page.data.entity.getId()
 context.Xrm.Page.getAttribute("statuscode").setSubmitMode("always");
-var statusReason = context.Xrm.Page.getAttribute("statuscode").getValue()
-
-// var statusR = context.$("#header_statuscode_i").attr("defaultvalue")
-
+ var statusReason = context.Xrm.Page.getAttribute("statuscode").getValue()
 toggleState(statusReason)
 // context.Xrm.Page.getAttribute("statuscode").addOnChange(refreshStatus)
 
 function toggleState(statusReason) {
+  // var statusReason = $("#header_statuscode_i", window.parent.document).attr("defaultvalue")
+  //remember that you are fetching the budget status code here
+ 
+   
+  if (statusReason == 148030011 || statusReason == 148030014 || statusReason == 148030013 ) {
 
-  if (statusReason == 148030011) {
-    console.log("status is closed") 
     $("#confirmationBtnText").text(" Click here to de-activate fund centre")
     $("#confirmationText").text("By clicking the de-activate button, the fund centre will be de-activated and users will not be able to create new cases or approve existing cases. You will be able to edit the details of this fund centre after de-activating however the changes will be saved as amendments to the fund centre for auditing and data integrity purposes.")
-
+   
     return false
 
   } else {
     console.log("status is open")  
      $("#confirmationBtnText").text(" Click here to activate fund centre")
      $("#confirmationText").text("By clicking the activate button, the fund centre will be active and ready to be used in production for new applications and new budget entries. You will be able to edit the details of this fund centre after activating however the changes will be saved as amendments to the fund centre for auditing and data integrity purposes.") 
-     console.log(statusReason)
-     if (statusReason == 148030009) {
+     if (statusReason == 148030009 || statusReason == 148030012) {
       $("#confirmationBtnText").attr("disabled", "disabled")
       $("#statusText").show()
       console.log("disabled")
@@ -78,22 +91,59 @@ function toggleState(statusReason) {
       $("#statusText").hide()
       console.log("enabled")
      }
+    
      return true
   }
 
 }
 
 $(document).on("click", "#confirmActivate", function() {
-
+  console.log("this is the real status:" + toggleState(statusReason))
   if (toggleState(statusReason)) {     
-    context.Xrm.Page.getAttribute("statuscode").setValue(148030011);  
-  } else {
-    context.Xrm.Page.getAttribute("statuscode").setValue(148030010); 
+    console.log("this is happending")
+    toggleStateFromTimeline()     
+  } else {  
+    context.Xrm.Page.getAttribute("statuscode").setValue(148030010);     
   }
     context.Xrm.Page.getAttribute("statuscode").fireOnChange();
+    // context.Xrm.Page.data.entity.save()
+    // context.Xrm.Page.data.entity.refresh()
+
+
     context.Xrm.Utility.openEntityForm("gcbase_fundcentre", entityId);  
 
 })
+
+function toggleStateFromTimeline() {
+  // 
+     var date = new Date()
+    var today = date.getDate();
+    var enddatex = context.Xrm.Page.getAttribute("gcbase_enddate").getValue();
+    var startdatex = context.Xrm.Page.getAttribute("gcbase_enddate").getValue();
+    var enddate = enddatex.getDate();
+    var startdate = startdatex.getDate();
+    
+
+    if (enddatex < date) {
+      console.log("here we are")
+      context.Xrm.Page.getAttribute("statuscode").setValue(148030014) 
+    } else {
+       context.Xrm.Page.getAttribute("statuscode").setValue(148030011) 
+    }
+    if (startdatex > date) {
+      console.log("here we are really")
+      context.Xrm.Page.getAttribute("statuscode").setValue(148030013) 
+    } else {
+       context.Xrm.Page.getAttribute("statuscode").setValue(148030011) 
+    }
+
+    if (!(enddatex < date) && !(startdatex > date)) {
+      console.log("stale")
+        context.Xrm.Page.getAttribute("statuscode").setValue(148030011);      
+    } else {
+       context.Xrm.Page.getAttribute("statuscode").setValue(148030011);
+    }
+}
 
 
 </script>

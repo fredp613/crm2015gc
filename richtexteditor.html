@@ -1,0 +1,102 @@
+<html><head>
+    <title></title>    
+    <script src="//cdn.ckeditor.com/4.5.3/standard/ckeditor.js"></script>    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <script type="text/javascript">
+    
+    
+      function getDataParam() {
+           var vals = new Array();
+           if (location.search != "") {
+            vals = location.search.substr(1).split("&");
+            for (var i in vals) {
+             vals[i] = vals[i].replace(/\+/g, " ").split("=");
+            }
+            //look for the parameter named 'data'
+            var found = false;
+            for (var i in vals) {
+             if (vals[i][0] == "data") {
+              return vals[i][1];              
+              found = true;
+              break;
+             }
+            }
+            if (!found)
+            { noParams(); }
+           }
+           else {
+            noParams();
+           }
+           return "";
+      } 
+
+
+
+        function parseDataValue(datavalue)
+        {
+
+          if (datavalue != "") {                      
+            textFieldName = datavalue;            
+          } else {
+            alert('No field name parameter has been passed to Rich Text Box Editor.');
+          }
+        }
+
+        function noParams() {
+           var message = document.createElement("p");
+           setText(message, "No data parameter was passed to this page");
+           document.body.appendChild(message);
+        }
+
+         function setText(element, text) {
+             if (typeof element.innerText != "undefined") {
+              element.innerText = text;
+             }
+             else {
+              element.textContent = text;
+             }
+          }
+
+        CKEDITOR.timestamp = null;
+      
+        CKEDITOR.on('instanceReady', function( evt )
+         {
+             var editor = evt.editor;
+             editor.execCommand('maximize');
+         });
+
+        var Xrm;
+
+        $(document).ready(function () 
+        {
+            getDataParam();
+
+            // var fieldName = getTextFieldName();
+            var fieldName = getDataParam();
+            var Xrm = parent.Xrm;
+            if (fieldName != "") {
+                var data = Xrm.Page.getAttribute(fieldName).getValue();
+                document.getElementById('editor1').value = data;
+
+                CKEDITOR.instances.editor1.on('change', function () 
+                {
+                    var value = CKEDITOR.instances.editor1.getData();            
+                    Xrm.Page.getAttribute(fieldName).setValue(value);
+                });
+                
+                CKEDITOR.config.allowedContent = true;
+                CKEDITOR.config.fullPage = true;              
+            }
+            
+        });
+
+
+    </script>
+    <meta>
+<meta charset="utf-8"></head>
+<body style="word-wrap: break-word;">
+    <textarea name="editor1" class="ckeditor" id="editor1" rows="10" cols="80"></textarea>
+
+
+</body></html>
