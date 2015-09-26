@@ -58,13 +58,13 @@ var fundCentreState = {
 
 
 
-var context = parent.window
+var Xrm = parent.Xrm;
 var ctxJquery = window.opener
-var entityId = context.Xrm.Page.data.entity.getId()
-context.Xrm.Page.getAttribute("statuscode").setSubmitMode("always");
- var statusReason = context.Xrm.Page.getAttribute("statuscode").getValue()
+var entityId = Xrm.Page.data.entity.getId()
+Xrm.Page.getAttribute("statuscode").setSubmitMode("always");
+ var statusReason = Xrm.Page.getAttribute("statuscode").getValue()
 toggleState(statusReason)
-// context.Xrm.Page.getAttribute("statuscode").addOnChange(refreshStatus)
+// Xrm.Page.getAttribute("statuscode").addOnChange(refreshStatus)
 
 function toggleState(statusReason) {
   // var statusReason = $("#header_statuscode_i", window.parent.document).attr("defaultvalue")
@@ -98,19 +98,18 @@ function toggleState(statusReason) {
 }
 
 $(document).on("click", "#confirmActivate", function() {
-  console.log("this is the real status:" + toggleState(statusReason))
+
   if (toggleState(statusReason)) {     
-    console.log("this is happending")
     toggleStateFromTimeline()     
   } else {  
-    context.Xrm.Page.getAttribute("statuscode").setValue(148030010);     
+    Xrm.Page.getAttribute("statuscode").setValue(148030010);     
   }
-    context.Xrm.Page.getAttribute("statuscode").fireOnChange();
-    // context.Xrm.Page.data.entity.save()
-    // context.Xrm.Page.data.entity.refresh()
+    parent.window.Xrm.Page.getAttribute("statuscode").fireOnChange();
+    // Xrm.Page.data.entity.save()
+    // Xrm.Page.data.entity.refresh()
 
 
-    context.Xrm.Utility.openEntityForm("gcbase_fundcentre", entityId);  
+    parent.window.Xrm.Utility.openEntityForm("gcbase_fundcentre", entityId);  
 
 })
 
@@ -118,30 +117,27 @@ function toggleStateFromTimeline() {
   // 
      var date = new Date()
     var today = date.getDate();
-    var enddatex = context.Xrm.Page.getAttribute("gcbase_enddate").getValue();
-    var startdatex = context.Xrm.Page.getAttribute("gcbase_enddate").getValue();
+    var enddatex = Xrm.Page.getAttribute("gcbase_enddate").getValue();
+    var startdatex = Xrm.Page.getAttribute("gcbase_enddate").getValue();
     var enddate = enddatex.getDate();
     var startdate = startdatex.getDate();
     
 
     if (enddatex < date) {
-      console.log("here we are")
-      context.Xrm.Page.getAttribute("statuscode").setValue(148030014) 
+      Xrm.Page.getAttribute("statuscode").setValue(148030014) 
     } else {
-       context.Xrm.Page.getAttribute("statuscode").setValue(148030011) 
+       Xrm.Page.getAttribute("statuscode").setValue(148030011) 
     }
     if (startdatex > date) {
-      console.log("here we are really")
-      context.Xrm.Page.getAttribute("statuscode").setValue(148030013) 
+      Xrm.Page.getAttribute("statuscode").setValue(148030013) 
     } else {
-       context.Xrm.Page.getAttribute("statuscode").setValue(148030011) 
+       Xrm.Page.getAttribute("statuscode").setValue(148030011) 
     }
 
     if (!(enddatex < date) && !(startdatex > date)) {
-      console.log("stale")
-        context.Xrm.Page.getAttribute("statuscode").setValue(148030011);      
+        Xrm.Page.getAttribute("statuscode").setValue(148030011);      
     } else {
-       context.Xrm.Page.getAttribute("statuscode").setValue(148030011);
+       Xrm.Page.getAttribute("statuscode").setValue(148030011);
     }
 }
 
