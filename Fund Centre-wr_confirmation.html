@@ -20,9 +20,7 @@
 <button type="button" id="confirmationBtnText" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
   Click here to activate fund centre
 </button>
-<p id="statusText">
- To activate fund centre, please ensure to complete the wizard
-</p>
+
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
@@ -53,12 +51,13 @@ var fundCentreState = {
   "Confirmed": 148030010,
   "Final": 148030011,
   "Pending": 148030013,
-  "Expired": 148030014
+  "Expired": 148030014,
+  "On-Hold": 148030015
 }
 
 
 
-var Xrm = parent.Xrm;
+var Xrm = window.parent.Xrm;
 var ctxJquery = window.opener
 var entityId = Xrm.Page.data.entity.getId()
 Xrm.Page.getAttribute("statuscode").setSubmitMode("always");
@@ -73,22 +72,20 @@ function toggleState(statusReason) {
    
   if (statusReason == 148030011 || statusReason == 148030014 || statusReason == 148030013 ) {
 
-    $("#confirmationBtnText").text(" Click here to de-activate fund centre")
-    $("#confirmationText").text("By clicking the de-activate button, the fund centre will be de-activated and users will not be able to create new cases or approve existing cases. You will be able to edit the details of this fund centre after de-activating however the changes will be saved as amendments to the fund centre for auditing and data integrity purposes.")
+    $("#confirmationBtnText").text(" Click here place this fund centre on hold")
+    $("#confirmationText").text("By clicking the put on hold button, the fund centre will be de-activated and users will not be able to create new funding cases.")
    
     return false
 
   } else {
-    console.log("status is open")  
+    console.log("status is in development")  
      $("#confirmationBtnText").text(" Click here to activate fund centre")
-     $("#confirmationText").text("By clicking the activate button, the fund centre will be active and ready to be used in production for new applications and new budget entries. You will be able to edit the details of this fund centre after activating however the changes will be saved as amendments to the fund centre for auditing and data integrity purposes.") 
+     $("#confirmationText").text("By clicking the activate button, the fund centre will be active and ready to be used in production for new applications and new budget entries.") 
      if (statusReason == 148030009 || statusReason == 148030012) {
       $("#confirmationBtnText").attr("disabled", "disabled")
-      $("#statusText").show()
       console.log("disabled")
      } else {     
       $("#confirmationBtnText").removeAttr("disabled")
-      $("#statusText").hide()
       console.log("enabled")
      }
     
@@ -102,14 +99,14 @@ $(document).on("click", "#confirmActivate", function() {
   if (toggleState(statusReason)) {     
     toggleStateFromTimeline()     
   } else {  
-    Xrm.Page.getAttribute("statuscode").setValue(148030010);     
+    Xrm.Page.getAttribute("statuscode").setValue(148030015);     
   }
-    parent.window.Xrm.Page.getAttribute("statuscode").fireOnChange();
+    Xrm.Page.getAttribute("statuscode").fireOnChange();
     // Xrm.Page.data.entity.save()
     // Xrm.Page.data.entity.refresh()
 
-
-    parent.window.Xrm.Utility.openEntityForm("gcbase_fundcentre", entityId);  
+    // parent.window.location.reload();
+    Xrm.Utility.openEntityForm("gcbase_fundcentre", entityId);  
 
 })
 

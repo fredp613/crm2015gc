@@ -3,12 +3,6 @@
 var fiscalYears = [];
 
 
-Xrm.Page.data.entity.addOnSave(testFunc);
- // console.log(Xrm.Page.data.entity.getId())
-
-function testFunc() {
-	console.log("record id is:" + Xrm.Page.data.entity.getId())
-}
 
 function onLoad() {
 	

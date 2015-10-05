@@ -1,0 +1,73 @@
+<html><head><meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Optional theme -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<style>
+</style>
+</head>
+<body>
+
+<!-- Button trigger modal -->
+<button class="btn btn-primary btn-lg" id="btnEditAccount" type="button">
+  Edit Account
+</button>
+ 
+<script type="text/javascript">
+
+
+
+var Xrm = window.parent.Xrm;
+var ctxJquery = window.opener
+var entityId = Xrm.Page.data.entity.getId()
+var accountSelected = Xrm.Page.getAttribute("gcbase_account").getValue()
+var accountId = "";
+
+if (accountSelected != null) {
+  accountId = accountSelected[0].id  
+}
+
+console.log("entity id is:" + entityId)
+
+
+if (accountId == "" || entityId == "") {
+  console.log("is null")
+  $("#btnEditAccount").attr("disabled", true)
+} else {
+  console.log("is not null")
+   $("#btnEditAccount").attr("disabled", false) 
+}
+
+
+$(document).on("click", "#btnEditAccount", function() {
+  console.log("testing");
+    var thisAccount = {
+      entityType: "account",
+      id: Xrm.Page.data.entity.getId()
+    };
+  // var callback = function (obj) {
+  //     console.log("Created new " + obj.savedEntityReference.entityType + " named '" + obj.savedEntityReference.name + "' with id:" + obj.savedEntityReference.id);
+  // }
+  // var setName = { name: "sttt" };
+  // Xrm.Utility.openQuickCreate("account", thisAccount, setName).then(callback, function (error) {
+  //     console.log(error.message);
+  // });
+
+var windowOptions = {
+ openInNewWindow: true 
+};
+
+Xrm.Utility.openEntityForm("account",accountId,null,windowOptions);
+
+});
+
+
+</script>
+
+</body></html>
