@@ -1,19 +1,17 @@
-<html>
-
-<head><meta charset="utf-8">
+<html><head><meta charset="utf-8">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet">
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 <style>
 </style>
-</head>
+<meta></head>
 <body>
 
 <div class="container-fluid">
@@ -23,14 +21,14 @@
 	<fieldset class="col-md-6">
 	<legend>Program and Finance Management</legend>
 
-	 <ul style="list-style-type:none;">
-	 	<li><a href="http://otvcrm01.justice.gc.ca:5555/GsAndCsDEV/main.aspx?etc=10005&extraqs=%3fpagemode%3diframe%26sitemappath%3dgc%257cgcfin%257cgcfc&pagetype=entitylist&viewid=%7b3DEF727E-1599-4A58-BAEC-5229A611400E%7d&viewtype=1039"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span> Programs</a></li>
-	 	<li><a href="http://otvcrm01.justice.gc.ca:5555/GsAndCsDEV/main.aspx?etc=10010&extraqs=%3fpagemode%3diframe%26sitemappath%3dgc%257cExtensions%257cgcbase_fund&pagetype=entitylist&viewid=%7bB9228413-FC18-4FC4-9254-7A18265BFC1E%7d&viewtype=1039"><span class="glyphicon glyphicon-tag" aria-hidden="true"></span> Funds</a></li>
-	 	<li><a href="http://otvcrm01.justice.gc.ca:5555/GsAndCsDEV/main.aspx?etc=10030&extraqs=%3fpagemode%3diframe%26sitemappath%3dgc%257cExtensions%257cgcbase_sapfundcentre&pagetype=entitylist&viewid=%7b35C137FD-CA9A-4B17-8C43-A8B95D25C95F%7d&viewtype=1039"><span class="glyphicon glyphicon-random" aria-hidden="true"></span> SAP Fund Centres</a></li>
-	 	<li><a href="http://otvcrm01.justice.gc.ca:5555/GsAndCsDEV/main.aspx?etc=10011&extraqs=%3fpagemode%3diframe%26sitemappath%3dgc%257cExtensions%257cgcbase_fundtype&pagetype=entitylist&viewid=%7bE16C1DB3-30B1-4BD6-B26B-5D179E8A3442%7d&viewtype=1039"><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Fund Types</a></li>
-	 	<li><a href="http://otvcrm01.justice.gc.ca:5555/GsAndCsDEV/main.aspx?etc=10031&extraqs=%3fpagemode%3diframe%26sitemappath%3dgc%257cExtensions%257cgcbase_costcategory&pagetype=entitylist&viewid=%7bB6A89AE1-C078-4D93-AC96-D1A785E90107%7d&viewtype=1039"><span class="glyphicon glyphicon-barcode" aria-hidden="true"></span> Cost Categories</a></li>
-	 	<li><a href="http://otvcrm01.justice.gc.ca:5555/GsAndCsDEV/main.aspx?etc=10032&extraqs=%3fpagemode%3diframe%26sitemappath%3dgc%257cExtensions%257cgcbase_programcostcategory&pagetype=entitylist&viewid=%7b4E3C87DF-D064-4603-9FD5-7C19D49EF5EF%7d&viewtype=1039"><span class="glyphicon glyphicon-barcode" aria-hidden="true"></span> Program Cost Categories</a></li>
-	 	<li><a href="http://otvcrm01.justice.gc.ca:5555/GsAndCsDEV/main.aspx?etc=10033&extraqs=%3fpagemode%3diframe%26sitemappath%3dgc%257cExtensions%257cgcbase_fundcenterteam&pagetype=entitylist&viewid=%7b94C6DA58-CED4-4B41-801D-D3046270BBDA%7d&viewtype=1039"><span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span> Program Teams</a></li>
+	 <ul style="list-style-type: none;">
+	 	<li><a class="url" id="gcbase_fundcentre" href="#" data-viewid="3DEF727E-1599-4A58-BAEC-5229A611400E"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span> Programs</a></li>
+	 	<li><a class="url" id="gcbase_fund" href="#" data-viewid="B9228413-FC18-4FC4-9254-7A18265BFC1E"><span class="glyphicon glyphicon-tag" aria-hidden="true"></span> Funds</a></li>
+	 	<li><a class="url" id="gcbase_sapfundcentre" href="#" data-viewid="35C137FD-CA9A-4B17-8C43-A8B95D25C95F"><span class="glyphicon glyphicon-random" aria-hidden="true"></span> SAP Fund Centres</a></li>
+	 	<li><a class="url" id="gcbase_fundtype" href="#" data-viewid="E16C1DB3-30B1-4BD6-B26B-5D179E8A3442"><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Fund Types</a></li>
+	 	<li><a class="url" id="gcbase_costcategory" href="#" data-viewid="B6A89AE1-C078-4D93-AC96-D1A785E90107"><span class="glyphicon glyphicon-barcode" aria-hidden="true"></span> Cost Categories</a></li>
+	 	<li><a class="url" id="gcbase_programcostcategory" href="#" data-viewid="4E3C87DF-D064-4603-9FD5-7C19D49EF5EF"><span class="glyphicon glyphicon-barcode" aria-hidden="true"></span> Program Cost Categories</a></li>
+	 	<li><a class="url" id="gcbase_fundcenterteam" href="#" data-viewid="94C6DA58-CED4-4B41-801D-D3046270BBDA"><span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span> Program Teams</a></li>
 	 </ul>
 
 	</fieldset>
@@ -38,12 +36,12 @@
 	<fieldset class="col-md-6">
 	<legend>Human Resources</legend>
 
-	  <ul style="list-style-type:none;">
-	 	<li><a href="http://otvcrm01.justice.gc.ca:5555/GsAndCsDEV/main.aspx?etc=9&extraqs=%3fpagemode%3diframe&pagetype=entitylist&viewid=%7b00000000-0000-0000-00AA-000010001026%7d&viewtype=1039"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Teams</a></li>
-	 	<li><a href="http://otvcrm01.justice.gc.ca:5555/GsAndCsDEV/main.aspx?etc=9&extraqs=%3fpagemode%3diframe&pagetype=entitylist&viewid=%7b00000000-0000-0000-00AA-000010001026%7d&viewtype=1039"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Level 1 Authorities</a></li>
-	 	<li><a href="http://otvcrm01.justice.gc.ca:5555/GsAndCsDEV/main.aspx?etc=9&extraqs=%3fpagemode%3diframe&pagetype=entitylist&viewid=%7b00000000-0000-0000-00AA-000010001026%7d&viewtype=1039"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Level 2 Authorities</a></li>
-	 	<li><a href="http://otvcrm01.justice.gc.ca:5555/GsAndCsDEV/main.aspx?etc=10023&extraqs=%3fpagemode%3diframe%26sitemappath%3dgc%257cExtensions%257cgcbase_level3authority&pagetype=entitylist&viewid=%7bC433973B-F54A-4EB1-B1B5-9FDF160F3742%7d&viewtype=1039"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Level 3 Authorities</a></li>
-	 	<li><a href="http://otvcrm01.justice.gc.ca:5555/GsAndCsDEV/main.aspx?etc=10024&extraqs=%3fpagemode%3diframe%26sitemappath%3dgc%257cExtensions%257cgcbase_level4authority&pagetype=entitylist&viewid=%7b3B73F038-BF52-4214-868E-113AE8CA5AEA%7d&viewtype=1039"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Level 4 Authorities</a></li>
+	  <ul style="list-style-type: none;">
+	 	<li><a class="url" id="team" href="#" data-viewid="00000000-0000-0000-00AA-000010001026"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Teams</a></li>
+	 	<li><a class="url" id="gcbase_level1authority" href="#" data-viewid="00000000-0000-0000-00AA-000010001026"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Level 1 Authorities</a></li>
+	 	<li><a class="url" id="gcbase_level2authority" href="#" data-viewid="00000000-0000-0000-00AA-000010001026"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Level 2 Authorities</a></li>
+	 	<li><a class="url" id="gcbase_level3authority" href="#" data-viewid="C433973B-F54A-4EB1-B1B5-9FDF160F3742"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Level 3 Authorities</a></li>
+	 	<li><a class="url" id="gcbase_level4authority" href="#" data-viewid="3B73F038-BF52-4214-868E-113AE8CA5AEA"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Level 4 Authorities</a></li>
 	
 	 </ul>
 
@@ -54,12 +52,12 @@
 		<fieldset class="col-md-6">
 	<legend>Other Configuration</legend>
 
-	  <ul style="list-style-type:none;">
-	 	<li><a href="http://otvcrm01.justice.gc.ca:5555/GsAndCsDEV/main.aspx?etc=10038&extraqs=%3fpagemode%3diframe%26sitemappath%3dgc%257cExtensions%257cgcbase_accountgrouptype&pagetype=entitylist&viewid=%7b42BAA273-0148-4CA5-8A5B-954ED1A69EFC%7d&viewtype=1039"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Account Types</a></li>
-	 	<li><a href="http://otvcrm01.justice.gc.ca:5555/GsAndCsDEV/main.aspx?etc=10041&extraqs=%3fpagemode%3diframe%26sitemappath%3dClient%257cExtensions%257cgcbase_contactgrouptype&pagetype=entitylist&viewid=%7bB06D74F4-90BF-4156-809E-75DC4C25983A%7d&viewtype=1039"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Contact Types</a></li>
-	 	<li><a href="http://otvcrm01.justice.gc.ca:5555/GsAndCsDEV/main.aspx?etc=10044&extraqs=%3fpagemode%3diframe%26sitemappath%3dgc%257cExtensions%257cgcbase_role&pagetype=entitylist&viewid=%7bC3E2A61A-A606-409A-B9DA-5DA97650E442%7d&viewtype=1039"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Global Roles</a></li>
-	 	<li><a href="http://otvcrm01.justice.gc.ca:5555/GsAndCsDEV/main.aspx?etc=10043&extraqs=%3fpagemode%3diframe%26sitemappath%3dgc%257cExtensions%257cgcbase_fundingcaserole&pagetype=entitylist&viewid=%7b032456D2-AFE0-4724-9B0D-20BFE54B526F%7d&viewtype=1039"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Funding Case Roles</a></li>
-	 	<li><a href="http://otvcrm01.justice.gc.ca:5555/GsAndCsDEV/main.aspx?etc=10037&extraqs=%3fpagemode%3diframe%26sitemappath%3dgc%257cExtensions%257cgcbase_accountcontactrole&pagetype=entitylist&viewid=%7bA63488FD-3D63-4F21-9A99-9C3BC93FE92C%7d&viewtype=1039"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Contact Roles</a></li>
+	  <ul style="list-style-type: none;">
+	 	<li><a class="url" id="gcbase_accountgrouptype" href="#" data-viewid="42BAA273-0148-4CA5-8A5B-954ED1A69EFC"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Account Group Types</a></li>
+	 	<li><a class="url" id="gcbase_contactgrouptype" href="#" data-viewid="B06D74F4-90BF-4156-809E-75DC4C25983A"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Contact Group Types</a></li>
+	 	<li><a class="url" id="gcbase_role" href="#" data-viewid="C3E2A61A-A606-409A-B9DA-5DA97650E442"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Global Roles</a></li>
+	 	<li><a class="url" id="gcbase_fundingcaserole" href="#" data-viewid="032456D2-AFE0-4724-9B0D-20BFE54B526F"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Funding Case Roles</a></li>
+	 	<li><a class="url" id="gcbase_contactrole" href="#" data-viewid="A63488FD-3D63-4F21-9A99-9C3BC93FE92C"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Contact Roles</a></li>
 	
 	 </ul>
 
@@ -68,6 +66,36 @@
 	</div>
 
 </div>
+
+<script type="text/javascript">
+
+
+var clientUrl = parent.window.Xrm.Page.context.getClientUrl();
+var GlobalODataPath = clientUrl
+
+
+$(function() {
+
+
+createUrl()
+
+function createUrl() {
+	for (var i=0;i < $(".url").length;i++) {
+		var link = $(".url")[i]
+		var url = clientUrl + 
+		"/main.aspx?etn="+link.id +
+		"&pagetype=entitylist&viewid="+$("#"+link.id).attr("data-viewid")+
+		"&viewtype=1039&navbar=off&cmdbar=false"
+		$("#"+link.id).attr("href", url);		
+	}
+}
+
+})
+
+
+console.log(clientUrl);
+
+</script>
 
 
 </body></html>
