@@ -8,15 +8,15 @@
 Xrm.Page.getAttribute("statuscode").setSubmitMode("always");
 Xrm.Page.getAttribute("statuscode").addOnChange(toggleForm);
 
-function formLoad() {
-	toggleTab()
+function formLoad() {	
 	disableHeaderFields()
 	registerBusinessProcessEvents()
 	triggerWorkflow()
-	Xrm.Page.data.process.addOnStageChange(disableHeaderFields);
-	Xrm.Page.data.process.addOnStageSelected(disableHeaderFields);
-	Xrm.Page.data.process.addOnStageChange(toggleTab);
-	Xrm.Page.data.process.addOnStageSelected(toggleTab);
+	if (Xrm.Page.getAttribute("processid") != null){ 
+		Xrm.Page.data.process.addOnStageChange(disableHeaderFields);
+		Xrm.Page.data.process.addOnStageSelected(disableHeaderFields);
+	}
+	
 }
 
 function toggleForm() {
@@ -30,7 +30,7 @@ function toggleForm() {
 		parameters["formid"] = "C88E2ED5-641A-476B-B390-6F49C1C2972F";		
 	var windowOptions = {
 		 openInNewWindow: false
-		};
+	};
 
 	if (_currentStatus == "148030002" || _currentStatus == "148030003" ) {
 		parameters["formid"] = "C88E2ED5-641A-476B-B390-6F49C1C2972F";	
@@ -76,56 +76,7 @@ function registerBusinessProcessEvents() {
 
 }
 
-function toggleTab() {
- //var currentStatus = Xrm.Page.getAttribute("statuscode").getText()
- //console.log(currentStatus)
-	 var activeStage = Xrm.Page.data.process.getActiveStage();
-	 //var selectedStage = Xrm.Page.data.process.getSelectedStage().getName();
-	 console.log(activeStage.getName())
-	 
-	 var stageForToggle = activeStage.getName()
-	 //iterate DOM find class with selectedStage - iterate that div, if div title contains wildcard search set activeTab variable
-	 
-	var stageStr = $(".selectedStage").find(".processStageTailContainer").attr("title")
 
-	if (stageStr.indexOf("Step 1") >= 0) {
-	 stageForToggle = "Step 1"
-	}
-	if (stageStr.indexOf("Step 2") >= 0) {
-	 stageForToggle = "Step 2"
-	}
-	if (stageStr.indexOf("Step 3") >= 0) {
-	 stageForToggle = "Step 3"
-	} 
-     toggleHelper(stageForToggle)
-}
-
-function toggleHelper(activeStage) {
-// Xrm.Page.ui.tabs.get("tab_warning").setVisible(true);
-  switch(activeStage) {
-     case "Step 1":   
-           Xrm.Page.ui.tabs.get("tab_step1").setVisible(true);
-           Xrm.Page.ui.tabs.get("tab_step2").setVisible(false);          
-           break;
-     case "Step 2":           
-	       // Xrm.Page.ui.tabs.get("tab_warning").setVisible(false);
-           Xrm.Page.ui.tabs.get("tab_step1").setVisible(false);       
-           Xrm.Page.ui.tabs.get("tab_step2").setVisible(true);
-           break;
-      case "Step 3":
-         // Xrm.Page.ui.tabs.get("tab_warning").setVisible(false);
-           Xrm.Page.ui.tabs.get("tab_step1").setVisible(false);
-           Xrm.Page.ui.tabs.get("tab_step2").setVisible(false);
-           break;
-      default:
-       	   // Xrm.Page.ui.tabs.get("tab_warning").setVisible(false);
-       	   Xrm.Page.ui.tabs.get("tab_step1").setVisible(true);
-           Xrm.Page.ui.tabs.get("tab_step2").setVisible(true);
-           break;
-   }
-
-
-}
 
 function triggerWorkflow() {
 	if (Xrm.Page.getAttribute("gcbase_hiddentogglehelper").getValue() != "toggle") {
