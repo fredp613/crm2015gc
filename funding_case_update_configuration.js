@@ -8,14 +8,28 @@
 Xrm.Page.getAttribute("statuscode").setSubmitMode("always");
 Xrm.Page.getAttribute("statuscode").addOnChange(toggleForm);
 
-function formLoad() {	
-	disableHeaderFields()
-	registerBusinessProcessEvents()
-	triggerWorkflow()
-	if (Xrm.Page.getAttribute("processid") != null){ 
-		Xrm.Page.data.process.addOnStageChange(disableHeaderFields);
-		Xrm.Page.data.process.addOnStageSelected(disableHeaderFields);
+
+function formLoad() {
+	
+	var processId =  Xrm.Page.data.process.getActiveProcess();
+	
+	Xrm.Page.data.process.getEnabledProcesses(function(processes) {
+		for (var processId in processes) {
+			console.log("PPPP", processId);
+			Xrm.Page.data.process.setActiveProcess(processId, function() {
+				console.log("PROCESS SET")
+				disableHeaderFields()
+				Xrm.Page.data.process.addOnStageChange(disableHeaderFields);
+				Xrm.Page.data.process.addOnStageSelected(disableHeaderFields);
+			})
+		}
+	})
+	if (document.readyState == "complete") {  
+		 triggerWorkflow()
 	}
+	// triggerWorkflow()
+	
+	// Xrm.Page.data.entity.save(true);	
 	
 }
 
@@ -72,11 +86,6 @@ function disableHeaderFields() {
 }
 
 
-function registerBusinessProcessEvents() {
-
-}
-
-
 
 function triggerWorkflow() {
 	if (Xrm.Page.getAttribute("gcbase_hiddentogglehelper").getValue() != "toggle") {
@@ -84,5 +93,6 @@ function triggerWorkflow() {
 	} else {
 		Xrm.Page.getAttribute("gcbase_hiddentogglehelper").setValue("toggle1")
 	}
-	Xrm.Page.data.entity.save();
+	Xrm.Page.getAttribute("gcbase_hiddentogglehelper").fireOnChange();
+	Xrm.Page.data.save();
 }
