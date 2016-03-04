@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--
+This file is part of the Microsoft Dynamics CRM SDK code samples.
+
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+This source code is intended only as a supplement to Microsoft
+Development Tools and/or on-line documentation.  See these other
+materials for detailed information regarding Microsoft code samples.
+
+THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY
+KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+PARTICULAR PURPOSE.
+-->
+<!--<snippetMetaDataDemo>-->
+<html lang="en-US">
+<head>
+ <title>Metadata Demonstration</title>
+ <script src="ClientGlobalContext.js.aspx"></script>
+ <script src="gcbase_SDK_MetaData" type="text/javascript"></script>
+ 
+</head>
+<body style="font-family: Segoe UI;">
+ <div id="message">
+ </div>
+ <div id="entitiesListContainer">
+ 	<div id="loader">loading...</div>
+ 	<select id="entitiesList" style='display:none;margin-top:-5px;'>
+ 		<option></option>
+ 	</select>
+ </div>
+
+<script type="text/javascript">
+  // An unordered list element to add Entity list items to
+  
+  var messageStatus = "Loading..."
+  var Xrm = window.parent.Xrm;
+
+  window.onload = startSample();
+  function startSample() {
+   //Retrieve entities
+   SDK.Metadata.RetrieveAllEntities(SDK.Metadata.EntityFilters.Entity, false, successRetrieveAllEntities, errorRetrieveAllEntities);
+  }
+
+  function successRetrieveAllEntities(entityMetadataCollection) {
+
+
+   // entityMetadataCollection.sort(function (a, b) {
+   //  if (a.LogicalName < b.LogicalName)
+   //  { return -1 }
+   //  if (a.LogicalName > b.LogicalName)
+   //  { return 1 }
+   //  return 0;
+   // });
+	console.log(entityMetadataCollection.length)
+
+   for (var i = 0; i < entityMetadataCollection.length; i++) {
+   	// console.log(i + "outside block")
+
+		var entity = entityMetadataCollection[i];
+
+	
+		if (entity.IsCustomEntity) {
+
+			var entityName = entity.LogicalName	    
+
+			var goodEntities = [];  
+
+				retrieveAttributes(entityName, function(data, entityName) {				
+					
+						if (i == entityMetadataCollection.length) {
+
+							if (data.length > 0) {		
+								var loaderDiv = document.getElementById("loader");									
+								var entitySelectList = document.getElementById("entitiesList");
+								loaderDiv.innerHTML = "";														
+								data.forEach(function(entity, index, array) {
+									console.log(entity)
+									var entitySelectOption = document.createElement('option');
+									entitySelectOption.value = entity.entityValue;
+									entitySelectOption.innerHTML = entity.entityName; 
+									entitySelectList.appendChild(entitySelectOption);
+								})
+								entitySelectList.style.display = "block";
+								entitySelectList.addEventListener("change", function() {
+								   Xrm.Page.getAttribute("gcbase_template").setValue(entitySelectList.options[entitySelectList.selectedIndex].text)
+									Xrm.Page.getAttribute("gcbase_name").setValue(entitySelectList.options[entitySelectList.selectedIndex].text)
+									Xrm.Page.getAttribute("gcbase_realname").setValue(entitySelectList.options[entitySelectList.selectedIndex].value)
+								})					
+							} /*else {
+								var loaderDiv = document.getElementById("loader");
+								loaderDiv.innerHTML = "There are currently no template entities. Create an entity(ies) with a lookup field to the fundcenterfundingcasetemplate entity";	
+							}*/
+					
+						}  	
+
+				});
+				
+		}
+
+    //if last generate 
+		
+   
+
+   }
+
+
+  
+  }
+  function errorRetrieveAllEntities(error) {
+  
+  }
+
+  function retrieveAttributes(entityName, callback) {
+  
+    var entityLogicalName = entityName;
+   
+    console.log(entityLogicalName)
+    SDK.Metadata.RetrieveEntity(SDK.Metadata.EntityFilters.Attributes,
+    entityLogicalName,
+    null,
+    false,
+    function (entityMetadata) {     	
+    	successRetrieveEntity(entityLogicalName, entityMetadata, callback); 
+    },
+    errorRetrieveEntity);
+
+
+  // }
+  // this.attributesRetrieved = true;
+   // this.title = "";
+  }
+
+  function successRetrieveEntity(logicalName, entityMetadata, callback) {
+
+	// entityMetadata.Attributes.sort(function (a, b) {
+	// if (a.LogicalName < b.LogicalName)
+	// 	{ return -1 }
+	// if (a.LogicalName > b.LogicalName)
+	// 	{ return 1 }
+	// return 0;
+	// });
+
+	
+	var goodEntities = [];
+	for (var i = 0; i < entityMetadata.Attributes.length; i++) {
+		var attribute = entityMetadata.Attributes[i];
+		
+		if (attribute.Targets == "gcbase_fundcentrefundingcasetemplate") {	
+			console.log(entityMetadata);
+			var entityObj = {
+				entityName: entityMetadata.DisplayName.UserLocalizedLabel.Label,
+				entityValue: entityMetadata.LogicalName
+
+			};
+			var entityName = entityMetadata.DisplayName.UserLocalizedLabel.Label
+			console.log(attribute)
+			goodEntities.push(entityObj)						
+			
+		}
+		
+	
+	}
+	callback(goodEntities, attribute.LogicalName)
+
+	
+		
+	
+	
+
+
+
+	
+  }
+ 
+
+  function errorRetrieveEntity(error) {
+   ///<summary>
+   /// Displays the error returned from SDK.Metadata.RetrieveEntity if it fails.
+   ///</summary>
+  
+  }
+
+
+ 
+
+ </script>
+
+
+</body>
+</html>
+<!--</snippetMetaDataDemo>-->

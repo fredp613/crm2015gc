@@ -1,0 +1,145 @@
+<html>
+<head>
+	 <script src="ClientGlobalContext.js.aspx"></script>
+	 <script src="gcbase_SDK_MetaData" type="text/javascript"></script>
+	 <script src="gcbase_SDK_rest" type="text/javascript"></script>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!-- Optional theme -->
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<!-- Latest compiled and minified JavaScript -->
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<fieldset>
+		<legend>Program Template</legend>
+		
+
+	</fieldset>
+	
+<br>
+
+<script type="text/javascript">
+
+var Xrm = window.parent.Xrm;
+
+window.onload = initialize();
+
+
+function initialize() {
+    var program = Xrm.Page.getAttribute("gcbase_program") ? Xrm.Page.getAttribute("gcbase_program").getValue()[0].id : null;
+    var fundingCaseId = Xrm.Page.data.entity.getId()
+    if (program) {
+    	getEntityTemplate(program, function(entity, success) {
+			if (!success) {
+				console.log(error)
+				return;
+			} 
+			//using funding case id to create the record.
+			//if there is no record, create it, and show result in bootstrap table (name, status, created on, modified on)
+			checkIfProgramTemplateExists(fundingCaseId, entity, function(exists) {
+				if (!exists) {
+					//create record //create table
+					console.log("record exists");
+				} else {
+					//fetch and create table
+					console.log("record does not exists");
+					createProgramTemplateRecord(fundingCaseId, entity, function(success) {
+						if (!success) {
+							console.log("something went wrong when creating the program template records")
+							return;
+						}
+						generateTable();
+					})
+				}
+			})
+		})
+    } else {
+    	console.log("error message")
+    }
+
+	
+}
+function generateTable() {
+	console.log("generating table");
+}
+
+function getEntityTemplate(program, callback) {
+
+    var ODATA_options = "?$filter=gcbase_FundCentre/Id eq guid\'" + program + "\'&$select=gcbase_RealName"; 
+
+    var total = 0;
+    var entityName = "";
+    var success = false;
+    SDK.REST.retrieveMultipleRecords(
+     "gcbase_fundcentrefundingcasetemplate",
+      ODATA_options,
+     function (results) {     	
+     	entityName = results[0]["gcbase_RealName"]
+     	success = true;
+          
+     },
+     errorHandler,
+     function () { 
+     	callback(entityName, success)
+		console.log("completed");              
+      }
+    );
+}
+
+
+
+function checkIfProgramTemplateExists(fundingCaseId, templateEntityName, callback) {
+	var ODATA_options = "?$filter=gcbase_FundingCase/Id eq guid\'" + fundingCaseId + "\'&$select=gcbase_name"; 
+	var exists = false;
+	SDK.REST.retrieveMultipleRecords(
+     templateEntityName,
+      ODATA_options,
+     function (results) {     	
+     	console.log(results)
+     	exists = true;
+          
+     },
+     errorHandler,
+     function () { 
+		console.log("completed");  
+		callback(exists);            
+      }
+    );
+}
+
+function createProgramTemplateRecord(fundingCaseId, entity, callback) {
+	//Create the Account
+	var success = false;
+	var template = {};
+	template.gcbase_name = "test";
+	template.gcbase_FundingCase = {gcbase_FundingcaseId:fundingCaseId, LogicalName: "gcbase_fundingcase", gcbase_Name: "test"};
+	
+	// account.PrimaryContactId = { Id: primaryContact.ContactId, LogicalName: "contact", Name: primaryContact.FullName };
+	SDK.REST.createRecord(
+		 template,
+		 entity,
+		 function (templateRecord) {		  
+		  	//retrieveAccount(templateRecords[0])
+		  	success = true;
+	 	 },
+		 errorHandler,
+		 function () { 
+		 	callback(success)
+			console.log("completed");  			           
+	     }
+	);
+}
+
+
+function errorHandler(error) {
+ console.log(error.message);
+}
+
+</script>
+
+</body>
+
+</html>

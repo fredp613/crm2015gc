@@ -25,7 +25,9 @@ function formLoad() {
 		}
 	})
 	if (document.readyState == "complete") {  
-		 triggerWorkflow()
+		 triggerWorkflow();
+		 //configure templates
+		 // configureTemplate();
 	}
 	// triggerWorkflow()
 	
@@ -96,3 +98,34 @@ function triggerWorkflow() {
 	Xrm.Page.getAttribute("gcbase_hiddentogglehelper").fireOnChange();
 	Xrm.Page.data.save();
 }
+
+// function configureTemplate() {
+    
+//     var fcId = Xrm.Page.getAttribute("gcbase_program").getValue()[0].id;
+
+//     var ODATA_options = "?$filter=gcbase_FundCentre/Id eq guid\'" + fcId + "\'&$select=gcbase_RealName"; 
+
+//     var total = 0;
+//     SDK.REST.retrieveMultipleRecords(
+//      "gcbase_fundcentrefundingcasetemplate",
+//       ODATA_options,
+//      function (results) {
+//      	setTimeout(function () { 
+//      		 //  var gridName = "grid_"+results[0]["gcbase_RealName"];
+// 		      // var grid_fcfcrt = Xrm.Page.getControl(gridName);
+// 		      // grid_fcfcrt.setVisible(false);
+
+// 		      //LOOP ALL VISIBLE GRIDS, CHOOSE ONLY TEMPLATE ONES, HIDE THEM, SHOW ONLY THE CORRECT ONE.
+//      	}, 2000);
+          
+//      },
+//      errorHandler,
+//      function () { 
+// 		console.log("completed");
+//         // callback(total);       
+//       }
+//     );
+// }
+// function errorHandler(error) {
+//  console.log(error.message);
+// }
