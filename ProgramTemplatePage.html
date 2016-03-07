@@ -3,6 +3,9 @@
 	 <script src="ClientGlobalContext.js.aspx"></script>
 	 <script src="gcbase_SDK_MetaData" type="text/javascript"></script>
 	 <script src="gcbase_SDK_rest" type="text/javascript"></script>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js" type="text/javascript"></script>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js" type="text/javascript"></script>
+
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<!-- Latest compiled and minified CSS -->
 	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -12,59 +15,142 @@
 	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 
-<body>
+<body style="font-family: Segoe UI;">
 	<fieldset>
 		<legend>Program Template</legend>
+		<script id="some-template" type="text/x-handlebars-template"> 
+			 <table id="programTemplateTable" class='table table-bordered table-hover table-condensed' style='margin-top:-25px'>
+			    <thead> 
+			        <th>Name</th> 
+			        <th>Created On</th> 
+			        <th>Modified On</th> 
+			    </thead> 
+			    <tbody> 
+			        {{#templates}} 
+			        <tr class='tblRow' data-entityname={{entityName}} value={{gcbase_id}}>
+			        	<td>{{gcbase_name}}</td>  
+			            <td>{{dateFormat CreatedOn format="MMMM YYYY"}}</td> 
+			            <td>{{dateFormat ModifiedOn format="MMMM YYYY"}}</td> 
+			        </tr> 
+			        {{/templates}} 
+			    </tbody> 
+			</table> 
+
 		
+			
+
+		</script>
+
+
 
 	</fieldset>
 	
 <br>
 
+
+
 <script type="text/javascript">
 
 var Xrm = window.parent.Xrm;
 
-window.onload = initialize();
+window.onload = initialize(function() {
+	// setTimeout(function() {
+	// 	var webResArea = Xrm.Page.ui.controls.get("WebResource_program_template_page");
+	// 	webResArea.setSrc(webResArea.getSrc());
+	// }, 3000);
+	// return;
+	Xrm.Page.data.save();
+});
 
 
-function initialize() {
-    var program = Xrm.Page.getAttribute("gcbase_program") ? Xrm.Page.getAttribute("gcbase_program").getValue()[0].id : null;
-    var fundingCaseId = Xrm.Page.data.entity.getId()
-    if (program) {
-    	getEntityTemplate(program, function(entity, success) {
-			if (!success) {
-				console.log(error)
-				return;
-			} 
-			//using funding case id to create the record.
-			//if there is no record, create it, and show result in bootstrap table (name, status, created on, modified on)
-			checkIfProgramTemplateExists(fundingCaseId, entity, function(exists) {
-				if (!exists) {
-					//create record //create table
-					console.log("record exists");
-				} else {
-					//fetch and create table
-					console.log("record does not exists");
-					createProgramTemplateRecord(fundingCaseId, entity, function(success) {
-						if (!success) {
-							console.log("something went wrong when creating the program template records")
-							return;
-						}
-						generateTable();
-					})
-				}
+function initialize(callback) {
+	// setTimeout(function(){
+
+		var program = Xrm.Page.getAttribute("gcbase_program") ? Xrm.Page.getAttribute("gcbase_program").getValue()[0].id : null;
+	    var fundingCaseId = Xrm.Page.data.entity.getId()
+	    console.log("program is: " + program)
+	    console.log("funding case id is: " + fundingCaseId)
+	    if (program) {
+	    	getEntityTemplate(program, function(entity, success) {
+				if (!success) {
+					console.log(error)
+					return;
+				} 
+				//using funding case id to create the record.
+				//if there is no record, create it, and show result in bootstrap table (name, status, created on, modified on)
+				checkIfProgramTemplateExists(fundingCaseId, entity, function(exists, data) {
+					if (!exists) {
+						//create record //create table
+						console.log("a template record does not exist");
+
+						createProgramTemplateRecord(fundingCaseId, entity, function(success, newData) {
+							if (!success) {
+								console.log("something went wrong when creating the program template records")
+								return;
+							}
+							console.log("we made it")
+							generateTable(newData, callback);
+						})
+						
+					} else {
+						//fetch and create table
+						console.log("a template record exists");
+						console.log(data);
+						generateTable(data, callback)
+						
+					}
+				})
 			})
-		})
-    } else {
-    	console.log("error message")
-    }
+	    } else {
+	    	console.log("error message")
+	    }
+
+	//}, 5000);
+    
 
 	
 }
-function generateTable() {
+function generateTable(data, callback) {
 	console.log("generating table");
+	var source = $("#some-template").html(); 
+	var template = Handlebars.compile(source); 
+	var data1 = {
+		templates: data
+	}
+	
+
+	Handlebars.registerHelper('dateFormat', function(context, block) {
+	  if (window.moment) {
+		    var f = block.hash.format || "MMM Do, YYYY";
+		    return moment(Date(context)).format(f);
+	  } else {
+	    	return context;   //  moment plugin not available. return data as is.
+	  };
+	});
+
+	$('body').append(template(data1));
+
+	$("#programTemplateTable > tbody > tr").hover(function() {
+		$(this).css('cursor','pointer');
+	})
+
+	$("#programTemplateTable > tbody > tr").click(function() {
+		console.log("hi");
+		var name = $(this).attr("data-entityname");
+		var id = $(this).attr("value");
+
+		Xrm.Utility.openEntityForm(name,id,null,null);
+	});
+	callback();
+
 }
+
+//  format an ISO date using Moment.js
+//  http://momentjs.com/
+//  moment syntax example: moment(Date("2011-07-18T15:50:52")).format("MMMM YYYY")
+//  usage: {{dateFormat creation_date format="MMMM YYYY"}}
+
+
 
 function getEntityTemplate(program, callback) {
 
@@ -73,10 +159,12 @@ function getEntityTemplate(program, callback) {
     var total = 0;
     var entityName = "";
     var success = false;
+
     SDK.REST.retrieveMultipleRecords(
      "gcbase_fundcentrefundingcasetemplate",
       ODATA_options,
-     function (results) {     	
+     function (results) { 
+     	console.log(results);    	
      	entityName = results[0]["gcbase_RealName"]
      	success = true;
           
@@ -92,47 +180,69 @@ function getEntityTemplate(program, callback) {
 
 
 function checkIfProgramTemplateExists(fundingCaseId, templateEntityName, callback) {
-	var ODATA_options = "?$filter=gcbase_FundingCase/Id eq guid\'" + fundingCaseId + "\'&$select=gcbase_name"; 
+	var ODATA_options = "?$filter=gcbase_FundingCase/Id eq guid\'" + fundingCaseId + "\'&$select=gcbase_name,CreatedOn,ModifiedOn,"+templateEntityName+"Id"; 
 	var exists = false;
+	var templateObjects = [];
 	SDK.REST.retrieveMultipleRecords(
      templateEntityName,
       ODATA_options,
      function (results) {     	
      	console.log(results)
-     	exists = true;
-          
+     	if (results.length > 0) {
+	     	exists = true;	
+	     	results.forEach(function(result) {
+	     		result.entityName = templateEntityName
+	     		result.gcbase_id = results[0][templateEntityName+"Id"]
+	     	})
+	     	templateObjects = results;
+
+     	} 
+     	          
      },
      errorHandler,
      function () { 
 		console.log("completed");  
-		callback(exists);            
+		 callback(exists, templateObjects);         
       }
     );
 }
 
 function createProgramTemplateRecord(fundingCaseId, entity, callback) {
 	//Create the Account
+	console.log("creating template .....................")
 	var success = false;
 	var template = {};
-	template.gcbase_name = "test";
-	template.gcbase_FundingCase = {gcbase_FundingcaseId:fundingCaseId, LogicalName: "gcbase_fundingcase", gcbase_Name: "test"};
-	
-	// account.PrimaryContactId = { Id: primaryContact.ContactId, LogicalName: "contact", Name: primaryContact.FullName };
+	template.gcbase_name = "Template for: " + Xrm.Page.getAttribute("gcbase_name").getValue();
+	template.gcbase_FundingCase = {Id:fundingCaseId, LogicalName: "gcbase_fundingcase"};
+	var newTemplateObjects = [];
+	var newTemplateObject = {};
 	SDK.REST.createRecord(
 		 template,
 		 entity,
 		 function (templateRecord) {		  
 		  	//retrieveAccount(templateRecords[0])
+		  	newTemplateObject.entityName = entity;
+		  	newTemplateObject.gcbase_id = templateRecord[entity+"Id"];
+		  	newTemplateObject.gcbase_name = templateRecord.gcbase_name;
+		  	newTemplateObject.CreatedOn = templateRecord.CreatedOn;
+		  	newTemplateObject.ModifiedOn = templateRecord.ModifiedOn;
+		  	newTemplateObjects.push(newTemplateObject);
+		  	console.log(newTemplateObjects);
+		  	console.log("new object is:  "+newTemplateObject)
 		  	success = true;
+		  	callback(success, newTemplateObjects)
 	 	 },
 		 errorHandler,
 		 function () { 
-		 	callback(success)
 			console.log("completed");  			           
 	     }
 	);
 }
 
+ // <tr class='tblRow' data-entityname={{entityName}} value={{gcbase_id}}>
+	// 		        	<td>{{gcbase_name}}</td>  
+	// 		            <td>{{dateFormat CreatedOn format="MMMM YYYY"}}</td> 
+	// 		            <td>{{dateFormat ModifiedOn format="MMMM YYYY"}}</td> 
 
 function errorHandler(error) {
  console.log(error.message);

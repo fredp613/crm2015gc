@@ -25,7 +25,7 @@ function formLoad() {
 		}
 	})
 	if (document.readyState == "complete") {  
-		 triggerWorkflow();
+		
 		 //configure templates
 		 // configureTemplate();
 	}
@@ -89,15 +89,15 @@ function disableHeaderFields() {
 
 
 
-function triggerWorkflow() {
-	if (Xrm.Page.getAttribute("gcbase_hiddentogglehelper").getValue() != "toggle") {
-		Xrm.Page.getAttribute("gcbase_hiddentogglehelper").setValue("toggle")
-	} else {
-		Xrm.Page.getAttribute("gcbase_hiddentogglehelper").setValue("toggle1")
-	}
-	Xrm.Page.getAttribute("gcbase_hiddentogglehelper").fireOnChange();
-	Xrm.Page.data.save();
-}
+// function triggerWorkflow() {
+// 	if (Xrm.Page.getAttribute("gcbase_hiddentogglehelper").getValue() != "toggle") {
+// 		Xrm.Page.getAttribute("gcbase_hiddentogglehelper").setValue("toggle")
+// 	} else {
+// 		Xrm.Page.getAttribute("gcbase_hiddentogglehelper").setValue("toggle1")
+// 	}
+// 	Xrm.Page.getAttribute("gcbase_hiddentogglehelper").fireOnChange();
+// 	Xrm.Page.data.save();
+// }
 
 // function configureTemplate() {
     
