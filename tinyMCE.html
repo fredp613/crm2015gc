@@ -15,28 +15,26 @@
       function getDataParam() {
                var vals = new Array();
            if (location.search != "") {
-            vals = location.search.substr(1).split("&");
-            for (var i in vals) {
-             vals[i] = vals[i].replace(/\+/g, " ").split("=");
-            }
-            //look for the parameter named 'data'
-            var found = false;
-            for (var i in vals) {
-             if (vals[i][0] == "data") {
-              return vals[i][1];              
-              found = true;
-              break;
-             }
-            }            
-            if (!found)  {               
-              return false 
-            }
-            return true;
+              vals = location.search.substr(1).split("&");
+              for (var i in vals) {
+                  vals[i] = vals[i].replace(/\+/g, " ").split("=");
+              }
+              //look for the parameter named 'data'
+              var found = false;
+              for (var i in vals) {
+                 if (vals[i][0] == "data") {
+                      found = true;
+                      return vals[i][1];              
+                 }
+              }            
+              if (!found)  {               
+                    return null 
+              }            
            }
            else {
-            return false;
+              return null;
            }
-           return false;
+           return null;
       } 
     
 
@@ -60,7 +58,7 @@
 
      $(function() {
 
-      if (getDataParam()) {
+      if (getDataParam() != null) {
         var contentAttribute = window.parent.Xrm.Page.getAttribute(getDataParam());
         
         if (contentAttribute != null) {
