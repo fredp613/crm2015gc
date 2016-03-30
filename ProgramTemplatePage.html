@@ -22,13 +22,15 @@
 			 <table id="programTemplateTable" class='table table-bordered table-hover table-condensed' style='margin-top:-25px'>
 			    <thead> 
 			        <th>Name</th> 
+			        <th>Status</th> 
 			        <th>Created On</th> 
 			        <th>Modified On</th> 
 			    </thead> 
 			    <tbody> 
 			        {{#templates}} 
 			        <tr class='tblRow' data-entityname={{entityName}} value={{gcbase_id}}>
-			        	<td>{{gcbase_name}}</td>  
+			        	<td>{{gcbase_name}}</td> 
+			        	<td>{{statuscode}}</td>  
 			            <td>{{dateFormat CreatedOn format="MMMM YYYY"}}</td> 
 			            <td>{{dateFormat ModifiedOn format="MMMM YYYY"}}</td> 
 			        </tr> 
@@ -73,7 +75,7 @@ function initialize(callback) {
 	    if (program) {
 	    	getEntityTemplate(program, function(entity, success) {
 				if (!success) {
-					console.log(error)
+					console.log("No program template found");
 					return;
 				} 
 				//using funding case id to create the record.
@@ -150,8 +152,6 @@ function generateTable(data, callback) {
 //  moment syntax example: moment(Date("2011-07-18T15:50:52")).format("MMMM YYYY")
 //  usage: {{dateFormat creation_date format="MMMM YYYY"}}
 
-
-
 function getEntityTemplate(program, callback) {
 
     var ODATA_options = "?$filter=gcbase_FundCentre/Id eq guid\'" + program + "\'&$select=gcbase_RealName"; 
@@ -164,10 +164,12 @@ function getEntityTemplate(program, callback) {
      "gcbase_fundcentrefundingcasetemplate",
       ODATA_options,
      function (results) { 
-     	console.log(results);    	
-     	entityName = results[0]["gcbase_RealName"]
-     	success = true;
-          
+     	if (results.length > 0) {
+     		console.log(results);    	
+	     	entityName = results[0]["gcbase_RealName"]
+	     	success = true;
+     	}
+     	         
      },
      errorHandler,
      function () { 
@@ -180,7 +182,7 @@ function getEntityTemplate(program, callback) {
 
 
 function checkIfProgramTemplateExists(fundingCaseId, templateEntityName, callback) {
-	var ODATA_options = "?$filter=gcbase_FundingCase/Id eq guid\'" + fundingCaseId + "\'&$select=gcbase_name,CreatedOn,ModifiedOn,"+templateEntityName+"Id"; 
+	var ODATA_options = "?$filter=gcbase_FundingCase/Id eq guid\'" + fundingCaseId + "\'&$select=gcbase_name,CreatedOn,ModifiedOn,statuscode,"+templateEntityName+"Id"; 
 	var exists = false;
 	var templateObjects = [];
 	SDK.REST.retrieveMultipleRecords(
@@ -191,6 +193,7 @@ function checkIfProgramTemplateExists(fundingCaseId, templateEntityName, callbac
      	if (results.length > 0) {
 	     	exists = true;	
 	     	results.forEach(function(result) {
+	     		result.statuscode = results[0].statuscode.Value;
 	     		result.entityName = templateEntityName
 	     		result.gcbase_id = results[0][templateEntityName+"Id"]
 	     	})
@@ -220,10 +223,12 @@ function createProgramTemplateRecord(fundingCaseId, entity, callback) {
 		 template,
 		 entity,
 		 function (templateRecord) {		  
+		 	console.log(templateRecord)
 		  	//retrieveAccount(templateRecords[0])
 		  	newTemplateObject.entityName = entity;
 		  	newTemplateObject.gcbase_id = templateRecord[entity+"Id"];
 		  	newTemplateObject.gcbase_name = templateRecord.gcbase_name;
+		  	newTemplateObject.statuscode = templateRecord.statuscode.Value;
 		  	newTemplateObject.CreatedOn = templateRecord.CreatedOn;
 		  	newTemplateObject.ModifiedOn = templateRecord.ModifiedOn;
 		  	newTemplateObjects.push(newTemplateObject);

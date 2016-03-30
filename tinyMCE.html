@@ -1,42 +1,98 @@
 
 
 <html><head>
-  <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+  <script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
   <script>
-    tinymce.init({
-      selector: 'textarea',
-      height: 500,
-      plugins: [
-        'advlist autolink lists link image charmap print preview anchor',
-        'searchreplace visualblocks code fullscreen',
-        'insertdatetime media table contextmenu paste code'
-      ],
-      toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
-      content_css: [
-        '//fast.fonts.net/cssapi/e6dc9b99-64fe-4292-ad98-6974f93cd2a2.css',
-        '//www.tinymce.com/css/codepen.min.css'
-      ],      
-    });
+      function getDataParam() {
+               var vals = new Array();
+           if (location.search != "") {
+            vals = location.search.substr(1).split("&");
+            for (var i in vals) {
+             vals[i] = vals[i].replace(/\+/g, " ").split("=");
+            }
+            //look for the parameter named 'data'
+            var found = false;
+            for (var i in vals) {
+             if (vals[i][0] == "data") {
+              return vals[i][1];              
+              found = true;
+              break;
+             }
+            }
+            if (!found)  {               
+              invalidParams(); 
+            }
+           }
+           else {
+            noParams();
+           }
+           return "";
+      } 
+    
+
+      function noParams() {
+                      
+           setTimeout(setText("No paramater has been provided in the web resource"), 1500);
+           // document.body.appendChild(message);
+      }
+      function invalidParams() {
+          setTimeout(setText("The field name provided in the web resource is invalid, please revise"), 1500);
+      }
+
+      function setText(message) { 
+        var textArea = document.getElementById("tinyTextArea");
+        if (textArea) {
+          textArea.innerHtml(message);
+        }     
+        
+      };
+
+    // window.onload = function() {
+      if (getDataParam() != "") {
+        var contentAttribute = window.parent.Xrm.Page.getAttribute(getDataParam());
+        
+        if (contentAttribute != null) {
+               tinymce.init({
+                selector: 'textarea',
+                height: 500,
+                plugins: [
+                  'advlist autolink lists link image charmap print preview anchor',
+                  'searchreplace visualblocks code fullscreen',
+                  'insertdatetime media table contextmenu paste code'
+                ],
+                toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | fullscreen',
+                content_css: [
+                  '//fast.fonts.net/cssapi/e6dc9b99-64fe-4292-ad98-6974f93cd2a2.css',
+                  '//www.tinymce.com/css/codepen.min.css'
+                ],
+                setup : function(ed) {
+                    ed.on('keyup', function(e) {
+                      var tinyMceHtml = ed.getContent();
+                      window.parent.Xrm.Page.getAttribute(getDataParam()).setValue(tinyMceHtml);
+                    });
+                    ed.on('init', function(e) {            
+                      editor.execCommand('mceFullScreen');
+                    });
+                },           
+              });
+              var content = contentAttribute.getValue();
+              setTimeout(function() {tinyMCE.activeEditor.setContent(content)}, 50);
+        } else {
+              noParams("The field name you provided in the web resource paramaters is invalid. Please try again");
+        }
+         
+      } else {
+        noParams("No data parameter was passed to this page");
+      }
+      
+    // }  
 
   </script>
 <meta charset="utf-8"></head>
 <body>
 
 
-  <textarea style="height: 250px;">Easy (and free!) You should check out our premium features.</textarea>
+  <textarea style="border:none;" id="tinyTextArea"></textarea>
+ 
 
-<!--   <table>
-   <thead><tr><td>Your header goes here</td></tr></thead>
-   <tbody>
-     <tr>
-        <td>
-          <div>
-             Page body in here -- as long as it needs to be
-          </div>
-          
-        </td>
-    </tr>
-   </tbody>
-   <tfoot><tr><td>Your footer goes here</td></tr></tfoot>
-</table> -->
 </body></html>
