@@ -2,7 +2,7 @@
 var wizardParams = "";
 
 function activateWizard(params) {
-	console.log(Xrm.Page.getAttribute("processid").getValue())
+	// console.log(Xrm.Page.getAttribute("processid").getValue())
 	if (document.readyState == "complete") {   
 		if (params) {
 			wizardParams = params;	
@@ -27,14 +27,11 @@ function handler() {
 	var steps = wizardParams.split(";");
 	var _entityId = Xrm.Page.data.entity.getId();
 	var _entityName = Xrm.Page.data.entity.getEntityName();
-	
-//Step 1:tab1,tab2;Step2:tab3,tab4
-	// var currentStage = Xrm.Page.data.process.getSelectedStage().getName();
 
 	var currentStage = $(".selectedStage").find(".processStageTailContainer").attr("title")
 	if (currentStage != null) {
 
-		console.log("current stage is:" + currentStage);
+		// console.log("current stage is:" + currentStage);
 
 		for (var i in steps) {
 
@@ -43,7 +40,7 @@ function handler() {
 			var stage = $(".activeStage.selectedStage")
 
 			var tabsForStep = steps[i].split(":")[1].split(",");
-			console.log(currentStage.indexOf(step) + step);
+			// console.log(currentStage.indexOf(step) + step);
 			for (var y in tabsForStep) {
 				if (currentStage.indexOf(step) != -1) {
 					if (Xrm.Page.ui.tabs.get(tabsForStep[y])) {
@@ -71,7 +68,7 @@ function handler() {
 					}
 									
 				} else {
-					console.log(tabsForStep[y])
+					// console.log(tabsForStep[y])
 					if (Xrm.Page.ui.tabs.get(tabsForStep[y])) {
 						Xrm.Page.ui.tabs.get(tabsForStep[y]).setVisible(false);
 					}
@@ -85,7 +82,7 @@ function handler() {
 
 function stageIsActive(stage) {
 	if (stage.length > 0) {
-		console.log("stage is: "+stage)
+		// console.log("stage is: "+stage)
 		return true;
 	}
 	return false;
@@ -94,7 +91,7 @@ function stageIsActive(stage) {
 function generateLocalizedMessage(messageType) {
 	var currentLanguage = Xrm.Page.context.getUserLcid();
 	if (messageType == "inactive tab") {
-		if (currentLanguage == "0c0c") {
+		if (currentLanguage == "1036") {
 			return "Cet onglet est inactif , par conséquent, vous ne pouvez pas éditer les champs de formulaire ci-dessous"
 		}
 		if (currentLanguage == "1033") {
