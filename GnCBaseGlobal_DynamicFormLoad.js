@@ -1,24 +1,5 @@
 
 
-// var DynamicFormLoad = DynamicFormLoad || {}
-
-// _entityId = Xrm.Page.data.entity.getId() || ""
-// _entityName = Xrm.Page.data.entity.getEntityName || ""
-// _parameters = {};
-// _windowOptions = {};
-
-// DynamicFormLoad.getFormObjectData = function(statusReason) {
-// 	var formDataObj = {
-// 		"entityName":_entityName,		
-// 		"entityId":_entityId,
-// 		"params":_parameters,
-// 		"windowOptions":_windowOptions
-// 	};
-// 	return formDataObj;
-// }
-
-
-
 function dynamicFormLoad(params) {
 
   if (document.readyState == "complete") {     
@@ -50,11 +31,10 @@ function processParams(params) {
 			if (status == currentStatus) {
 				if (currentForm != formName) {
 					parameters["formid"] = formId;	
-					console.log("should toggle form");
 					Xrm.Utility.openEntityForm(_entityName, _entityId, parameters, windowOptions);
 					return;
 				} else {
-					console.log("should not toggle form");
+					//do something later
 				}
 
 			}			

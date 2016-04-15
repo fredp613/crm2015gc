@@ -15,10 +15,10 @@
 	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 
-<body style="font-family: Segoe UI;">
-	<fieldset>
-		<legend>Program Template</legend>
+<body style="font-family: Segoe UI;">	
 		<script id="some-template" type="text/x-handlebars-template"> 
+		<fieldset>
+		<legend>Program Template</legend>
 			 <table id="programTemplateTable" class='table table-bordered table-hover table-condensed' style='margin-top:-25px'>
 			    <thead> 
 			        <th>Name</th> 
@@ -39,13 +39,13 @@
 			</table> 
 
 		
-			
+				</fieldset>
 
 		</script>
 
 
 
-	</fieldset>
+
 	
 <br>
 
@@ -90,7 +90,7 @@ function initialize(callback) {
 								console.log("something went wrong when creating the program template records")
 								return;
 							}
-							console.log("we made it")
+							console.log("we made it")							
 							generateTable(newData, callback);
 						})
 						

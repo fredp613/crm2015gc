@@ -22,13 +22,9 @@ PARTICULAR PURPOSE.
  
 </head>
 <body style="font-family: Segoe UI;">
- <div id="message">
- </div>
- <div id="entitiesListContainer">
- 	<div id="loader">loading...</div>
- 	<select id="entitiesList" style='display:none;margin-top:-5px;'>
- 		<option></option>
- 	</select>
+ <div id="entitiesListContainer"> 	
+ 	<img id="loader" height="20px" width="20px" src="gcbase_spinner">
+ 	<div id="selectContainer"> </div>
  </div>
 
 <script type="text/javascript">
@@ -37,7 +33,7 @@ PARTICULAR PURPOSE.
   var messageStatus = "Loading..."
   var Xrm = window.parent.Xrm;
 
-  window.onload = startSample();
+  window.onload = setTimeout(startSample(), 0) 
   function startSample() {
    //Retrieve entities
    SDK.Metadata.RetrieveAllEntities(SDK.Metadata.EntityFilters.Entity, false, successRetrieveAllEntities, errorRetrieveAllEntities);
@@ -45,22 +41,16 @@ PARTICULAR PURPOSE.
 
   function successRetrieveAllEntities(entityMetadataCollection) {
 
+	
+   var options = [];
+   var entitySelectList = document.createElement("select");
+	entitySelectList.Id = "entitiesList";
 
-   // entityMetadataCollection.sort(function (a, b) {
-   //  if (a.LogicalName < b.LogicalName)
-   //  { return -1 }
-   //  if (a.LogicalName > b.LogicalName)
-   //  { return 1 }
-   //  return 0;
-   // });
-	console.log(entityMetadataCollection.length)
-
-   for (var i = 0; i < entityMetadataCollection.length; i++) {
+   for (var i in entityMetadataCollection) {
    	// console.log(i + "outside block")
 
 		var entity = entityMetadataCollection[i];
-
-	
+		console.log(entity.LogicalName[i])
 		if (entity.IsCustomEntity) {
 
 			var entityName = entity.LogicalName	    
@@ -69,41 +59,50 @@ PARTICULAR PURPOSE.
 
 				retrieveAttributes(entityName, function(data, entityName) {				
 					
-						if (i == entityMetadataCollection.length) {
-
-							if (data.length > 0) {		
-								var loaderDiv = document.getElementById("loader");									
-								var entitySelectList = document.getElementById("entitiesList");
-								loaderDiv.innerHTML = "";														
+						if (i == (entityMetadataCollection.length - 1)) {
+							
+							if (data.length > 0) {																																							
+								var options = [];
 								data.forEach(function(entity, index, array) {
 									console.log(entity)
 									var entitySelectOption = document.createElement('option');
 									entitySelectOption.value = entity.entityValue;
 									entitySelectOption.innerHTML = entity.entityName; 
-									entitySelectList.appendChild(entitySelectOption);
+									options.push(entitySelectOption)									
 								})
-								entitySelectList.style.display = "block";
+
+								
+								entitySelectList.style.display = "";
 								entitySelectList.addEventListener("change", function() {
 								   Xrm.Page.getAttribute("gcbase_template").setValue(entitySelectList.options[entitySelectList.selectedIndex].text)
 									Xrm.Page.getAttribute("gcbase_name").setValue(entitySelectList.options[entitySelectList.selectedIndex].text)
 									Xrm.Page.getAttribute("gcbase_realname").setValue(entitySelectList.options[entitySelectList.selectedIndex].value)
-								})					
-							} /*else {
-								var loaderDiv = document.getElementById("loader");
-								loaderDiv.innerHTML = "There are currently no template entities. Create an entity(ies) with a lookup field to the fundcenterfundingcasetemplate entity";	
-							}*/
-					
+								})	
+								for (var y in options) {
+									entitySelectList.appendChild(options[y]);
+								}																				
+							} 					
 						}  	
-
-				});
-				
+				});				
 		}
-
-    //if last generate 
-		
-   
-
    }
+
+   var loaderImg = document.getElementById("loader")
+   loaderImg.parentNode.removeChild(loaderImg);
+   var selectContainer = document.getElementById("selectContainer");
+   entitySelectList.style.width = "250px"
+   entitySelectList.style.marginLeft = "18px"
+   entitySelectList.style.height = "20px" 
+
+// <option value="" disabled selected>Select your option</option>
+   var blankOption = document.createElement('option');
+	blankOption.value = "";
+	blankOption.disabled = true
+	blankOption.selected = true	
+	blankOption.innerHTML = "Select..."
+
+   entitySelectList.appendChild(blankOption);
+   selectContainer.appendChild(entitySelectList);
 
 
   
@@ -115,8 +114,7 @@ PARTICULAR PURPOSE.
   function retrieveAttributes(entityName, callback) {
   
     var entityLogicalName = entityName;
-   
-    console.log(entityLogicalName)
+  
     SDK.Metadata.RetrieveEntity(SDK.Metadata.EntityFilters.Attributes,
     entityLogicalName,
     null,
@@ -134,28 +132,19 @@ PARTICULAR PURPOSE.
 
   function successRetrieveEntity(logicalName, entityMetadata, callback) {
 
-	// entityMetadata.Attributes.sort(function (a, b) {
-	// if (a.LogicalName < b.LogicalName)
-	// 	{ return -1 }
-	// if (a.LogicalName > b.LogicalName)
-	// 	{ return 1 }
-	// return 0;
-	// });
 
 	
 	var goodEntities = [];
 	for (var i = 0; i < entityMetadata.Attributes.length; i++) {
 		var attribute = entityMetadata.Attributes[i];
 		
-		if (attribute.Targets == "gcbase_fundcentrefundingcasetemplate") {	
-			console.log(entityMetadata);
+		if (attribute.Targets == "gcbase_fundcentrefundingcasetemplate") {				
 			var entityObj = {
 				entityName: entityMetadata.DisplayName.UserLocalizedLabel.Label,
 				entityValue: entityMetadata.LogicalName
 
 			};
-			var entityName = entityMetadata.DisplayName.UserLocalizedLabel.Label
-			console.log(attribute)
+			var entityName = entityMetadata.DisplayName.UserLocalizedLabel.Label			
 			goodEntities.push(entityObj)						
 			
 		}

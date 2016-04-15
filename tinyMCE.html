@@ -57,43 +57,46 @@
       };
 
      $(function() {
-
-      if (getDataParam() != null) {
-        var contentAttribute = window.parent.Xrm.Page.getAttribute(getDataParam());
-        
-        if (contentAttribute != null) {
-               tinymce.init({
-                selector: 'textarea',
-                height: 500,
-                plugins: [
-                  'advlist autolink lists link image charmap print preview anchor',
-                  'searchreplace visualblocks code fullscreen',
-                  'insertdatetime media table contextmenu paste code'
-                ],
-                toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | fullscreen',
-                content_css: [
-                  '//fast.fonts.net/cssapi/e6dc9b99-64fe-4292-ad98-6974f93cd2a2.css',
-                  '//www.tinymce.com/css/codepen.min.css'
-                ],
-                setup : function(ed) {
-                    ed.on('keyup', function(e) {
-                      var tinyMceHtml = ed.getContent();
-                      window.parent.Xrm.Page.getAttribute(getDataParam()).setValue(tinyMceHtml);
-                    });
-                    ed.on('init', function(e) {            
-                      editor.execCommand('mceFullScreen');
-                    });
-                },           
-              });
-              var content = contentAttribute.getValue();
-              setTimeout(function() {tinyMCE.activeEditor.setContent(content)}, 50);
+      console.log("parent element is:" + document["hidden"])
+      // if (document["hidden"]) {
+           if (getDataParam() != null) {
+          var contentAttribute = window.parent.Xrm.Page.getAttribute(getDataParam());
+          
+          if (contentAttribute != null) {
+                 tinymce.init({
+                  selector: 'textarea',
+                  height: 500,
+                  plugins: [
+                    'advlist autolink lists link image charmap print preview anchor',
+                    'searchreplace visualblocks code fullscreen',
+                    'insertdatetime media table contextmenu paste code'
+                  ],
+                  toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | fullscreen',
+                  content_css: [
+                    '//fast.fonts.net/cssapi/e6dc9b99-64fe-4292-ad98-6974f93cd2a2.css',
+                    '//www.tinymce.com/css/codepen.min.css'
+                  ],
+                  setup : function(ed) {
+                      ed.on('keyup', function(e) {
+                        var tinyMceHtml = ed.getContent();
+                        window.parent.Xrm.Page.getAttribute(getDataParam()).setValue(tinyMceHtml);
+                      });
+                      ed.on('init', function(e) {            
+                        editor.execCommand('mceFullScreen');
+                      });
+                  },           
+                });
+                var content = contentAttribute.getValue();
+                setTimeout(function() {tinyMCE.activeEditor.setContent(content)}, 50);
+          } else {
+                invalidParams();
+          }
+           
         } else {
-              invalidParams();
+          noParams();
         }
-         
-      } else {
-        noParams();
-      }
+      // }
+     
       
      });
 

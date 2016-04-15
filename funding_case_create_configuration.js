@@ -19,18 +19,17 @@ function toggleYears() {
 	var enddate = Xrm.Page.getAttribute("gcbase_enddate").getValue()
 
 	if (startdate && enddate) {
+
 		var existingFiscalYears = [];
 		$(document).find(".currency").each(function(index, element) {
 			var year = $(element).attr("id")
 			var intYear = parseInt(year)
-			existingFiscalYears.push(intYear)
+			existingFiscalYears.push(intYear)			
 		})
 
 		fiscalYears = FiscalYear.getYears(startdate, enddate)
-		// var difference = new Array
-		// jQuery.grep(existingFiscalYears, function(el) {
-	 //        if (jQuery.inArray(el, fiscalYears) == -1) difference.push(el);
-		// });
+		console.log(fiscalYears)
+		
 		var toAdd = $(fiscalYears).not(existingFiscalYears).get();
 		var toDelete = $(existingFiscalYears).not(fiscalYears).get();
 
@@ -60,17 +59,6 @@ function generateBudgetForm(fiscalYears) {
   	// textAmount.insertBefore("[name='tab_1_column_2_section_1'] tbody > tr:last")
   	}
 }
-
-
-function onSave(context) {
-	//create record
-	// var fundingCaseAmountByFY = {}
-	// fundingCaseAmountByFY.gcbase_name = "testing",
-	// fundingCaseAmountByFY.gcbase_fiscalyear = "2012",
-
-}
-
-// gcbase_anticipatedbudgetbyfiscalyearvalidated
 
 $(document).on("blur", ".currency", function() {
 	// console.log($(this).val())

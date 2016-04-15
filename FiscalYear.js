@@ -13,21 +13,26 @@ FiscalYear.getYears = function(startdate, enddate) {
 	var endMonth = enddate.getMonth()
 	var numberOfYears = endYear - startYear
 
-	 if (startMonth < 3) {
-        if (endMonth > 3) {
-            numberOfYears = numberOfYears + 2;
-            endYear = endYear + 1;
-        }
-        else {
-            numberOfYears = numberOfYears + 1;
-        }
+   
+    if (startMonth < 3) {
+            if (endMonth > 3) {
+                numberOfYears = numberOfYears + 2;
+                endYear = endYear + 1;
+            } else {
+                numberOfYears = numberOfYears + 1;
+            }
     } else {
-        startYear = startYear + 1;
-        if (endMonth > 3){
-            numberOfYears = numberOfYears + 1;
-            endYear = endYear + 1;
-        }
-    }
+            startYear = startYear + 1;
+            if (endMonth > 3){
+                numberOfYears = numberOfYears + 1;
+                endYear = endYear + 1;
+            } else {
+                numberOfYears = 1;
+            }
+        
+    } 
+	
+
 
     for (var i = 0; i < numberOfYears; i++)
     {
