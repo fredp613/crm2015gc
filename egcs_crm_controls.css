@@ -1,0 +1,2899 @@
+
+
+
+body[contentEditable=true] BLOCKQUOTE
+{
+margin-top:0px;
+margin-bottom:0px;
+}
+
+TEXTAREA
+{
+width: 100%;
+resize: none;
+overflow:auto;
+}
+
+INPUT
+{
+width: 100%;
+}
+
+.egcs-crm-ltrcontrol
+{
+direction:ltr;
+}
+
+.egcs-crm-HeaderTileElement .egcs-crm-Field-DatePickerTimePicker-Print
+{
+width: 100%!important;
+min-width: 200px !important;
+
+direction:ltr;
+
+}
+
+.egcs-crm-HeaderTileElement .egcs-crm-Field-DatePickerTimePicker-Print .egcs-crm-Inline-Edit.egcs-crm-HeaderTile
+{
+width: 200px !important;
+
+direction:ltr;
+
+}
+
+
+
+
+
+
+
+
+
+
+.egcs-crm-ltrcontrol.egcs-crm-Inline-Chrome .egcs-crm-Inline-EmptyValue,
+.egcs-crm-ltrcontrol.egcs-crm-Inline-Chrome .egcs-crm-Inline-Edit
+{
+
+direction:ltr;
+
+}
+
+
+
+INPUT.radio
+{
+height:				20px;
+}
+
+TEXTAREA.egcs-crm-ReadOnly,
+INPUT[type=text].egcs-crm-ReadOnly,
+.egcs-crm-Input
+{
+border: 0px;
+margin: 0px;
+padding-top: 0px;
+padding-left: 0px;
+padding-bottom: 0px;
+
+
+padding-right: 0px;
+
+}
+
+INPUT.egcs-crm-ReadOnlyDateTime
+{
+background-color: #FFFFFF;
+color: #000000;
+border: 0px;
+margin: 0px;
+padding-top: 0px;
+padding-left: 0px;
+padding-bottom: 0px;
+
+
+padding-right: 0px;
+
+}
+
+.egcs-crm-hidden-container
+{
+display:none;
+}
+
+.egcs-crm-Input-Container
+{
+padding: 1px;
+background-color:#ffffff;
+border-width: 1px;
+border-style: solid;
+}
+.egcs-crm-Input-Container.focus
+{
+outline-color: -webkit-focus-ring-color;
+outline-width: 5px;
+outline-style: auto;
+}
+.egcs-crm-Input:focus
+{
+outline: none;
+}
+.egcs-crm-DateTime-Container-Input
+{
+
+
+padding-left: 5px;
+
+}
+
+TABLE.egcs-crm-DateTime .egcs-crm-DateTime-Container
+{
+overflow: hidden;
+}
+.egcs-crm-Input-Container-ReadOnly
+{
+border-top-width:2px;
+border-top-color:#696969;
+
+border-left-width:2px;
+border-left-color:#696969;
+
+}
+td.DateTimeUI_RenderDateControl_td TEXTAREA.egcs-crm-ReadOnly,
+td.DateTimeUI_RenderDateControl_td INPUT.egcs-crm-ReadOnly,
+td.DateTimeUI_RenderDateControl_td .egcs-crm-ReadOnly
+{
+padding-bottom:2px;
+width:90%;
+
+margin-right:4px;
+
+}
+.egcs-crm-IE7-Texarea-Container{
+position:relative;
+height: 100%;
+}
+.egcs-crm-IE7-Texarea{
+position:absolute;
+top:0px;
+bottom:0px;
+left:0px;
+right:0px;
+padding:0px;
+}
+.egcs-crm-IE7-td-Texarea-Container{
+position:absolute;
+top:3px;
+bottom:2px;
+
+left:3px;
+right:2px;
+
+}
+INPUT.egcs-crm-RadioButton
+{
+
+margin-left: 8px;
+margin-right: 3px;
+
+width: 15px;
+border: 0px;
+cursor: pointer;
+vertical-align: middle;
+margin-top: 0px;
+}
+
+DIV.egcs-crm-RadioButton
+{
+
+}
+
+INPUT.egcs-crm-Email-Address,
+INPUT.egcs-crm-LiveId-Email-Address
+{
+text-decoration: underline;
+
+direction: ltr ;
+
+}
+
+INPUT.egcs-crm-Ticker
+{
+color: #0000ff;
+text-decoration: underline;
+}
+
+
+
+INPUT.egcs-crm-CheckBox
+{
+margin-top: 1px;
+width: 16px;
+
+}
+
+INPUT.egcs-crm-Url
+{
+text-decoration: underline;
+
+
+}
+
+INPUT.egcs-crm-Number
+{
+
+
+}
+
+INPUT.egcs-crm-Money
+{
+
+direction:ltr;
+border-left-width: 0px;
+
+}
+
+BUTTON.egcs-crm-Button
+{
+overflow: visible;
+
+
+min-width: 84px;
+width: auto;
+white-space:nowrap;
+}
+
+TABLE.egcs-crm-DateTime
+{
+
+}
+
+TABLE.egcs-crm-DateTime TR
+{
+vertical-align : middle;
+}
+
+TABLE.egcs-crm-Money
+{
+
+}
+
+INPUT.egcs-crm-Text
+{
+
+}
+
+DIV.egcs-crm-IL-MRU-Header,
+DIV.egcs-crm-IL-Header,
+DIV.egcs-crm-IL-MRU-Footer,
+.egcs-crm-Inline-Value,
+.egcs-crm-Inline-Edit input.egcs-crm-InlineInput,
+.egcs-crm-Inline-Edit input.egcs-crm-Input,
+.processStep.emptyValue .bit .egcs-crm-Inline-Value,
+.egcs-crm-Inline-Validation{
+font-family: Segoe UI, Arial, sans-serif;
+}
+
+DIV.egcs-crm-IL-MRU-Header,
+DIV.egcs-crm-IL-Header
+{
+background-color:	#FFFFFF;
+border-top: 	1px solid #c6c6c6;
+border-right: 	1px solid #c6c6c6;
+border-left: 	1px solid #c6c6c6;
+height:			11px;
+font-size: 11px;
+color: #666666;
+padding-top: 5px;
+padding-bottom: 5px;
+
+padding-left: 6px;
+
+}
+
+DIV.egcs-crm-IL-MRU-Footer
+{
+background-color:	#FFFFFF;
+border-right: 	1px solid #c6c6c6;
+border-left: 	1px solid #c6c6c6;
+height:	11px;
+font-size: 11px;
+color: #666666;
+padding-top: 5px;
+padding-bottom: 5px;
+text-align:center;
+}
+
+DIV.egcs-crm-IL-Footer
+{
+background-color:	#FFFFFF;
+border-right: 		1px solid #c6c6c6;
+border-bottom: 		1px solid #c6c6c6;
+border-left: 		1px solid #c6c6c6;
+padding:			0px 6px;
+height:				22px;
+}
+
+UL.egcs-crm-InlineLookupEdit
+{
+font-size:	12px;
+width:	100%;
+overflow-x:	hidden;
+
+float:	left;
+text-align:	left;
+
+}
+
+UL.egcs-crm-InlineMultiLookupEdit
+{
+min-height: 19px;
+}
+
+TD.egcs-crm-InlineLookupEdit-Box
+{
+width: 6px;
+}
+
+TD.egcs-crm-InlineMultiLookupEdit-Box
+{
+width: 5px;
+}
+
+IMG.egcs-crm-InlineLookupEdit
+{
+cursor:	pointer;
+vertical-align:	middle;
+border-top:	#c6c6c6 1px solid;
+border-bottom:	#c6c6c6 1px solid;
+padding-top:	1px;
+padding-bottom:	1px;
+height:		18px !important;
+
+border-right:	#c6c6c6 1px solid;
+
+}
+
+IMG.egcs-crm-Inline-MultiLookupEdit
+{
+padding-top:	2px;
+padding-bottom:	2px;
+}
+
+DIV.egcs-crm-InlineLookupEdit
+{
+overflow-y: hidden !important;
+height: 15px;
+padding-top: 2px;
+padding-bottom: 3px;
+
+
+padding-left: 5px;
+
+}
+
+.partylist .egcs-crm-Inline-Value.egcs-crm-Inline-Lookup.egcs-crm-Inline-EditHintState
+{
+min-height: 16px;
+}
+
+INPUT.egcs-crm-InlineLookupEdit
+{
+height:		15px !important;
+
+margin-left:	-1px;
+
+}
+
+.processStepValue DIV.egcs-crm-InlineLookupEdit
+{
+overflow-y: hidden !important;
+padding-top:	1px;
+padding-bottom:	1px;
+height:		16px !important;
+}
+
+.processStepValue INPUT.egcs-crm-InlineLookupEdit
+{
+height:		16px !important;
+}
+
+.processStepValue IMG.egcs-crm-InlineLookupEdit
+{
+height:		18px !important;
+padding-top:	0px;
+padding-bottom:	0px;
+}
+
+DIV.egcs-crm-InlineLookup-FooterSection-TopResults
+{
+
+float:left;
+
+text-align:left;
+
+
+width: 45%;
+color: #444444;
+padding: 4px 0px;
+}
+
+DIV.egcs-crm-InlineLookup-FooterSection-AddNew
+{
+
+float:right;
+
+text-align:right;
+
+padding: 4px 2px 0px 4px;
+
+
+width: 45%;
+}
+
+IMG.egcs-crm-InlineLookup-FooterSection-AddImage
+{
+height: 10px;
+width: 10px;
+
+
+padding-right: 4px;
+
+}
+A.egcs-crm-InlineLookup-FooterSection-AddAnchor
+{
+color: #262626;
+
+border:	1px solid #ffffff;
+
+padding-left: 2px;
+padding-right: 2px;
+}
+A.egcs-crm-InlineLookup-FooterSection-AddAnchor-Selected
+{
+background-color:	#D7EBF9;
+}
+
+SPAN.egcs-crm-Lookup-Item
+{
+margin-top: -1px;
+cursor:	pointer;
+margin-left: 1px;
+margin-right: 1px;
+}
+
+SPAN.egcs-crm-BreadCrumb-Lookup-Parent-Container
+{
+width: 100%;
+display:inline-block;
+
+direction:ltr;
+
+}
+
+SPAN.egcs-crm-BreadCrumb-Lookup-Parent-Container-Child
+{
+width: 100%;
+display:inline-block;
+overflow:hidden;
+
+direction:rtl;
+
+}
+
+SPAN.egcs-crm-BreadCrumb-Lookup-Item
+{
+margin-top: -1px;
+cursor:       pointer;
+margin-left: 1px;
+margin-right: 1px;
+display:inline-block;
+overflow:hidden;
+text-overflow:ellipsis;
+max-width:200px;
+vertical-align:bottom;
+
+direction:ltr;
+
+}
+
+SPAN.egcs-crm-focus-breadcrumb-item
+{
+border-width: 1px;
+border-style: dotted;
+border-color : blue;
+}
+
+SPAN.egcs-crm-hide-breadcrumb-extra
+{
+display:none !important;
+}
+
+SPAN.egcs-crm-BreadCrumb-Lookup-Item-Seperator
+{
+
+direction:ltr;
+
+}
+
+SPAN.egcs-crm-selected-Lookup-Item
+{
+background-color: rgb(0, 114, 198) !important;
+color: rgb(255,250,250) !important;
+}
+
+A.egcs-crm-List-Link:hover
+{
+text-decoration: underline;
+}
+
+.egcs-crm-SubGrid-InlineEdit-Anchor
+{
+text-decoration: None;
+}
+
+.egcs-crm-SubGrid-InlineEdit-Span
+{
+text-decoration: None;
+}
+
+DIV.egcs-crm-SubGrid-InlineEdit
+{
+position: relative;
+padding: 0px;
+margin: 0px;
+background-color: rgb(0,0,0,0);
+}
+
+DIV.egcs-crm-SubGrid-InlineEdit-Nobr-Div
+{
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+DIV.egcs-crm-SubGrid-InlineEdit:hover
+{
+background-color: white;
+}
+
+SPAN.egcs-crm-Lookup-DialogItem
+{
+margin-top: -1px;
+color: #000000;
+cursor:	pointer;
+margin-left: 1px;
+margin-right: 1px;
+}
+
+SPAN.egcs-crm-Lookup-SelectedDialogItem
+{
+margin-top: -1px;
+cursor:	pointer;
+background-color: #a7cdf0;
+color: #000000;
+margin-left: 1px;
+margin-right: 1px;
+}
+
+SPAN.egcs-crm-Lookup-SelectedDialogItem-NoFocus
+{
+margin-top: -1px;
+cursor:	pointer;
+background-color: #cdcdcd;
+color: #000000;
+margin-left: 1px;
+margin-right: 1px;
+}
+
+
+SPAN.egcs-crm-Lookup-SelectedDialogItemIE11
+{
+margin-top: 0px;
+cursor:	pointer;
+background-color: #a7cdf0;
+color: #000000;
+margin-left: 1px;
+margin-right: 1px;
+}
+
+
+SPAN.egcs-crm-Lookup-SelectedDialogItem-NoFocusIE11
+{
+margin-top: 0px;
+cursor:	pointer;
+background-color: #cdcdcd;
+color: #000000;
+margin-left: 1px;
+margin-right: 1px;
+}
+
+SPAN.egcs-crm-Lookup-Item-NonEntity
+{
+margin-top: -1px;
+color: #000000;
+text-decoration: none;
+cursor:	default;
+
+padding-left: 1px;
+
+word-break: break-all;
+}
+
+SPAN.egcs-crm-Lookup-Ambiguous,
+SPAN.egcs-crm-Lookup-PartyItem-NoAddress,
+SPAN.egcs-crm-Lookup-PartyItem-Unresolved,
+SPAN.egcs-crm-Lookup-Unresolved
+{
+color:				#ff0000;
+text-decoration:	underline;
+cursor:				pointer;
+}
+
+SPAN.egcs-crm-Inline-LookupItem-Ambiguous-Name
+{
+text-decoration:	underline;
+}
+
+SPAN.egcs-crm-Lookup-Item SPAN.egcs-crm-LookupItem-Name.egcs-crm-Inline-MultiLookupItem-Unresolved,
+SPAN.egcs-crm-Lookup-Item SPAN.egcs-crm-LookupItem-Seperator.egcs-crm-Inline-MultiLookupItem-Unresolved,
+SPAN.egcs-crm-Inline-MultiLookupItem-Unresolved
+{
+color:	#FF0000;
+}
+
+IMG.egcs-crm-Lookup-Item
+{
+vertical-align:		middle;
+
+margin-left:		2px;
+margin-right:		5px;
+
+}
+
+.partylist DIV.egcs-crm-InlineLookupEdit
+{
+overflow-y:			auto !important;
+height:				auto !important;
+max-height:			56px !important;
+}
+
+.partylist IMG.egcs-crm-Lookup-Item
+{
+margin-top: -4px;
+}
+
+.partylist SPAN.egcs-crm-Lookup-Item SPAN.egcs-crm-selected-Lookup-Item:hover
+{
+cursor: pointer;
+}
+
+.partylist SPAN.egcs-crm-Lookup-Item:hover
+{
+cursor: text;
+}
+
+.partylist SPAN.egcs-crm-Lookup-Item-Read:hover
+{
+cursor: text;
+}
+
+IMG.egcs-crm-Lookup-PresenceItem
+{
+height:				12px;
+width:				12px;
+margin-top:		    1px;
+vertical-align:		middle;
+
+margin-left:		2px;
+margin-right:		9px;
+
+}
+
+.egcs-crm-Inline-Lookup IMG.egcs-crm-Lookup-PresenceItem
+{
+margin-bottom:	    3px;
+}
+
+.egcs-crm-List-Link IMG.egcs-crm-Lookup-PresenceItem
+{
+margin-bottom:		8px;
+}
+
+DIV.egcs-crm-FloatLookup
+{
+position: absolute;
+height: 50px!important;
+}
+INPUT.egcs-crm-LookupNormal
+{
+margin-top: -1px;
+margin-bottom: -1px;
+}
+
+DIV.egcs-crm-Lookup
+{
+overflow-y:			auto;
+overflow-x:         hidden;
+outline:            none;
+word-wrap:			break-word;
+height:				15px;
+background:			window;
+width:				100%;
+}
+
+DIV.egcs-crm-Lookup-Party
+{
+overflow-y: auto;
+width: 100%;
+word-wrap: break-word;
+background: window;
+height: 20px;
+padding-top: 2px;
+}
+
+DIV.egcs-crm-Lookup-DisplayOnly
+{
+height:				80px;
+}
+
+TABLE.egcs-crm-Lookup
+{
+
+}
+
+DIV.egcs-crm-ReadOnly
+{
+overflow-y:			auto;
+height:				18px;
+width:				100%;
+background-color:	#FFFFFF;
+border-color:		#C5C5C5;
+}
+
+DIV.egcs-crm-Lookup-Required
+{
+background-color:	;
+}
+
+DIV.egcs-crm-Lookup-Recommended
+{
+background-color:	;
+}
+
+IMG.egcs-crm-Lookup
+{
+cursor:				pointer;
+
+}
+
+IMG.egcs-crm-Lookup-Party
+{
+cursor:				pointer;
+
+}
+
+IMG.egcs-crm-Lookup-TransactionCurrency
+{
+cursor:				pointer;
+
+}
+
+IMG.egcs-crm-DateTime
+{
+cursor:				pointer;
+}
+
+IFRAME.egcs-crm-Custom
+{
+width:				99.5%;
+height:				100%;
+border-width:		1px;
+border-style:		solid;
+}
+
+IFRAME.egcs-crm-Email-Body
+{
+background-color:	#ffffff;
+height:				100%;
+width:				100%;
+overflow:			auto;
+border-width:		0px;
+}
+TD.egcs-crm-Email-Body
+{
+border-width:		1px;
+border-style:		solid;
+}
+
+TABLE.egcs-crm-Email-Body {}
+
+TABLE.egcs-crm-Email-Body-Error
+{
+background-color:	#ffffae;
+border:				1px solid #c5c5c5;
+width:				100%;
+table-layout:		fixed;
+padding-top:		20px;
+padding-bottom:		20px;
+}
+
+TABLE.egcs-crm-Inline-Email-Body-Error
+{
+padding-top:		5px;
+padding-bottom:		5px;
+border-bottom-width: 0px;
+}
+
+
+SPAN.egcs-crm-DataSlugBody
+{
+border:	1px solid #c5c5c5;
+background-color: #FFFFFF;
+overflow-y: auto;
+}
+
+SPAN.egcs-crm-DataSlugBodySingleSlug
+{
+border:	1px solid #c5c5c5;
+background-color: #FFFFFF;
+overflow: hidden;
+}
+
+SPAN.egcs-crm-DataSlug
+{
+background-color: #FFFF33;
+height: 15px;
+padding-top: 1px;
+padding-right: 2px;
+padding-left: 2px;
+overflow: hidden;
+margin-bottom: 0px;
+vertical-align: middle;
+}
+
+
+SPAN.egcs-crm-DataSlug:focus
+{
+border-width: 1px;
+border-style: dotted;
+border-color : blue;
+}
+
+SPAN.egcs-crm-DataSlugBody P
+{
+margin:0px;
+}
+
+
+td.egcs-crm-Money-CurrencySymbol
+{
+text-align: center;
+
+border-top-width: 1px;
+border-right-width: 0px;
+border-bottom-width: 1px;
+
+border-left-width: 1px;
+
+border-style: solid;
+border-right-style:inset;
+
+border-color: #e2e3ea;
+border-top-color: #abadb3;
+
+width: 1px;
+white-space:nowrap;
+}
+
+td.egcs-crm-CurrencySymbol-Refresh
+{
+text-align: center;
+padding-right: 2px;
+padding-left: 2px;
+
+width: 1px;
+white-space:nowrap;
+word-wrap: normal;
+}
+
+.egcs-crm-CurrencyTable-Refresh
+{
+width: 100%;
+white-space:nowrap;
+
+}
+
+.egcs-crm-Money .egcs-crm-Input-Container
+{
+
+border-left-width: 0;
+padding-left: 0px;
+}
+
+span.egcs-crm-Money-CurrencySymbol
+{
+padding-right:1px;
+}
+
+DIV.egcs-crm-CheckBoxList
+{
+height: 100%;
+overflow: auto;
+width: 100%;
+}
+
+DIV.egcs-crm-NextButton
+{
+padding: 5px;
+}
+
+IMG.egcs-crm-NextButton
+{
+
+vertical-align: middle;
+}
+
+SPAN.egcs-crm-NextButton
+{
+
+padding-left: 10px;
+color:  #15428B;
+}
+
+A.egcs-crm-NextButton-Disabled
+{
+cursor: default;
+}
+
+TABLE.egcs-crm-ReportControl
+{
+background-color: #FFFFFF;
+border-left: 1px solid #6893CF;
+border-top: 2px solid #6893CF;
+border-right: 1px solid #6893CF;
+border-bottom: 1px solid #6699CC;
+}
+
+BUTTON#btnRemoveValue
+{
+width: auto;
+}
+
+.crm-divLeft
+{
+
+float:left;
+padding-left: 2%;
+text-align: left;
+
+width: 48%;
+padding-top:1%;
+padding-bottom:1%;
+}
+.crm-divRight
+{
+
+float:right;
+padding-left: 2%;
+text-align: left;
+
+width: 48%;
+padding-top:1%;
+padding-bottom:1%;
+}
+input[type="text"]:disabled,
+textarea:disabled,
+select:disabled,
+option:disabled {
+color: #666666;
+}
+
+input.egcs-crm-SelectBox:disabled{
+color:#666666;
+}
+
+td.AppAttachment_Render_td6,
+td.AppAttachment_Render_td5
+{
+
+padding-left:3px;
+text-align: left;
+
+}
+
+.RTE_list_style_position
+{
+list-style-position:inside;
+}
+
+
+.RTE_list_style_position LI>:first-child
+{
+display:inline;
+}
+
+INPUT.egcs-crm-Url.egcs-crm-ReadOnly,
+INPUT.egcs-crm-Email-Address.egcs-crm-ReadOnly
+{
+color:#666666;
+}
+
+INPUT.egcs-crm-Phone
+{
+
+direction:ltr;
+border-left-width: 0px;
+
+}
+
+
+.egcs-crm-Inline-Chrome
+{
+width: 100%;
+position:relative;
+}
+
+.egcs-crm-Inline-Chrome:focus, .egcs-crm-Inline-Chrome *:focus
+{
+outline: none;
+}
+
+.egcs-crm-Inline-Edit.egcs-crm-Inline-Lookup
+{
+
+margin-right: -1px;
+
+
+z-index: 200;
+Overflow: Visible;
+position: relative;
+}
+
+.egcs-crm-Inline-Edit.egcs-crm-Inline-CheckBox
+{
+display:inline-block;
+}
+
+.partylist .egcs-crm-Inline-Value.egcs-crm-Inline-Lookup
+{
+white-space: inherit;
+max-height: 50px;
+overflow: hidden;
+}
+
+#lost-competitor .egcs-crm-Inline-Edit.egcs-crm-Inline-Lookup
+{
+
+margin-right: 5px;
+margin-right: 6px \0/;
+
+}
+
+#_lost_revenue .egcs-crm-Inline-Edit.egcs-crm-Inline-Currency,
+#_won_revenue .egcs-crm-Inline-Edit.egcs-crm-Inline-Currency
+{
+
+margin-right: 12px;
+margin-right: 14px \0/;
+
+}
+
+#_lost_closedate .egcs-crm-Inline-Edit,
+#_won_closedate .egcs-crm-Inline-Edit
+{
+
+margin-right: 6px;
+margin-right: 7px \0/;
+
+}
+
+#_lost_statusreason .egcs-crm-Inline-Edit
+{
+
+margin-right: 7px;
+margin-right: 9px \0/;
+
+}
+
+.egcs-crm-Inline-DateTimeSpacer
+{
+padding-right: 9px;
+}
+
+.processStepValue .egcs-crm-Inline-Value,
+.processStepValue .egcs-crm-Inline-Edit input.egcs-crm-InlineInput
+{
+padding-top: 1px;
+padding-bottom: 1px;
+}
+
+.processStepValue .egcs-crm-Inline-Value span.egcs-crm-Lookup-Item-Read,
+.processStepValue .ntext .egcs-crm-Inline-Value
+{
+height: 16px;
+}
+
+.processStepValue .egcs-crm-Inline-Value span.egcs-crm-Lookup-Item-Read img
+{
+margin-top: -1px
+}
+
+.processStepValue .egcs-crm-Inline-Edit ul.egcs-crm-InlineLookupEdit img
+{
+margin-top: -1px
+}
+
+.egcs-crm-Inline-Value,
+.egcs-crm-Inline-Edit input.egcs-crm-InlineInput
+{
+padding-top: 2px;
+padding-bottom: 3px;
+
+padding-right: 0px;
+
+}
+
+.highContrast .egcs-crm-Inline-Value
+{
+padding:3px 1px 4px 1px;
+border-width:0px;
+}
+
+.highContrast .egcs-crm-Inline-Value.egcs-crm-Inline-EditHintState
+{
+padding:2px 0px 3px 0px;
+border-width:1px;
+border-style:dashed;
+}
+
+.egcs-crm-Inline-Value
+{
+overflow: hidden;
+white-space: nowrap;
+
+
+text-align: left;
+margin-left: 23px;
+padding-left: 0px;
+
+}
+
+.egcs-crm-Inline-Value.egcs-crm-Email-Body-Value
+{
+
+margin-left: 0px;
+
+}
+
+.money > .egcs-crm-HeaderTile
+{
+overflow: hidden;
+white-space: nowrap;
+text-align: left;
+margin-left: 23px;
+padding-left: 0px;
+}
+
+.ntext .egcs-crm-Inline-Value
+{
+white-space: normal;
+word-wrap: break-word;
+}
+
+.egcs-crm-Inline-DynamicGutter .egcs-crm-Inline-Value
+{
+
+margin-left: 0px;
+
+}
+
+.egcs-crm-Inline-Value.egcs-crm-Inline-EditHintState
+{
+box-shadow: 1px 1px 2px #ccc;
+}
+
+.egcs-crm-Inline-Value.egcs-crm-Inline-EditHintState
+{
+padding-right: 5px;
+padding-left: 5px;
+}
+
+.egcs-crm-Inline-Value a,
+.egcs-crm-Inline-Value span
+{
+display: inline-block;
+}
+
+.egcs-crm-Inline-Edit
+{
+
+
+margin-left: 23px;
+
+margin-right: 6px;
+margin-right: 7px \0/;
+
+}
+
+.egcs-crm-Inline-Value-email-body
+{
+margin-left: 0px;
+white-space: normal;
+}
+
+.egcs-crm-FormSection .egcs-crm-Inline-Value-email-border
+{
+border: 1px solid;
+border-color: #D6D6D6;
+}
+
+.egcs-crm-Inline-Edit-email-body
+{
+margin-left: 0px;
+height:100%
+}
+
+.egcs-crm-Inline-Value.egcs-crm-Inline-Value-email-body
+{
+font-weight: normal;
+overflow-y: auto;
+height:100%
+}
+
+.egcs-crm-Inline-DynamicGutter .egcs-crm-Inline-Edit.egcs-crm-Inline-OptionSet,
+.egcs-crm-Inline-DynamicGutter .egcs-crm-Inline-Edit
+{
+
+margin-left: 0px;
+
+}
+
+.datetime .egcs-crm-Inline-Edit,
+.egcs-crm-Duration .egcs-crm-Inline-Edit
+{
+
+margin-right: 0px;
+
+}
+
+.egcs-crm-QuickAdd-FlyOut-Lookup-Control
+{
+
+margin-left: 0px;
+
+}
+
+.egcs-crm-Inline-Value,
+.egcs-crm-Inline-Edit input.egcs-crm-InlineInput,
+.egcs-crm-Inline-Edit input.egcs-crm-Input
+{
+
+
+font-weight : 700;
+
+color: #000000;
+font-size: 12px;
+}
+
+#customerpane_qfc_customerpane_qfc_account_name > .egcs-crm-Inline-Value,
+#customerpane_qfc_customerpane_qfc_contact_fullname > .egcs-crm-Inline-Value
+{
+font-size: 18px ! important;
+}
+
+.egcs-crm-Inline-Value.egcs-crm-Inline-Lookup
+{
+color: #000000;
+}
+
+.egcs-crm-Inline-Edit input.egcs-crm-InlineInput
+{
+
+padding-left: 4px;
+padding-left: 5px \0/;
+
+}
+
+.egcs-crm-Inline-Edit.egcs-crm-Inline-OptionSet
+{
+
+height:22px;
+height:23px \0/;
+
+
+margin-left: 22px;
+margin-right: 0px;
+margin-left: 21px \0/;
+margin-right: 2px \0/;
+
+}
+
+:root .egcs-crm-Inline-Edit.egcs-crm-Inline-OptionSet
+{
+
+margin-right: 1px \0/IE9;
+
+}
+
+div.egcs-crm-FieldLabel-LeftAlign
+{
+color: #444444;
+}
+
+span.egcs-crm-InlineEditLabelWap
+{
+word-wrap:break-word !important;
+white-space: normal !important;
+}
+
+.egcs-crm-InlineEditLabel
+{
+color: #444444;
+display: block;
+white-space: nowrap;
+overflow: hidden;
+position: relative;
+
+text-align: left;
+
+}
+
+.egcs-crm-InlineEditLabel span:first-child,
+.egcs-crm-InlineEditLabel img:first-child
+{
+
+float: left;
+
+overflow: hidden;
+display: inline-block;
+white-space: nowrap;
+}
+
+.egcs-crm-InlineEditLabel .egcs-crm-Inline-RequiredLevel
+{
+
+float: left;
+
+}
+
+.egcs-crm-Inline-Value.egcs-crm-HeaderTile
+{
+color: #000000;
+
+margin: 0px 6px 0 0px;
+
+padding: 0;
+font-size: 15px;
+height: 20px;
+overflow: hidden;
+}
+
+.egcs-crm-Inline-Value.egcs-crm-HeaderTile .egcs-crm-Lookup-Item-Read img.egcs-crm-Lookup-Item
+{
+display:none;
+}
+
+.egcs-crm-Inline-Value.egcs-crm-HeaderTile .egcs-crm-Lookup-Item-Read
+{
+display: inline-block;
+}
+
+.egcs-crm-Inline-Edit.egcs-crm-HeaderTile .Lookup_RenderButton_td img
+{
+background-color: #FFFFFF;
+}
+
+.egcs-crm-Inline-Edit.egcs-crm-HeaderTile
+{
+margin: 1px 6px 0 2px;
+margin: 2px 7px 0 2px\9;
+*margin: 2px 6px 0 2px\9;
+}
+
+:root .egcs-crm-Inline-Edit.egcs-crm-HeaderTile
+{
+margin: 1px 7px 0 2px \0/IE9;
+}
+
+.datetime .egcs-crm-Inline-Edit.egcs-crm-HeaderTile
+{
+margin: -1px 2px 0px 2px;
+}
+
+.egcs-crm-Inline-Edit.egcs-crm-HeaderTile.egcs-crm-Inline-Lookup
+{
+
+margin: -2px 1px 0 3px;
+
+}
+
+.egcs-crm-Inline-Edit.egcs-crm-HeaderTile.egcs-crm-Inline-OptionSet
+{
+margin: 0px 2px 0 2px;
+}
+
+.egcs-crm-Inline-Edit.egcs-crm-HeaderTile select.egcs-crm-SelectBox
+{
+margin: 0;
+}
+
+.egcs-crm-Inline-Edit.egcs-crm-HeaderTile input.egcs-crm-InlineInput
+{
+padding-top: 2px;
+padding-top: 1px \0/;
+padding-bottom: 2px;
+border: none;
+}
+
+.egcs-crm-Inline-Edit.egcs-crm-HeaderTile input.egcs-crm-InlineInput.egcs-crm-InlineLookupEdit
+{
+border: 1px solid #CCCCCC;
+padding: 3px 2px 2px 2px;
+}
+
+.egcs-crm-Inline-Value.egcs-crm-HeaderTile.egcs-crm-Inline-HasError,
+.egcs-crm-Inline-Edit.egcs-crm-HeaderTile.egcs-crm-Inline-HasError,
+.egcs-crm-Inline-DynamicGutter .egcs-crm-Inline-Value.egcs-crm-Inline-HasError,
+.egcs-crm-Inline-DynamicGutter .egcs-crm-Inline-Edit.egcs-crm-Inline-HasError,
+.egcs-crm-Inline-DynamicGutter .egcs-crm-Inline-Value.egcs-crm-Inline-Locked,
+.refresh-form-footer .egcs-crm-Inline-Value.egcs-crm-Inline-Locked,
+.egcs-crm-Inline-Value.egcs-crm-HeaderTile.egcs-crm-Inline-Locked
+{
+
+margin-left: 16px;
+
+}
+
+.egcs-crm-Inline-Edit.egcs-crm-HeaderTile.egcs-crm-Inline-Currency.egcs-crm-Inline-HasError,
+.datetime .egcs-crm-Inline-Edit.egcs-crm-HeaderTile.egcs-crm-Inline-HasError
+{
+
+margin-left: 23px;
+
+}
+
+.egcs-crm-HeaderTileLabel
+{
+margin: 0px;
+font-size: 12px;
+color: #444444;
+}
+
+.egcs-crm-HeaderTileElement .egcs-crm-Field-Data-Print {
+padding-bottom: 3px;
+}
+
+.egcs-crm-HeaderTileElement .egcs-crm-ReadField-Normal {
+padding-top: 2px;
+}
+
+.egcs-crm-HeaderTilesWrapperElement .egcs-crm-HeaderTitleShowLabel
+{
+margin-top : 20px;
+}
+
+textarea.egcs-crm-InlineInput
+{
+border: 1px solid #CCCCCC;
+margin: 0;
+padding: 2px 5px 3px 5px;
+font-size: 12px;
+display: block;
+width: auto;
+word-wrap: break-word;
+
+font-weight : 700;
+
+}
+
+.egcs-crm-Inline-Edit input.egcs-crm-InlineInput
+{
+border: 1px solid #CCCCCC;
+margin: 0;
+}
+
+.mscrm-pbleditor .highContrast textarea.egcs-crm-InlineInput,
+.mscrm-pbleditor .highContrast .egcs-crm-Inline-Edit input.egcs-crm-InlineInput
+{
+
+}
+
+.egcs-crm-InlineInput::-ms-clear
+{
+display: none;
+}
+
+.egcs-crm-Inline-Edit select.egcs-crm-SelectBox
+{
+font-size: 12px;
+border: 1px solid #CCCCCC;
+margin: 1px 0 0 0;
+width: 100%;
+
+
+
+margin-left: 1px;
+margin-left: 2px \0/;
+
+}
+
+.egcs-crm-Inline-EmptyValue
+{
+
+font-weight : 700;
+
+}
+
+.egcs-crm-Inline-EmptyValue
+{
+font-size: 12px;
+color: #000000;
+}
+
+.egcs-crm-HeaderTileElement .egcs-crm-Inline-EmptyValue
+{
+font-style: normal;
+color: #444444;
+}
+
+.processStepValue .egcs-crm-Inline-EmptyValue
+{
+text-transform: lowercase;
+color: #1160b7;
+
+font-style: italic;
+
+}
+
+.disabled .processStepValue .egcs-crm-Inline-EmptyValue,
+.processStepValue .deactivated .egcs-crm-Inline-EmptyValue
+{
+color: #b1b1b1;
+font-style: normal;
+}
+
+.egcs-crm-Inline-EditHintState
+{
+border: 1px solid #CCCCCC;
+background-color: #F3F1F1;
+}
+
+.egcs-crm-Inline-toggleclickState
+{
+border: 1px solid #CCCCCC;
+background-color: #FFFFFF;
+}
+
+.egcs-crm-Inline-Edit-SubGrid-Cell-Indentation
+{
+
+padding-left : 12px !important;
+
+}
+
+.egcs-crm-Inline-Validation
+{
+position: fixed;
+z-index: 1500;
+background-color: #FFFFFF;
+border: 1px solid;
+border-color: #D6D6D6;
+width: 300px;
+padding-top: 0px;
+padding-bottom: 2px;
+
+padding-left: 5px;
+
+font-size:12px;
+color:#262626;
+}
+
+.egcs-crm-Inline-WarningIcon, .egcs-crm-Inline-LockIcon, .egcs-crm-LockIcon-quickform
+{
+background: transparent none;
+margin: 0;
+padding: 0;
+position: absolute;
+z-index: 10;
+}
+
+.egcs-crm-Inline-WarningIcon
+{
+
+top: 3px;
+
+height: 16px;
+}
+
+.processStepValue .egcs-crm-Inline-WarningIcon
+{
+bottom: -1px;
+}
+
+.egcs-crm-Inline-LockIcon
+{
+
+left: 5px;
+
+top: 3px;
+}
+
+.Totals-Section .egcs-crm-Inline-LockIcon {
+
+left: 5px;
+
+}
+
+#accountcquickform_name .egcs-crm-Inline-LockIcon,
+#contactcquickform_fullname .egcs-crm-Inline-LockIcon
+{
+top: 6px;
+}
+
+.processStepValue .egcs-crm-Inline-LockIcon
+{
+bottom: 0px;
+}
+
+.egcs-crm-HeaderTileElement .egcs-crm-Inline-WarningIcon
+{
+bottom: 0px;
+}
+
+.egcs-crm-HeaderTileElement .egcs-crm-Inline-LockIcon
+{
+bottom: 2px;
+top:auto;
+}
+
+.egcs-crm-Inline-ErrorArrowIcon
+{
+position: fixed;
+z-index: 1500;
+height :11px;
+width : 12px;
+background-color: transparent;
+margin-top: 4px;
+}
+
+.egcs-crm-VerticalFlip
+{
+filter:FlipV();-webkit-transform:scaleY(-1);-moz-transform:scaleY(-1);-o-transform:scaleY(-1);transform:scaleY(-1);
+}
+
+.egcs-crm-VerticalFlipMargin
+{
+margin-top: -1px;
+}
+
+.egcs-crm-Inline-ErrorArrowIcon img
+{
+display: block;
+}
+
+
+
+@media screen and (max-width: 769px)
+{
+.egcs-crm-HeaderTileTabletContainer .egcs-crm-HeaderTileElement.egcs-crm-HeaderTileElementPosition1,
+.egcs-crm-HeaderTileTabletContainer .egcs-crm-HeaderTileElement.egcs-crm-HeaderTileElementPosition2,
+.egcs-crm-HeaderTileTabletContainer .egcs-crm-HeaderTileElement.egcs-crm-HeaderTileElementPosition3,
+.egcs-crm-HeaderTileTabletContainer .headertile-collapse-button
+{
+display: none;
+}
+
+.egcs-crm-HeaderTileTabletContainer .egcs-crm-HeaderTilesTitleWrapperElement
+{
+width: 560px;
+}
+
+.egcs-crm-HeaderTileTabletContainer .egcs-crm-HeaderTilesTitleWrapperElement.collapsed
+{
+width: 180px;
+}
+
+.egcs-crm-HeaderTileTabletContainer .egcs-crm-HeaderTilesWrapperLayoutElement
+{
+width: 147px;
+}
+}
+
+@media screen and (min-width: 769px) and (max-width: 1025px)
+{
+.egcs-crm-HeaderTileTabletContainer .egcs-crm-HeaderTileElement.egcs-crm-HeaderTileElementPosition3,
+.egcs-crm-HeaderTileTabletContainer .headertile-collapse-button
+{
+display: none;
+}
+
+.egcs-crm-HeaderTileTabletContainer .egcs-crm-HeaderTilesTitleWrapperElement
+{
+width: 570px;
+}
+
+.egcs-crm-HeaderTileTabletContainer .egcs-crm-HeaderTilesTitleWrapperElement.collapsed
+{
+width: 400px;
+}
+
+.egcs-crm-HeaderTileTabletContainer .egcs-crm-HeaderTilesWrapperLayoutElement
+{
+width: 395px;
+}
+}
+
+@media screen and (max-width: 1025px)
+{
+.egcs-crm-HeaderTileTabletContainer .collapsed .headertile-collapse-button
+{
+display: none;
+}
+
+.egcs-crm-HeaderTileTabletContainer .expanded .headertile-collapse-button
+{
+display: block;
+}
+
+.egcs-crm-HeaderTileTabletContainer .collapsed .headertile-expand-button
+{
+display: block;
+}
+
+.egcs-crm-HeaderTileTabletContainer .expanded .headertile-expand-button
+{
+display: none;
+}
+}
+
+@media screen and (min-width: 1025px)
+{
+.egcs-crm-HeaderTileTabletContainer .headertile-collapse-button,
+.egcs-crm-HeaderTileTabletContainer .headertile-expand-button
+{
+display: none;
+}
+
+.egcs-crm-HeaderTileTabletContainer .egcs-crm-HeaderTilesTitleWrapperElement
+{
+width: 600px;
+}
+
+.egcs-crm-HeaderTileTabletContainer .egcs-crm-HeaderTilesWrapperLayoutElement
+{
+width: 519px;
+}
+}
+
+@media screen and (min-width: 1536px)
+{
+.egcs-crm-HeaderTileTabletContainer .egcs-crm-HeaderTilesTitleWrapperElement
+{
+width: 950px;
+}
+}
+
+.egcs-crm-HeaderTileTabletContainer
+{
+overflow: hidden;
+}
+
+.egcs-crm-HeaderTileTabletContainer .expanded .egcs-crm-HeaderTileElement.egcs-crm-HeaderTileElementPosition1,
+.egcs-crm-HeaderTileTabletContainer .expanded .egcs-crm-HeaderTileElement.egcs-crm-HeaderTileElementPosition2,
+.egcs-crm-HeaderTileTabletContainer .expanded .egcs-crm-HeaderTileElement.egcs-crm-HeaderTileElementPosition3
+{
+display: block;
+}
+
+.egcs-crm-HeaderTileTabletContainer .egcs-crm-HeaderTilesWrapperLayoutElement.expanded
+{
+width: 519px;
+}
+
+.egcs-crm-HeaderTileTabletContainer .egcs-crm-HeaderTilesTitleWrapperElement
+{
+min-width: 0px;
+}
+
+.egcs-crm-HeaderTileTabletContainer .egcs-crm-HeaderTilesWrapperLayoutElement .egcs-crm-HeaderTilesActionsContainer
+{
+
+float: left;
+
+}
+
+.egcs-crm-HeaderTileTabletContainer .egcs-crm-HeaderTilesWrapperLayoutElement .headertile-expand-button,
+.egcs-crm-HeaderTileTabletContainer .egcs-crm-HeaderTilesWrapperLayoutElement .headertile-collapse-button
+{
+background: #F4D89D;
+color: black;
+width: 23px;
+padding-top: 12px;
+height: 30px;
+
+padding-left: 5px;
+margin-left: 4px;
+
+}
+
+.egcs-crm-HeaderTileTabletContainer .egcs-crm-HeaderTilesWrapperLayoutElement
+{
+
+float: right;
+
+position: static;
+}
+
+.egcs-crm-HeaderTileTabletContainer .egcs-crm-HeaderTilesTitleWrapperElement
+{
+
+float: left;
+
+}
+
+
+
+.egcs-crm-HeaderTileElement
+{
+background: #FFFFFF;
+border: solid;
+border-color: #CCCCCC;
+
+float: left;
+border-width: 0px 0px 0px 3px;
+
+height: 42px;
+width: 120px;
+min-width: 120px;
+overflow: hidden;
+}
+
+.egcs-crm-HeaderTileElement:hover
+{
+background: #F3F1F1;
+}
+
+.egcs-crm-HeaderTileElement:hover .egcs-crm-HeaderTileLabel,
+.egcs-crm-HeaderTileElement:hover .egcs-crm-Inline-Value,
+.egcs-crm-HeaderTileElement:hover .egcs-crm-Inline-Value.egcs-crm-Inline-Lookup span.egcs-crm-Lookup-Item-Read
+{
+color: #444444;
+}
+
+.egcs-crm-HeaderTileElement.noScroll
+{
+overflow: visible;
+}
+
+.egcs-crm-HeaderTilesWrapperElement
+{
+position: absolute;
+
+right: 0px;
+
+}
+
+.egcs-crm-HeaderTilesWrapperLayoutElement
+{
+margin-top: -56px;
+margin-bottom: 9px;
+height: 42px;
+}
+
+div.egcs-crm-Form-Breadrumb.egcs-crm-HeaderTilesTitleWrapperElement
+{
+padding-bottom: 0px;
+}
+
+
+.inEdit .egcs-crm-Inline-Chrome textarea {
+position: relative;
+width: 195px;
+z-index: 10;
+height: 150px;
+overflow: auto;
+word-wrap: break-word;
+}
+
+.ie7 .inEdit .egcs-crm-Inline-Chrome textarea {
+width: 135px;
+}
+
+.processStepValue .egcs-crm-Inline-Value {
+white-space: nowrap;
+}
+
+.processStep.emptyValue .egcs-crm-Inline-Value {
+color: #1160B7;
+
+font-style: italic;
+
+font-weight: normal;
+}
+
+.processStep.emptyValue .bit.locked .egcs-crm-Inline-Value,
+.readonly .processStep.emptyValue .bit .egcs-crm-Inline-Value {
+color: #444;
+font-style: normal;
+}
+
+
+.egcs-crm-Inline-Edit.egcs-crm-Inline-OptionSet.egcs-crm-Inline-HideByZeroHeight,
+.egcs-crm-Inline-HideByZeroHeight {
+height: 0;
+overflow: hidden;
+}
+
+
+select.egcs-crm-Inline-HideByZeroHeight-Ie7 {
+*height: 0;
+}
+
+
+.egcs-crm-InlineEditLabel div.egcs-crm-Inline-GradientMask {
+
+right:0px;
+
+}
+
+.egcs-crm-InlineEditLabel div.egcs-crm-Inline-GradientMask.withReqIcon {
+
+right:10px;
+
+}
+
+.egcs-crm-InlineEditLabel div.egcs-crm-InlineField.withReqIcon {
+
+right:10px;
+
+}
+
+.egcs-crm-InlineEditLabel.egcs-crm-HeaderTileLabel .egcs-crm-Inline-RequiredLevel {
+
+margin-left:-2px;
+
+}
+
+
+.egcs-crm-InlineEditLabel.egcs-crm-HeaderTileLabel div.egcs-crm-Inline-GradientMask.withReqIcon {
+
+right:8px;
+
+}
+
+img.rollup.refreshImage
+{
+border:0px;
+display:block;
+padding-top:1px;
+}
+
+.highContrast img.rollup.refreshImage
+{
+border:0px;
+display:block;
+padding-top:0px;
+}
+
+img.calculateImage
+{
+height:16px;
+
+padding-right:4px;
+
+padding-bottom:2px;
+vertical-align:middle;
+}
+
+div.rollup.egcs-crm-Inline-EditIcon
+{
+position: absolute;
+z-index: 2;
+bottom: 0px;
+top: 0px;
+
+border-left: 0px;
+
+border-width: 1px;
+padding: 2px;
+cursor: pointer;
+}
+
+.hideControl
+{
+display: none;
+}
+
+.tablet .rollup.egcs-crm-Inline-EditIcon
+{
+display: inline-block;
+background-color: transparent;
+border: none;
+position: relative;
+padding: 0px;
+
+margin-left: 14px;
+
+margin-top:-5px;
+}
+
+.tablet .egcs-crm-HeaderTile .rollup.egcs-crm-Inline-EditIcon
+{
+display: inline;
+background-color: #F3F1F1;
+position: absolute;
+padding: 2px;
+padding-top: 0px;
+border-style: solid;
+border-width: 1px;
+border-color: #C6C6C6;
+padding-left:1px;
+}
+
+.egcs-crm-HeaderTile .rollup.egcs-crm-Inline-EditIcon
+{
+height:18px;
+
+margin-right:1px;
+border-left-style: solid;
+border-left-color: #c6c6c6;
+
+margin-top:-1px;
+padding-top: 0px;
+}
+
+.egcs-crm-HeaderTile a.rolluprefreshPostsLinkSpinningWheel
+{
+margin:0px;
+}
+
+a.rolluprefreshPostsLinkSpinningWheel
+{
+background-color:transparent;
+padding-bottom:4px;
+
+margin-right:5px;
+
+}
+
+.tablet a.rolluprefreshPostsLinkSpinningWheel
+{
+padding-bottom:0px;
+}
+
+a.rolluprefreshPostsLink
+{
+display:block;
+height:13px;
+width:11px;
+overflow:hidden;
+float:right;
+border:0;
+margin-top:2px;
+
+margin-right:7px;
+margin-left:2px;
+
+}
+
+.highContrast a.rolluprefreshPostsLink
+{
+overflow:visible;
+
+margin-right:9px;
+
+}
+
+.highContrast .egcs-crm-HeaderTile a.rolluprefreshPostsLink
+{
+
+margin-right:5px;
+margin-left:0px;
+
+}
+
+.tablet .highContrast a.rolluprefreshPostsLink
+{
+
+margin-left:0px;
+
+}
+
+.highContrast a.rolluprefreshPostsLink:hover img
+{
+margin-top:0px;
+}
+
+a.rolluprefreshPostsLink:hover img , a.rolluprefreshPostsLink.hover img
+{
+margin-top: -13px;
+}
+
+a.rolluprefreshPostsLink:focus img
+{
+margin-top: -13px;
+}
+
+div.rollup.Inline-value-alignment
+{
+
+padding-left:0px !important;
+
+padding-bottom:0px;
+height:19px;
+}
+
+div.rollup.CommandBarOverlayFlyOut
+{
+width: 100%;
+height: 100%;
+z-index: 1001;
+position: absolute;
+padding:1px;
+}
+
+.egcs-crm-HeaderTile a.rolluprefreshPostsLink
+{
+
+margin-right:3px;
+
+margin-top:4px;
+}
+
+div.egcs-crm-Inline-EditIcon
+{
+position: absolute;
+z-index: 2;
+bottom: 0px;
+top: 0px;
+display:none;
+
+right: 0px;
+
+border-color: #c6c6c6;
+border-width: 1px;
+border-style: solid;
+background-color: #FFFFFF;
+}
+
+div.egcs-crm-Inline-MultiLookupEditIcon
+{
+border-bottom-color: #FFF;
+
+box-shadow: 2px 2px 2px #FFF;
+border-right-color: #FFF;
+
+}
+
+img.egcs-crm-EditLookup-Image
+{
+border-width: 0px;
+vertical-align: middle;
+margin-top: 1px;
+}
+
+img.egcs-crm-EditMultiLookup-Image
+{
+vertical-align: middle;
+margin-bottom: 1px;
+box-shadow: 1px 1px 2px #CCC;
+
+padding: 2px 1px 1px 0px;
+border-width: 0px 1px 1px 0px;
+
+}
+
+img.egcs-crm-EditLookup-Process-Image
+{
+border-width: 0px;
+vertical-align: top;
+margin-top: 0px;
+}
+
+.egcs-crm-Inline-Value div.egcs-crm-Inline-GradientMask {
+
+right: 1px;
+
+}
+
+.egcs-crm-InlineEditLabel div.egcs-crm-Inline-GradientMask,
+.egcs-crm-Inline-Value div.egcs-crm-Inline-GradientMask {
+position: absolute;
+width: 15px;
+height: 20px;
+z-index: 1;
+top: 1px;
+background: rgba(255, 255, 255, 0.25);
+
+background: -moz-linear-gradient(
+
+right,
+
+rgb(255, 255, 255) 25%,
+rgba(255, 255, 255, 0) 100%);
+
+background: -webkit-gradient(
+linear,
+
+right,
+left,
+
+color-stop(25%, rgb(255, 255, 255)),
+color-stop(100%, rgba(255, 255, 255, 0)));
+
+background: -webkit-linear-gradient(
+
+right,
+
+rgb(255, 255, 255) 25%,
+rgba(255, 255, 255, 0) 100%);
+
+background: -o-linear-gradient(
+
+right,
+
+rgb(255, 255, 255) 25%,
+rgba(255, 255, 255, 0) 100%);
+background: -ms-linear-gradient(
+
+right,
+
+rgb(255, 255, 255) 25%,
+rgba(255, 255, 255, 0) 100%);
+
+
+
+
+filter: progid:DXImageTransform.Microsoft.gradient(
+startColorstr='#40FFFFFF',
+endColorstr='#FFFFFF',
+GradientType=1);
+
+
+background: linear-gradient(
+
+right,
+
+rgb(255, 255, 255) 25%,
+rgba(255, 255, 255, 0) 100%);
+}
+
+.egcs-crm-Inline-Value.egcs-crm-Inline-EditHintState div.egcs-crm-Inline-GradientMask {
+rgba(243, 241, 241, 0.25);
+
+background: -moz-linear-gradient(
+
+right,
+
+rgb(243, 241, 241) 25%,
+rgba(243, 241, 241, 0) 100%);
+
+background: -webkit-gradient(
+linear,
+
+right, left,
+
+color-stop(25%, rgb(243, 241, 241)),
+color-stop(100%, rgba(243, 241, 241, 0)));
+
+background: -webkit-linear-gradient(
+
+right,
+
+rgb(243, 241, 241) 25%,
+rgba(243, 241, 241, 0) 100%);
+
+background: -o-linear-gradient(
+
+right,
+
+rgb(243, 241, 241) 25%,
+rgba(243, 241, 241, 0) 100%);
+
+background: -ms-linear-gradient(
+
+right,
+
+rgb(243, 241, 241) 25%,
+rgba(243, 241, 241, 0) 100%);
+
+
+
+
+filter: progid:DXImageTransform.Microsoft.gradient(
+startColorstr='#40F3F1F1',
+endColorstr='#F3F1F1',
+GradientType=1);
+
+
+background: linear-gradient(
+
+right,
+
+rgb(243, 241, 241) 25%,
+rgba(243, 241, 241, 0) 100%);
+}
+
+.egcs-crm-InlineEditLabel div.egcs-crm-Inline-GradientMask {
+top: 0px;
+}
+
+.money .egcs-crm-Inline-Value div.egcs-crm-Inline-GradientMask {
+
+}
+
+.money .egcs-crm-Inline-Value.egcs-crm-Inline-EditHintState div.egcs-crm-Inline-GradientMask {
+
+}
+
+.money .egcs-crm-Inline-Value.egcs-crm-Inline-EmptyValue div.egcs-crm-Inline-GradientMask {
+
+}
+
+.money .egcs-crm-Inline-Value.egcs-crm-Inline-EmptyValue.egcs-crm-Inline-EditHintState div.egcs-crm-Inline-GradientMask
+{
+
+}
+
+.egcs-crm-HeaderTile.egcs-crm-Inline-Value.egcs-crm-Inline-Lookup .egcs-crm-Inline-EditIcon
+{
+
+right: 2px;
+
+top: -3px;
+}
+
+.egcs-crm-HeaderTileElement .money .egcs-crm-Inline-Value.egcs-crm-HeaderTile div.egcs-crm-Inline-GradientMask {
+
+}
+
+.egcs-crm-HeaderTileElement.egcs-crm-Inline-EditHintState .money .egcs-crm-Inline-Value.egcs-crm-HeaderTile div.egcs-crm-Inline-GradientMask {
+
+}
+
+.egcs-crm-HeaderTileElement .money .egcs-crm-Inline-Value.egcs-crm-HeaderTile.egcs-crm-Inline-EmptyValue div.egcs-crm-Inline-GradientMask {
+background: rgba(255, 255, 255, 0.15);
+
+
+}
+
+.egcs-crm-HeaderTileElement.egcs-crm-Inline-EditHintState .money .egcs-crm-Inline-Value.egcs-crm-HeaderTile.egcs-crm-Inline-EmptyValue div.egcs-crm-Inline-GradientMask {
+background: rgba(243, 241, 241, 0.15);
+
+
+}
+
+.egcs-crm-HeaderTileElement .egcs-crm-Inline-Value.egcs-crm-HeaderTile div.egcs-crm-Inline-GradientMask {
+position: absolute;
+width: 40px;
+height: 24px;
+z-index: 1;
+top: 0px;
+
+right: 6px;
+
+}
+
+.egcs-crm-HeaderTileElement .egcs-crm-Inline-Value.egcs-crm-HeaderTile div.egcs-crm-Inline-GradientMask,
+.egcs-crm-HeaderTileElement .egcs-crm-InlineEditLabel div.egcs-crm-Inline-GradientMask {
+background: rgba(255, 255, 255, 0.15);
+
+background: -moz-linear-gradient(
+
+right,
+
+rgb(255, 255, 255) 15%,
+rgba(255, 255, 255, 0) 100%);
+
+background: -webkit-gradient(
+linear,
+
+right,
+left,
+
+color-stop(15%, rgb(255, 255, 255)),
+color-stop(100%, rgba(255, 255, 255, 0)));
+
+background: -webkit-linear-gradient(
+
+right,
+
+rgb(255, 255, 255) 15%,
+rgba(255, 255, 255, 0) 100%);
+
+background: -o-linear-gradient(
+
+right,
+
+rgb(255, 255, 255) 15%,
+rgba(255, 255, 255, 0) 100%);
+
+background: -ms-linear-gradient(
+
+right,
+
+rgb(255, 255, 255) 15%,
+rgba(255, 255, 255, 0) 100%);
+
+
+
+
+filter: progid:DXImageTransform.Microsoft.gradient(
+startColorstr='#03FFFFFF',
+endColorstr='#FFFFFF',
+GradientType=1);
+
+
+background: linear-gradient(
+
+right,
+
+rgb(255, 255, 255) 15%,
+rgba(255, 255, 255, 0) 100%);
+}
+
+.egcs-crm-HeaderTileElement:hover .egcs-crm-Inline-Value.egcs-crm-HeaderTile div.egcs-crm-Inline-GradientMask,
+.egcs-crm-HeaderTileElement:hover .egcs-crm-InlineEditLabel div.egcs-crm-Inline-GradientMask {
+background: rgba(243, 241, 241, 0.15);
+
+background: -moz-linear-gradient(
+
+right,
+
+rgb(243, 241, 241) 15%,
+rgba(243, 241, 241, 0) 100%);
+
+background: -webkit-gradient(
+linear,
+
+right,
+left,
+
+color-stop(15%, rgb(243, 241, 241)),
+color-stop(100%, rgba(243, 241, 241, 0)));
+
+background: -webkit-linear-gradient(
+
+right,
+
+rgb(243, 241, 241) 15%,
+rgba(243, 241, 241, 0) 100%);
+
+background: -o-linear-gradient(
+
+right,
+
+rgb(243, 241, 241) 15%,
+rgba(243, 241, 241, 0) 100%);
+
+background: -ms-linear-gradient(
+
+right,
+
+rgb(243, 241, 241) 15%,
+rgba(243, 241, 241, 0) 100%);
+
+
+
+
+filter: progid:DXImageTransform.Microsoft.gradient(
+startColorstr='#03C07E03',
+endColorstr='#C07E03',
+GradientType=1);
+
+
+background: linear-gradient(
+
+right,
+
+rgb(243, 241, 241) 15%,
+rgba(243, 241, 241, 0) 100%);
+}
+
+.egcs-crm-HeaderTileElement img.egcs-crm-ImageStrip-Recalculate_16
+{
+padding-bottom:4px;
+vertical-align: middle;
+}
+
+.egcs-crm-InlineDateTime {
+table-layout: fixed;
+width: 100%;
+border-collapse: collapse;
+min-width: 110px;
+}
+
+.egcs-crm-InlineDateTime-HiddenCell {
+display: none;
+}
+
+.egcs-crm-InlineDateTime-IconCell, .egcs-crm-InlineDuration-IconCell {
+border: 1px solid #CCCCCC;
+font-size:0;
+line-height:0;
+}
+
+.egcs-crm-Inline-Edit.egcs-crm-HeaderTile .egcs-crm-InlineDateTime-IconCell
+{
+background-color: #FFFFFF;
+}
+
+.egcs-crm-InlineDateTime-Icon, .egcs-crm-InlineDuration-Icon {
+border: 1px solid transparent;
+}
+
+.egcs-crm-InlineDateTime-Icon:hover, .egcs-crm-InlineDuration-Icon:hover {
+border: 1px solid #859CC2;
+}
+
+.egcs-crm-InlineDateTime-TimeCell {
+border: 1px solid #CCCCCC;
+}
+
+.egcs-crm-InlineDuration-InputTable {
+table-layout: fixed;
+border-collapse: collapse;
+width: 100%;
+}
+
+.egcs-crm-InlineDuration-Icon {
+cursor: pointer;
+}
+
+.egcs-crm-InlineDuration-InputTable .egcs-crm-Select-Input-Container,
+.egcs-crm-InlineDuration-InputTable .egcs-crm-InlineDuration-IconCell {
+border: 1px solid #CCCCCC;
+}
+
+.egcs-crm-InlineDateTime .egcs-crm-Select-Input-Container,
+.egcs-crm-InlineDateTime .egcs-crm-InlineDuration-IconCell {
+border: 0;
+}
+
+.egcs-crm-Select-Input-Container
+{
+
+}
+
+.egcs-crm-InlineDateTime .egcs-crm-InlineDuration-InputTable .egcs-crm-InlineDuration-IconCell {
+
+border-left: 1px solid #CCCCCC;
+
+}
+
+.egcs-crm-Inline-OptionSet-AutoOpen {
+position: relative;
+z-index: 10000;
+}
+
+.won-lost-inline-edit-control .egcs-crm-Inline-Edit INPUT.egcs-crm-Input,
+.won-lost-inline-edit-control .egcs-crm-Inline-Edit INPUT.egcs-crm-InlineInput,
+.won-lost-inline-edit-control textarea.egcs-crm-InlineInput,
+.egcs-crm-HeaderTile.egcs-crm-Inline-Value {
+font-weight:500;
+}
+
+.egcs-crm-InlineDateTime-TimeCell INPUT.egcs-crm-SelectBox
+{
+
+font-weight : 700;
+
+}
+
+.egcs-crm-InlineTimerControl
+{
+width: auto;
+vertical-align:middle !important;
+}
+
+.egcs-crm-InlineTimerControl-Icon
+{
+width:16px;
+height:16px;
+margin-top:4px;
+
+margin-right:4px;
+float:left;
+
+}
+
+DIV.egcs-crm-InlineTimerControl-MainDiv
+{
+height:100%;
+position:relative;
+
+margin-left:-3px;
+padding-left:3px;
+
+}
+
+.egcs-crm-InlineTimerControl-InnerDiv
+{
+position:absolute;
+top:25%;
+
+left:1%;
+right:0%;
+
+}
+
+.egcs-crm-InlineTimerControl-Time
+{
+font-family: "SegoeUI\00002DSemibold","Segoe\000020UI\000020SemiBold";
+font-weight:600;
+white-space:nowrap;
+text-overflow:ellipsis;
+overflow:hidden;
+display:block;
+
+margin-right:2px;
+
+}
+
+.TimerControlTimerRow
+{
+font-size: 18px;
+font-family:Segoe\000020UI,Tahoma,Arial;
+color:#000000;
+}
+.TimerControlTimerRow-Warning
+{
+color:#f09b21;
+}
+.TimerControlTimerRow-Expired
+{
+color:#ff0000;
+}
+.TimerControlTimerRow-Failed
+{
+color:#ff0000;
+}
+.TimerControlTimerRow-Succeeded
+{
+color:#5c9559;
+}
+
+.TimerControlLabel
+{
+color:#666666 !important;
+white-space:nowrap;
+overflow:hidden;
+}
+
+
+
+
+
+img.recnav-leftcap,
+img.recnav-rightcap
+{
+height : 21px;
+width : 2px;
+
+
+}
+
+img.recnav-dropdown
+{
+height : 21px;
+width : 15px;
+}
+
+span.recnav-dropdown
+{
+width : 100px;
+height : 19px;
+margin-bottom : 4px;
+}
+
+
+img.recnav-dropdownfiller-disabled,
+img.recnav-dropdownfiller-rest,
+span.recnav-dropdown-rest
+{
+
+color : #23272c;
+}
+
+span.recnav-dropdown-disabled
+{
+
+color: #999999;
+}
+
+span.recnav-dropdown-hover,
+img.recnav-dropdownfiller-hover
+{
+
+color : #23272c;
+}
+span.recnav-dropdown-selected,
+img.recnav-dropdownfiller-selected
+{
+
+color : #23272c;
+}
+span.recnav-dropdown
+{
+overflow : hidden;
+text-overflow : ellipsis;
+
+height : 21px;
+width : 100px;
+display: inline-block;
+
+vertical-align : top;
+
+line-height : 21px;
+
+
+margin-left : 5px;
+
+
+
+
+
+font-family:Segoe\000020UI,Tahoma,Arial;
+font-size: 11px;
+font-weight: normal;
+}
+img.recnav-dropdown-filler
+{
+height : 21px;
+width : 5px;
+}
+
+span.egcs-crm-Form-RecNav
+{
+position: absolute;
+
+right: 7px;
+
+}
+span.egcs-crm-Form-RecNav.recordSetControlProxy
+{
+position: static;
+line-height: 28px;
+}
+
+a.recnav-up,
+a.recnav-down,
+a.recnav-dropdown
+{
+font-size: 11px;
+display: inline-block;
+vertical-align: top;
+text-align: left;
+height: 21px;
+}
+a.recnav-dropdown
+{
+border-width: 1px;
+border-style: solid;
+}
+a.recnav-up,
+a.recnav-down
+{
+border-top-width: 1px;
+border-top-style: solid;
+border-bottom-width: 1px;
+border-bottom-style: solid;
+
+
+border-right-width: 1px;
+border-right-style: solid;
+
+}
+#contextualActionBar
+{
+position: absolute;
+top: 0;
+
+right: 8px;
+
+}
+.recordSetControlProxy > .recnav-up,
+.recordSetControlProxy > .recnav-down
+{
+border: 0;
+height: auto;
+}
+#popoutButton,#hierarchyButton
+{
+vertical-align: top;
+font-size: 0;
+}
+.contextualAction
+{
+display: inline-block;
+
+margin-left: 1px;
+
+}
+
+
+.egcs-crm-InlineMultiPicklist
+{
+display:block;
+}
+
+.egcs-crm-InlineMultiPicklist INPUT.egcs-crm-InlineMultiPicklist-Checkbox
+{
+width: auto;
+}
+
+.egcs-crm-InlineMultiPicklist .egcs-crm-selectedmultiboxitem
+{
+width:auto;
+background-color:#eeeeee;
+margin-left:2px;
+margin-right:2px;
+}
+
+.egcs-crm-InlineMultiPicklist nobr
+{
+display: block;
+height: 24px;
+}
+
+.egcs-crm-InlineMultiPicklist .egcs-crm-InlineMultiPicklist-Checkbox
+{
+vertical-align: middle;
+height:24px;
+padding:0px;
+
+margin:0px 0px 0px 8px;
+
+}
+.egcs-crm-InlineMultiPicklist label
+{
+width: 80%;
+
+margin:0px 0px 0px 8px;
+
+display: inline-block;
+white-space: nowrap;
+overflow-x: hidden;
+text-overflow: ellipsis;
+color: #000000;
+padding: 0px 0px 2px 0px;
+vertical-align: middle;
+}
+
+.egcs-crm-InlineMultiPicklist .egcs-crm-selectedmultiboxitem .egcs-crm-InlineMultiPicklist-Checkbox
+{
+
+margin:0px 0px 0px 6px;
+
+}
+
+.hiddenAriaStyle
+{
+position : absolute;
+left : -10000px;
+top : auto;
+width : 1px;
+height : 1px;
+overflow : hidden;
+}
+
+.rollupError .ui-dialog-title
+{
+font-size: 35px;
+padding-left: 30px;
+max-width: 615px;
+}
+
+.rollupError div.rollupRuntimeError-dialog-icon
+{
+padding-left: 30px;
+}
+
+.rollupError .rollupRuntimeError-dialog-detail
+{
+position: absolute;
+top: 15px;
+left: 100px;
+}
+
+
+

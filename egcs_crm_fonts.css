@@ -1,0 +1,554 @@
+
+
+
+
+
+
+
+
+body,
+input,
+select,
+textarea,
+table.egcs-crm-Loading,
+DIV.egcs-crm-Grid-Title
+{
+font-family:Segoe\000020UI,Tahoma,Arial;
+font-size: 11px;
+}
+
+td
+{
+font-size: 11px;
+}
+
+th
+{
+font-size: 11px;
+font-weight: normal;
+}
+
+a,
+a:link img,
+a:link,
+a:visited img,
+a:visited,
+a:active img,
+a:active,
+a:hover img,
+a:hover
+{
+font-weight: normal;
+text-decoration: none;
+}
+
+h2
+{
+font-size: 16px;
+}
+button
+{
+font-size: 11px;
+}
+
+
+
+
+.egcs-crm-Emphasis-Strong,
+.egcs-crm-Bold-Header,
+.egcs-crm-Column-SelectWidth,
+.egcs-crm-Field-Label-Print,
+.egcs-crm-Gantt-Progress-Label,
+.egcs-crm-List-IndexItem,
+.egcs-crm-List-PreviewLabel,
+.egcs-crm-List-SelectedIndex,
+.egcs-crm-MastHead-SignIn-User,
+.egcs-crm-Unblock-Content-Link,
+.egcs-crm-Wsdl-Title,
+A.egcs-crm-Cal-Week-Header,
+A.egcs-crm-Cal-Week-Header:active,
+A.egcs-crm-Cal-Week-Header:hover,
+A.egcs-crm-Cal-Week-Header:link,
+A.egcs-crm-Cal-Week-Header:visited,
+A.egcs-crm-TaskTree:active,
+A.egcs-crm-TaskTree:hover,
+A.egcs-crm-TaskTree:link,
+A.egcs-crm-TaskTree:visited,
+div.formproperties_div,
+div.ganttBlockSelected,
+DIV.egcs-crm-AddUsers-Licensing-AccessModeLabel,
+DIV.egcs-crm-Cal-Week-Header,
+DIV.egcs-crm-GettingStarted-Title,
+GanttControlFrame_label,
+Input.wfStageDescription,
+div.wfStageDescription,
+legend.egcs-crm-recurrence-dialog-section-title,
+SPAN.attachment,
+span.bodyheader,
+span.location,
+SPAN.egcs-crm-AdvFind-Message,
+SPAN.egcs-crm-Menu-Group,
+SPAN.egcs-crm-Menu-Group-Opened,
+SPAN.egcs-crm-Menu-Group-Hovered,
+SPAN.egcs-crm-NextButton,
+SPAN.egcs-crm-WizardForm-Header-Title,
+td.am,
+TD.egcs-crm-AdvFind-Label,
+TD.egcs-crm-AdvFind-TitleLabel,
+TD.egcs-crm-Form-Section,
+DIV.egcs-crm-Form-Section,
+div.egcs-crm-Form-StatusBar,
+TD.egcs-crm-Form-StatusBar,
+DIV.egcs-crm-Menu-Title,
+td.pm,
+td.zoomheader,
+TEXTAREA.wfStageDescriptionReadOnly,
+TEXTAREA.wfStepDescriptionReadOnly,
+DIV.wfStageDescriptionReadOnly,
+DIV.wfStepDescriptionReadOnly,
+.egcs-crm-Form-FooterContanier TD.egcs-crm-Field-Data-Print,
+TR.feEntityHeadingText
+{
+font-weight: bold;
+}
+
+TD.noteCreatedField
+{
+font-weight: normal;
+}
+
+TD.noteSubjectField
+{
+font-weight: 600;
+}
+
+TABLE.headerContainerTable ms-crm-Field-Label-Print,
+TABLE.headerContainerTable ms-crm-Field-Data-Print,
+.egcs-crm-Form-FooterContainer TD.egcs-crm-Field-Label-Print,
+.egcs-crm-Emphasis-None,
+span.InformationItem
+{
+font-weight: normal;
+}
+
+.egcs-crm-Menu-Text
+{
+font-size: 11px;
+}
+
+.egcs-crm-Error-Header
+{
+font-size: 14px;
+font-weight: bold;
+}
+DIV.egcs-crm-Dialog-Header-Title
+{
+font-weight:	bold;
+font-size:		13px;
+}
+DIV.egcs-crm-RefreshDialog-Header-Title,
+TD.egcs-crm-RefreshDialog-Error-Title
+{
+font-weight:	Lighter;
+font-size:		27px;
+}
+.egcs-crm-Field-Required
+{
+font-weight:	normal;
+}
+.egcs-crm-Field-Recommended
+{
+font-weight:		normal;
+}
+.egcs-crm-NavHeader-Title,
+.egcs-crm-ContextHeader-Title,
+.egcs-crm-Dialog-Title-Reversed,
+.egcs-crm-Dialog-Title
+{
+font-weight:    bold;
+font-size:      14px;
+}
+
+.egcs-crm-Setting-ContextHeader-Title
+{
+font-size:      21px;
+}
+
+TABLE.popupMenu
+{
+font-size: 11px;
+}
+span.egcs-crm-Form-Title
+{
+font-size:		11px;
+font-weight:	bold;
+}
+span.egcs-crm-solution-title
+{
+font-size:		11px;
+font-weight:	bold;
+}
+.egcs-crm-Form-Breadcrumb
+{
+font-size:		18px;
+font-weight:	bold;
+}
+
+
+
+
+
+li.egcs-crm-Tab
+{
+font-size: 11px;
+}
+DIV.wizHead
+{
+font-weight: bold;
+font-size: 10px;
+}
+
+
+
+
+.egcs-crm-Error-AdditionalInformation
+{
+font-weight:bold;
+font-size:10px;
+}
+TD.egcs-crm-Dialog-Error-Title
+{
+font-weight:	bold;
+font-size:		14px;
+font-family:    Segoe\000020UI,Tahoma,Arial;
+}
+TD.egcs-crm-Dialog-Error-Body
+{
+font-size:		11px;
+font-family:    Segoe\000020UI,Tahoma,Arial;
+}
+A.egcs-crm-Dialog-Error-Link,
+A.egcs-crm-Dialog-Error-Link:hover
+{
+font-size:		11px;
+font-family:    Segoe\000020UI,Tahoma,Arial;
+}
+.egcs-crm-Grid-Title-Print
+{
+font-size: 16px;
+font-weight: bold;
+}
+TD.egcs-crm-MastHead-SignIn
+{
+font-size: 11px;
+}
+div.aboutdefault_div_warnings
+{
+font-size:10px;
+font-weight: normal;
+}
+div.Articlesedit_article_div_secEdit
+{
+font-size: 9pt;
+}
+.egcs-crm-StatusBar-Copyright
+{
+font-size:          9px;
+}
+table.egcs-crm-ViewForm-Header
+{
+font-size:			11px;
+}
+td.egcs-crm-SignIn-Banner
+{
+font-size:18px;
+font-weight: bold;
+}
+
+TH.egcs-crm-Group-Links,
+TH.egcs-crm-Group,
+A.egcs-crm-Nav-Group-Heading,
+A.egcs-crm-Nav-Group-Heading:link,
+A.egcs-crm-Nav-Group-Heading:visited,
+A.egcs-crm-Nav-Group-Heading:active,
+A.egcs-crm-Nav-Group-Heading:hover,
+NOBR.egcs-crm-Nav-Group-Heading
+{
+font-weight: bold;
+font-size: 11px;
+}
+A.egcs-crm-Nav-Area,
+A.egcs-crm-Nav-Area:link,
+A.egcs-crm-Nav-Area:visited,
+A.egcs-crm-Nav-Area:active,
+A.egcs-crm-Nav-Area:hover
+{
+font-weight: bold;
+font-size: 11px;
+}
+
+TR.egcs-crm-MiniCal-Nav,
+TD.egcs-crm-MiniCal-DayOfWeek,
+TD.egcs-crm-MiniCal-Week-Number,
+TD.egcs-crm-MiniCal-Day,
+TD.egcs-crm-MiniCal-TodayBar,
+TD.egcs-crm-MiniCal-TodayBar-Hovered,
+DIV.egcs-crm-MiniCal-TodayBar
+{
+font-size: 8pt;
+}
+input.egcs-crm-SelectBox
+{
+font-size: 11px;
+}
+SELECT.egcs-crm-SelectBox,
+SELECT.egcs-crm-SelectBox-WorkflowDesigner
+{
+font-size:			11px;
+}
+.subtitle
+{
+font-size: 14px;
+font-weight: bold;
+}
+A.linktitle,
+A.linktitle:link,
+A.linktitle:visited,
+A.linktitle:active,
+A.linktitle:hover
+{
+font-size: 14px;
+font-weight: bold;
+}
+
+A.linktitlesm,
+A.linktitlesm:link,
+A.linktitlesm:visited,
+A.linktitlesm:active,
+A.linktitlesm:hover
+{
+font-size: 11px;
+font-weight: bold;
+}
+
+div.linkhelp
+{
+font-size: 11px;
+}
+
+TEXTAREA.egcs-crm-Note-Text,
+TD.noteEditedField,
+TEXTAREA.egcs-crm-Note-Text-create
+{
+font-size: 12px;
+}
+
+DIV.Notification
+{
+font-size:			8pt;
+}
+span.CategoryHeadingText
+{
+font-size:		8pt;
+}
+div.CategoryBody
+{
+font-size:			8pt;
+}
+TD.RelatedInformationTitle
+{
+font-weight:bold;
+font-size:11px;
+}
+DIV.AreaHeading
+{
+font-size:			8pt;
+font-weight:		bold;
+}
+SELECT.ContextSelect
+{
+font-size:			8pt;
+}
+DIV.InformationLoading
+{
+font-size:		8pt;
+}
+DIV.InformationMessage
+{
+font-size:		8pt;
+}
+
+
+div.info
+{
+font-size: 16px;
+font-weight: normal;
+}
+div.release
+{
+font-weight: bold;
+font-size: 12px;
+}
+span.norm
+{
+font-weight:normal;
+font-size:11px;
+}
+body.egcs-crm-Cal-Body
+{
+font-size:			11px;
+}
+td.egcs-crm-ArticleComment-Title
+{
+font-size: 8pt;
+font-weight: bold;
+}
+td.egcs-crm-ArticleComment-Body
+{
+font-size: 8pt;
+}
+td.egcs-crm-ArticleComment-Info
+{
+font-size: 7pt;
+}
+div.egcs-crm-Help-ErrorMessage
+{
+font-weight:bold;
+font-size:16px;
+}
+span.egcs-crm-Viz-Name,
+span.egcs-crm-Viz-Name-hover,
+span.egcs-crm-Viz-Name-select,
+label.egcs-crm-viz-hd,
+.egcs-crm-Help-Toc-Heading
+{
+font-size: 13px;
+}
+.egcs-crm-Gantt-Progress-Cancel
+{
+font-size:9;
+}
+span.calendarTitle
+{
+font-size:			8pt;
+font-weight:		bold;
+}
+div.ganttHeaderTop
+{
+font-weight: bold;
+font-size: 10px;
+}
+body.ganttFrame
+{
+font-size: 6pt;
+}
+div.ganttHeaderBottom
+{
+font-size: 9px;
+}
+.egcs-crm-Salesperson-Error
+{
+font-size:12px;
+}
+TABLE.example
+{
+font-size:			5px;
+}
+TD.example
+{
+font-size:			3px;
+}
+TABLE.gridheader
+{
+font-size:			11px;
+}
+TABLE.visualizationImageTable
+{
+font-family:        Tahoma,Verdana,Arial;
+}
+tr.gridheader
+{
+font-size:			11px;
+}
+.egcs-crm-File-Upload
+{
+font-size:			8pt;
+}
+.egcs-crm-SubjectTree-Label
+{
+font-size:12px;
+font-weight:bold;
+}
+div.manageAttribute_div_SchemaName
+{
+font-size:8pt;
+}
+input.icon
+{
+font-size:		8pt;
+}
+div.egcs-crm-ViewManager
+{
+font-size:11px;
+}
+div.secTitle
+{
+font-weight:bold;
+font-size: 11px;
+}
+div.WizardTitle
+{
+font-weight: bold;
+font-size: 11px;
+}
+TD.egcs-crm-WizardForm-Header-Title
+{
+font-size: 14px;
+}
+A.egcs-crm-InlineTabHeaderText,
+A.egcs-crm-InlineTabHeaderText:link,
+A.egcs-crm-InlineTabHeaderText:visited,
+A.egcs-crm-InlineTabHeaderText:active,
+A.egcs-crm-InlineTabHeaderText:hover
+{
+font-size: 14px;
+font-weight: bold;
+}
+
+DIV.egcs-crm-Tab-Print
+{
+font-size:			11pt;
+font-weight:		bolder;
+}
+
+LABEL.DashboardNameHint
+{
+font-size: 14px;
+}
+DIV.editor
+{
+font-family: Tahoma,Verdana,Arial;
+font-size: 10px;
+}
+li.egcs-crm-CommandBarItem
+{
+font-size: 12px;
+text-transform: uppercase;
+}
+div.ui-dialog-content li.egcs-crm-CommandBarItem
+{
+font-size: 12px;
+text-transform: none;
+}
+li.egcs-crm-CommandBar-MoreMenu
+{
+font-size: 14px;
+font-weight:bold;
+}
+.egcs-crm-RefreshDialog-Button,
+.egcs-crm-RefreshDialog-Header-Desc,
+.egcs-crm-RefreshDialog-Main,
+.egcs-crm-RefreshDialog-Main-HeaderLess
+{
+font-size: 12px;
+}

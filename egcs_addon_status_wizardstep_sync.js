@@ -4,7 +4,9 @@
 
 
 
-function getParamObject(params) {
+
+
+function getParamObjects(params) {
 	var arry = params.split(",")
 	var arrOfObjects = [];	
 	for (var i in arry) {
@@ -13,6 +15,7 @@ function getParamObject(params) {
 		var wizardStep = arry[i].split(":")[1];
 	
 		arrOfObjects.push({
+			index: i,
 			status1: status,
 			wizardStep: wizardStep
 		})
@@ -30,35 +33,68 @@ function getCurrentStatus(paramObjects) {
 	return null;
 }
 
+
+
+
 function setup(params) {
-	console.log(Xrm.Page.getAttribute("statuscode").getValue())
-	console.log(params);
-	var paramObjects = getParamObject(params)
-	
-	console.log(paramObjects);
-	var currentStatusObject = getCurrentStatus(paramObjects) 
-	if (currentStatusObject) {
-		var stepToActivate = currentStatusObject.wizardStep;
-		console.log(stepToActivate)
-	} else {
-		console.log("wrong")
-	}
-	var activePathCollection = Xrm.Page.data.process.getActivePath();
-	// activePathCollection.forEach(function(stage, e) {
-	// 	console.log(stage.getName());
-	// 	console.log(stage.getId());
-	  setTimeout(function() {
-	  	// Xrm.Page.data.process.setSelectedStage('1364d75a-208d-6a52-36d9-a4d09e15e349');
-		Xrm.Page.data.process.moveNext();
-	  }, 500)
+
+
 		
+	var statuses = getParamObjects(params)
+	console.log(statuses)
+	var currentStatus = getCurrentStatus(statuses)
+	
+	var stepAttributes = [];
+	var hiddenStepAttributes = [];
 
-		// var steps = stage.getSteps();
-		// steps.forEach(function(step, i) {
-		// 	console.log(step)
-		// 	// console.log(step.getName());
-		// })
-	// })
+	if (statuses.length > 0) {
+		var indexOfCurrentlyActive = 0;
+		Xrm.Page.data.process.getActiveProcess().getStages().get(function(attribute, index){					
+			var isActive = attribute.getStatus();
+			
+			//only get stages that are not hidden
+			var parentElemClass = document.querySelector('div[title*="'+attribute.getName()+'"]').parentNode.className
+			if (parentElemClass.indexOf("hideStage").length > 0) {
+				stepAttributes.push({index: index, attribute: attribute.getName(), status:isActive, isHidden: true})
+			} else {
+				stepAttributes.push({index: index, attribute: attribute.getName(), status:isActive, isHidden: false})
+			}
+
+			console.log(attribute.getName())
+
+		
+										
+		})
+
+		for (var i in stepAttributes) {
+			var attribute = stepAttributes[i]			
+			if (attribute.status === "active") {
+				indexOfCurrentlyActive = attribute.index;
+			}
+		}		
+
+		if (currentStatus.index < indexOfCurrentlyActive) {
+			
+			for (var i = indexOfCurrentlyActive;i>=currentStatus.index;i--) {
+				if (stepAttributes[i].isHidden == false) {
+					Xrm.Page.data.process.movePrevious();
+				}
+			}
+		}
+
+		if (currentStatus.index > indexOfCurrentlyActive) {
+			
+			for (var i = indexOfCurrentlyActive;i<=currentStatus.index;i++) {
+				if (stepAttributes[i].isHidden == false) {
+					Xrm.Page.data.process.moveNext();
+				}
+			}
+		}
+
+
+	}	
 	
 
+	
 }
+	

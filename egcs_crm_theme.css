@@ -1,0 +1,2008 @@
+
+
+body.egcs-crm-Setting-Context-top,
+body
+{
+	background-color:#FFFFFF;
+	scrollbar-3dlight-color:#F0F0F0;
+	scrollbar-arrow-color:#1E395B;
+	scrollbar-base-color:#CDCDCD;
+	scrollbar-darkshadow-color:#F0F0F0;
+	scrollbar-face-color:#CDCDCD;
+	scrollbar-highlight-color:#CDCDCD;
+	scrollbar-shadow-color:#CDCDCD;
+	scrollbar-track-color:#F0F0F0;
+
+}
+
+div.egcs-crm-TopBarContainerGlobal
+{
+	background-color:#FFFFFF;
+	background-image:url(/_imgs/theme/Outlook15White/Masthead.png?ver=1399901605);
+
+}
+
+div.egcs-crm-TopBarContainerForm
+{
+	background-image:none;
+
+}
+
+A.egcs-crm-MastHead-UserInfo-Other,
+SPAN.egcs-crm-MastHead-UserInfo-Other
+{
+	color:#444444;
+
+}
+
+A.egcs-crm-MastHead-UserInfo-Record,
+SPAN.egcs-crm-MastHead-UserInfo-Record
+{
+	color:#444444;
+
+}
+
+A.egcs-crm-MastHead-UserInfo-SignOut,
+SPAN.egcs-crm-MastHead-UserInfo-SignOut
+{
+	color:#0072C6;
+
+}
+
+A.egcs-crm-MastHead-UserInfo-Record-SignOut,
+SPAN.egcs-crm-MastHead-UserInfo-Record-SignOut
+{
+	color:#0072C6;
+
+}
+
+
+table.htmlBar
+{
+	background-color:#EEEEEE;
+	border-color:#C6C6C6;
+
+}
+
+SPAN.htmlBtnHideable
+{
+	color:#001938;
+
+}
+
+DIV.egcs-crm-AdvFind-TitleArea
+{
+	background-color:#FFFFFF;
+
+}
+
+DIV.egcs-crm-AdvFind-EmptyField,
+DIV.egcs-crm-AdvFind-SelectedFilterField
+{
+	border-color:#C6CBD2;
+
+}
+
+div.egcs-crm-Context-cell,
+div.egcs-crm-ContextHeader-Title,
+div.egcs-crm-Setting-ContextHeader-Title,
+table.home_import_table,
+td.homepage_menubar,
+.egcs-crm-appgridmenubar,
+.homepage_table,
+DIV.feFilterEditor,
+.feAFControls,
+TABLE.egcs-crm-AdvFind-Title-table-WithTopBorder,
+TABLE.egcs-crm-AdvFind-Title-table,
+DIV.egcs-crm-AdvFindControl,
+.egcs-crm-menutopborder,
+.egcs-crm-PaneControl-LeftRight-footer,
+.egcs-crm-PaneControl-TopDown-footer,
+.egcs-crm-CC-splitter,
+div.dashboard-brdr,
+.egcs-crm-control-SideStrip,
+table.egcs-crm-control-strip-table,
+IFRAME.egcs-crm-Email-Body,
+IFRAME.egcs-crm-Custom,
+div.egcs-crm-DataField,
+div.egcs-crm-ToolBar-Shadow,
+TD.egcs-crm-control-SideStrip-LeftRight,
+TD.egcs-crm-visualizationpane-paneTD
+{
+	border-color:#FFFFFF;
+
+}
+
+TD.egcs-crm-Cal-Day-Time
+{
+	background-color:#FFFFFF;
+
+}
+
+DIV.egcs-crm-Home-Cal-Body
+{
+	color:#444444;
+	background-color:#FFFFFF;
+
+	border-color:#849DBD;
+
+}
+
+div.egcs-crm-Home-Cal-CreateNew-Title,
+DIV.egcs-crm-Home-Cal-Header
+{
+	color:#111111;
+
+}
+
+div.egcs-crm-Home-Cal-Views-Title
+{
+	color:#111111;
+
+	border-color:#DBDEE1;
+
+}
+
+Div.egcs-crm-Cal-Week-Header
+{
+	border-color:#DBDEE1;
+
+}
+
+TD.egcs-crm-Cal-Month-Nav
+{
+	background-color:#EEEEEE;
+	border-color:#FFFFFF;
+
+}
+
+ul.egcs-crm-Home-Cal-CreateNew-Items,
+body.egcs-crm-Cal-Body
+{
+	color:#000000;
+
+	border-color:#DBDEE1;
+
+}
+td.ganttHeaderRowBottom,
+div.ganttHeaderTop,
+div.ganttContainer,
+div.gridSpacer
+{
+	border-color:#B9CDE1;
+
+}
+
+hr.separator
+{
+	color:#B9CDE1;
+
+}
+
+div#ganttPageBodyTable,
+div.calendarPane
+{
+	background-color:#FFFFFF;
+
+}
+
+div.gridSpacer,
+div.ganttSheetHeader,
+td.bottomSpacerBar
+{
+	background-color:#F0F6FC;
+
+}
+
+TABLE.egcs-crm-Cal-Month-DayOfWeek-Header
+{
+	background-color:#FFFFFF;
+
+}
+TD.egcs-crm-Cal-Month-Day-NotCurrent
+{
+	background-color:#FFFFFF;
+
+}
+
+TD.egcs-crm-Cal-Month-Day,
+TD.egcs-crm-Cal-Month-DayOfWeek
+{
+	border-color:#B9CDE1;
+
+}
+
+DIV.egcs-crm-MenuBar
+{
+	background-image:url(/_imgs/theme/Outlook15White/form_toolbar_back.png?ver=1399901605);
+
+}
+
+div#rofContainer,
+div#readFormNavContainer,
+div#rofContainer div.egcs-crm-Form-Container
+{
+	background-color:#FFFFFF;
+	border-color:#FFFFFF;
+
+}
+
+UL.egcs-crm-MenuList,
+div.egcs-crm-Standard-Popup,
+SPAN.egcs-crm-Menu-Group,
+SPAN.egcs-crm-Menu-Group-Opened,
+SPAN.egcs-crm-Menu-Group-Hovered
+{
+	background-image:url(/_imgs/theme/Outlook15White/RightClickMenuChannel.png?ver=1399901605);
+
+}
+
+button
+{
+	border-color:#666666;
+	background-image:url(/_imgs/theme/Outlook15White/ButtonNormalGradient.png?ver=1399901605);
+
+}
+
+BUTTON.egcs-crm-Button-Hover
+{
+	border-color:#336699;
+	background-image:url(/_imgs/theme/Outlook15White/ButtonSelectedGradient.png?ver=1399901605);
+
+}
+
+DIV.feEntityHeadingBar,
+.egcs-crm-PaneControl-LeftRight-footer,
+.egcs-crm-PaneControl-TopDown-footer,
+TD.egcs-crm-gridPaneSepMotionHorTD,
+DIV.egcs-crm-gridPaneSepMotionHorDiv,
+div.egcs-crm-gridPaneSepDivVer,
+DIV.egcs-crm-WizardForm-Main,
+table.egcs-crm-Form-Title,
+TABLE.egcs-crm-Form-Title-NoNav,
+DIV.egcs-crm-Form-Layout,
+TABLE.egcs-crm-Form-Layout
+{
+	background-color:#FFFFFF;
+
+}
+
+span.egcs-crm-Form-Entity-Name
+{
+	color:#111111;
+
+vertical-align: bottom;
+}
+
+.egcs-crm-Form-Breadcrumb,
+h1.egcs-crm-Form
+{
+	color:#111111;
+
+}
+
+h1.egcs-crm-FormMenuBarHeader
+{
+	color:#3B3B3B;
+
+}
+
+.egcs-crm-FormMenuBarBreadcrumb
+{
+	color:#000000;
+
+}
+
+h2.egcs-crm-Form
+{
+	color:#0072C6;
+
+}
+
+h3.egcs-crm-Form,
+.refresh-form h2.egcs-crm-Form
+{
+	color:#000000;
+
+}
+
+TD.noteSubjectField
+{
+	color:#444444;
+
+}
+
+TD.egcs-crm-Form-SectionBar
+{
+	border-bottom-color:#FFFFFF;
+
+}
+DIV.egcs-crm-Form-SectionBar
+{
+	border-bottom-color:#FFFFFF;
+
+}
+BODY.NotesData hr
+{
+	color:#FFFFFF;
+	background-color:#FFFFFF;
+	background-image:url(/_imgs/theme/Outlook15White/app_back.png?ver=1399901605);
+
+}
+
+.noteHeaderSelected,
+.noteTextAreaSelected
+{
+	background-color:#B1D6F0;
+
+}
+
+TD.egcs-crm-Field-Recommended,
+DIV.egcs-crm-Field-Recommended,
+TD.egcs-crm-Field-Normal,
+TD.egcs-crm-ReadField-Normal,
+DIV.egcs-crm-ReadField-Normal
+{
+	color:#111111;
+
+}
+.egcs-crm-Form-HeaderContainer
+{
+	background-color:#FFFFFF;
+	border-color:#FFFFFF;
+
+}
+
+DIV.egcs-crm-InlineTabContainer-Read
+{
+	background-color:#FFFFFF;
+	border-color:#FFFFFF;
+
+}
+
+.egcs-crm-Form-Page
+{
+	background-color:#FFFFFF;
+	border-color:#FFFFFF;
+
+	background-image:url(/_imgs/theme/Outlook15White/FormHeaderGradientTop.png?ver=1399901605);
+
+}
+
+TABLE.headerContainerTable .egcs-crm-Field-Label-Print,
+DIV.egcs-crm-Field-Normal
+{
+	color:#666666;
+
+}
+
+.egcs-crm-Field-Required
+{
+	color:#000000;
+
+}
+
+DIV.egcs-crm-Form-HeaderContainer,
+A.egcs-crm-Masthead-LaunchMobileExpress
+{
+	color:#FFFFFF;
+
+}
+
+.egcs-crm-Form-FooterContainer TD.egcs-crm-Field-Label-Print,
+.egcs-crm-Form-Title-Label
+{
+	color:#444444;
+
+}
+
+TABLE.headerContainerTable .egcs-crm-Field-Data-Print
+{
+	color:#444444;
+
+}
+
+.egcs-crm-Form-FooterContainer TD.egcs-crm-Field-Data-Print,
+.egcs-crm-Form-Title-Data,
+.egcs-crm-Form-Title-Data h1,
+.egcs-crm-LookupItemText-Color,
+TD.RelatedInformationTitle
+{
+	color:#262626;
+
+}
+
+.egcs-crm-Field-Label-Print
+{
+	color:#111111;
+
+}
+
+.egcs-crm-Field-Data-Print
+{
+	color:#000000;
+
+}
+
+a.egcs-crm-List-Message-Link-Lite,
+INPUT.egcs-crm-Email-Address,
+INPUT.egcs-crm-LiveId-Email-Address,
+SPAN.egcs-crm-Lookup-Item,
+INPUT.egcs-crm-Url
+{
+	color:#0072C6;
+
+}
+
+SPAN.egcs-crm-Lookup-Item SPAN.egcs-crm-LookupItem-Name,
+SPAN.egcs-crm-CommandBar-Menu
+{
+	color:#444444;
+
+}
+
+SPAN.egcs-crm-Lookup-Item SPAN.egcs-crm-LookupItem-Seperator
+{
+	color:#444444;
+
+}
+
+DIV.egcs-crm-Form-Information-Title
+{
+	background-color:#FFFFFF;
+	border-bottom-color:#C4D9F6;
+
+}
+
+.egcs-crm-Dashboard-Background,
+.egcs-crm-Form-Dashboard,
+.egcs-crm-Dashboard-Body,
+.egcs-crm-NRForm-Main-Container,
+.egcs-crm-Form-AreaContainer-qrk,
+BODY.NotesData,
+div.egcs-crm-InlineTab
+{
+	background-color:#FFFFFF;
+
+}
+
+ul.egcs-crm-TabBar
+{
+	border-left-color:#DDDDDD;
+
+}
+
+li.egcs-crm-Tab
+{
+	border-top-color:#DDDDDD;
+	border-bottom-color:#FFFFFF;
+	border-left-color:#DDDDDD;
+	border-right-color:#DDDDDD;
+	background-image:url(/_imgs/theme/Outlook15White/TabFlat.gif?ver=1399901605);
+
+}
+
+li.egcs-crm-Tab-Selected
+{
+	background-color:#FFFFFF;
+	background-image:none;
+
+}
+
+div.egcs-crm-TabS,
+div.egcs-crm-Tab
+{
+	border-top-color:#DDDDDD;
+	border-bottom-color:#DDDDDD;
+	border-left-color:#DDDDDD;
+	border-right-color:#DDDDDD;
+
+}
+
+DIV.egcs-crm-MiniCal-TodayBar,
+TD.egcs-crm-MiniCal-TodayBar,
+TD.egcs-crm-MiniCal-DayOfWeek,
+TD.egcs-crm-MiniCal-Week-Number,
+TD.egcs-crm-MiniCal-Day
+{
+	color:#444444;
+	background-color:#FFFFFF;
+
+}
+
+TD.egcs-crm-MiniCal-Header
+{
+	background-color:#EEEEEE;
+
+}
+TD.egcs-crm-MiniCal-Day-Today
+{
+	border-color:#B1D6F0;
+	border-width:1px;
+	border-style:solid;
+
+}
+
+TD.egcs-crm-MiniCal-Month,
+TD.egcs-crm-MiniCal-TodayBar,
+TD.egcs-crm-MiniCal-TodayBar-Hovered
+{
+	border-color:#E1E1E1;
+
+}
+
+DIV.egcs-crm-MiniCal-TodayBar
+{
+	border-color:#FFFFFF;
+	border-width:1px;
+	border-style:solid;
+
+}
+TD.egcs-crm-MiniCal-Day-NotCurrent
+{
+	color:#B1B1B1;
+
+}
+.egcs-crm-MiniCal-Border,
+div.egcs-crm-Home-Cal-MiniCal
+{
+	border-color:#C6C6C6;
+	border-width:1px;
+	border-style:solid;
+
+}
+TR.egcs-crm-MiniCal-Nav
+{
+	color:#444444;
+
+}
+TD.egcs-crm-MiniCal-Day-Hilited-Current
+{
+	background-color:#B1D6F0;
+
+}
+TD.egcs-crm-MiniCal-Day-Hovered,
+TD.egcs-crm-MiniCal-Month-Hovered,
+TD.egcs-crm-MiniCal-Nav-Button-Hovered,
+TD.egcs-crm-MiniCal-TodayBar-Hovered
+{
+	color:#0072C6;
+
+}
+.egcs-crm-Form-Background
+{
+
+
+
+}
+
+Div.egcs-crm-Form-FormFrameBkgd, TR.egcs-crm-Form-FormFrameBkgd
+{
+	background-color:#FFFFFF;
+
+}
+
+TR.egcs-crm-TitleRowBkgd
+{
+	background-color:#BDCDE1;
+
+}
+
+div.crmAppNav,
+div.tree_container
+{
+	background-color:#F3F3F3;
+	border-left-color:#F3F3F3;
+	border-right-color:#F3F3F3;
+	background-image:none;
+
+}
+
+.ms-cui-tabBody
+{
+	background-image:none;
+
+}
+
+LI.egcs-crm-NavBar-Subarea-Selected,
+a.egcs-crm-navtree-group-heading-selected,
+a.egcs-crm-navtree-subarea-link-selected
+{
+	background-color:#D4D4D4;
+	border-color:#D4D4D4;
+	border-width:1px;
+	border-style:solid;
+
+}
+
+LI.egcs-crm-NavBar-Subarea-Selected-Hovered
+{
+	background-color:#D7EBF9;
+	border-color:#D7EBF9;
+	border-width:1px;
+	border-style:solid;
+
+}
+
+TR.egcs-crm-Form-FieldAlternateFieldBkgd
+{
+	background-color:#FFFFFF;
+
+}
+
+TD.BizRolesedit_td_u,
+TD.BizRolesedit_td_r
+{
+	border-left-color:#FFFFFF;
+	border-right-color:#FFFFFF;
+
+}
+
+.egcs-crm-ChartText
+{
+	color:#000000;
+
+}
+
+.egcs-crm-StatusLabel
+{
+	color:#111111;
+
+}
+
+A.egcs-crm-Nav-Subarea-Link,
+A.egcs-crm-Nav-Subarea-Link:link,
+A.egcs-crm-Nav-Subarea-Link:visited,
+A.egcs-crm-Nav-Subarea-Link:active
+{
+	color:#444444;
+
+}
+
+A.egcs-crm-Nav-Group-Heading,
+A.egcs-crm-Nav-Group-Heading:link,
+A.egcs-crm-Nav-Group-Heading:visited,
+A.egcs-crm-Nav-Group-Heading:active,
+A.egcs-crm-Nav-Group-Heading:hover,
+NOBR.egcs-crm-Nav-Group-Heading
+{
+	color:#262626;
+
+}
+
+.egcs-crm-Form-HeaderContainer
+{
+	border-bottom-color:#D6D6D6;
+
+}
+.egcs-crm-Form-FooterContainer
+{
+	border-top-color:#D6D6D6;
+
+	background-image:url(/_imgs/theme/Outlook15White/FormFooterGradient.png?ver=1399901605);
+
+}
+
+LI.egcs-crm-ImageStrip-wunderbar_sel,
+LI.egcs-crm-ImageStrip-wunderbar_hover,
+LI.egcs-crm-ImageStrip-wunderbar_sel NOBR.egcs-crm-NavBar-Area-Title,
+LI.egcs-crm-ImageStrip-wunderbar_hover NOBR.egcs-crm-NavBar-Area-Title
+{
+	color:#0072C6;
+	border-color:#F3F3F3;
+
+}
+
+NOBR.egcs-crm-NavBar-Area-Title
+{
+	color:#444444;
+
+}
+
+.egcs-crm-ImageStrip-wunderbar_sel
+{
+	background-image:none;
+
+}
+
+.egcs-crm-ImageStrip-wunderbar_hover
+{
+	background-image:none;
+
+}
+
+.egcs-crm-ImageStrip-wunderbar_rest
+{
+	background-image:none;
+
+}
+
+.associatedGrid_viewRow
+{
+	background-color:#FFFFFF;
+
+}
+
+DIV.egcs-crm-Category-List,
+div.CategoryBody
+{
+	color:#666666;
+	background-color:#FFFFFF;
+	border-color:#C6C6C6;
+
+}
+
+
+LI.egcs-crm-POPUP-MenuItem,
+A.egcs-crm-POPUP-MenuItem-Anchor,
+DIV.egcs-crm-POPUP-MenuItem-Separator-h,
+LI.egcs-crm-AVS-MenuItem,
+LI.egcs-crm-VS-MenuItem,
+SPAN.egcs-crm-CM-MenuItem-Icon-Rest-qrk,
+A.egcs-crm-RS-MenuItem-Anchor,
+A.egcs-crm-VS-MenuItem-Anchor,
+A.egcs-crm-MS-MenuItem-Anchor-qrk,
+DIV.egcs-crm-VS-MenuItem-Separator-h,
+span.egcs-crm-CMsub-MenuItem-Sep-Rest,
+NOBR.egcs-crm-CMsub-MenuItem-Title-Rest,
+SPAN.egcs-crm-CMsub-MenuItem-Icon-Rest,
+SPAN.egcs-crm-CMsub-MenuItem-Aux-Rest
+{
+	background-color:#FFFFFF;
+	border-color:#FFFFFF;
+
+}
+
+SPAN.egcs-crm-Menu-FilterImgWrapper-Open,
+SPAN.egcs-crm-Menu-Label-Opened,
+DIV.egcs-crm-Menu-FilterImgWrapper-Open,
+DIV.egcs-crm-Menu-Label-Opened,
+a.ms-cui-ctl-menu-on
+{
+	background-color:#B1D6F0;
+	border-color:#B1D6F0;
+
+}
+
+SPAN.egcs-crm-Menu-FilterImgWrapper-Hover,
+SPAN.egcs-crm-Menu-Label-Hovered,
+DIV.egcs-crm-Menu-FilterImgWrapper-Hover,
+DIV.egcs-crm-Menu-Label-Hovered,
+a.ms-cui-ctl-menu:hover
+{
+	background-color:#D7EBF9;
+	border-color:#D7EBF9;
+
+}
+
+div.egcs-crm-Standard-Item-Glow
+{
+	border-color:#FFFFFF;
+
+}
+
+span.egcs-crm-View-Name-hover,
+span.egcs-crm-View-Name-select
+{
+	background-color:#FFFFFF;
+
+}
+
+A.egcs-crm-View-Name:hover,
+A.egcs-crm-View-Name-hover:link,
+A.egcs-crm-View-Name-hover:hover
+{
+	background-color:#FFFFFF;
+	border-color:#FFFFFF;
+
+}
+
+A.egcs-crm-View-Name:active,
+A.egcs-crm-View-Name-hover:active,
+A.egcs-crm-View-Name-hover:visited,
+A.egcs-crm-View-Name-select,
+A.egcs-crm-View-Name-select:link,
+A.egcs-crm-View-Name-select:visited,
+A.egcs-crm-View-Name-select:hover,
+A.egcs-crm-View-Name-select:active
+{
+	background-color:#FFFFFF;
+	border-color:#FFFFFF;
+
+}
+
+SPAN.egcs-crm-CMsub-MenuItem-Aux-Hover,
+span.egcs-crm-CMsub-MenuItem-Sep-Hover,
+SPAN.egcs-crm-CMsub-MenuItem-Icon-Hover,
+NOBR.egcs-crm-CMsub-MenuItem-Title-Hover,
+SPAN.egcs-crm-in-CM-MenuItem-Icon-Hover,
+SPAN.egcs-crm-in-CM-MenuItem-Sep-Hover,
+NOBR.egcs-crm-in-CM-MenuItem-Title-Hover,
+SPAN.egcs-crm-CM-MenuItem-Icon-Hover,
+SPAN.egcs-crm-CM-MenuItem-Icon-Hover-qrk,
+span.egcs-crm-CM-MenuItem-Sep-Hover,
+span.egcs-crm-CM-MenuItem-Sep-Hover-qrk,
+NOBR.egcs-crm-CM-MenuItem-Title-Hover,
+NOBR.egcs-crm-CM-MenuItem-Title-Hover-qrk
+{
+	background-image:url(/_imgs/theme/Outlook15White/contextmenu_hover_18.png?ver=1399901605);
+
+}
+
+SPAN.egcs-crm-POPUP-MenuItem-Icon-Hover,
+span.egcs-crm-AVS-MenuItem-Aux-Hover,
+span.egcs-crm-POPUP-MenuItem-Sep-Hover,
+NOBR.egcs-crm-POPUP-MenuItem-Title-Hover,
+div.egcs-crm-Standard-Item-Glow,
+NOBR.egcs-crm-SVS-MenuItem-Title-Hover-qrk,
+NOBR.egcs-crm-BVS-MenuItem-Title-Hover-qrk,
+NOBR.egcs-crm-TVS-MenuItem-Title-Hover-qrk,
+LI.egcs-crm-AVS-MenuItem-Hover,
+SPAN.egcs-crm-MenuItem-Label-Opened,
+SPAN.egcs-crm-MenuItem-Label-Hovered,
+SPAN.egcs-crm-MenuItem-Label-Opened,
+SPAN.egcs-crm-MenuItem-Label-Hovered,
+TR.egcs-crm-DE-PreviewSelector,
+LI.egcs-crm-RV-MenuItem-Hover,
+LI.egcs-crm-RV-view-item-MenuItem-Hover,
+A.egcs-crm-RV-MenuItem-Aux-Hover,
+A.egcs-crm-RV-view-item-MenuItem-Aux-Hover,
+LI.egcs-crm-MS-MenuItem-Hover-qrk,
+A.egcs-crm-MS-MenuItem-Aux-Hover-qrk,
+A.egcs-crm-MS-MenuItem-Anchor-Hover-qrk,
+SPAN.egcs-crm-AVS-MenuItem-Icon-Hover,
+span.egcs-crm-AVS-MenuItem-Sep-Hover,
+NOBR.egcs-crm-AVS-MenuItem-Title-Hover,
+SPAN.egcs-crm-VS-MenuItem-Icon-Hover,
+span.egcs-crm-VS-MenuItem-Sep-Hover,
+NOBR.egcs-crm-VS-MenuItem-Title-Hover,
+A.egcs-crm-RS-MenuItem-Anchor-Hover,
+NOBR.egcs-crm-FS-MenuItem-Title-Hover,
+NOBR.egcs-crm-FS-MenuItem-Title-Hover-qrk,
+LI.egcs-crm-LK-MenuItem-Hover,
+LI.egcs-crm-LK-MenuItem-Selected,
+LI.egcs-crm-LK-MenuItem-Hover-qrk,
+LI.egcs-crm-LK-MenuItem-Selected-qrk
+{
+	background-image:url(/_imgs/theme/Outlook15White/contextmenu_hover_20.png?ver=1399901605);
+
+}
+
+SPAN.egcs-crm-POPUP-MenuItem-Icon-Hover,
+span.egcs-crm-AVS-MenuItem-Aux-Hover,
+SPAN.egcs-crm-CMsub-MenuItem-Aux-Hover,
+SPAN.egcs-crm-CMsub-MenuItem-Icon-Hover,
+SPAN.egcs-crm-MenuItem-Label-Opened,
+SPAN.egcs-crm-MenuItem-Label-Hovered,
+SPAN.egcs-crm-MenuItem-Label-Opened,
+SPAN.egcs-crm-MenuItem-Label-Hovered,
+A.egcs-crm-RS-MenuItem-Anchor-Hover,
+SPAN.egcs-crm-in-CM-MenuItem-Icon-Rest,
+LI.egcs-crm-RV-MenuItem-Hover,
+LI.egcs-crm-RV-view-item-MenuItem-Hover,
+A.egcs-crm-RV-MenuItem-Aux-Hover,
+A.egcs-crm-RV-view-item-MenuItem-Aux-Hover,
+LI.egcs-crm-MS-MenuItem-Hover-qrk,
+A.egcs-crm-MS-MenuItem-Aux-Hover-qrk,
+A.egcs-crm-MS-MenuItem-Anchor-Hover-qrk,
+SPAN.egcs-crm-AVS-MenuItem-Icon-Hover,
+SPAN.egcs-crm-VS-MenuItem-Icon-Hover,
+SPAN.egcs-crm-in-CM-MenuItem-Icon-Hover,
+SPAN.egcs-crm-CM-MenuItem-Icon-Hover,
+SPAN.egcs-crm-CM-MenuItem-Icon-Hover-qrk
+{
+	border-top-color:#FFFFFF;
+	border-bottom-color:#FFFFFF;
+	border-left-color:#FFFFFF;
+
+}
+
+NOBR.egcs-crm-POPUP-MenuItem-Title-Hover,
+SPAN.egcs-crm-AVS-MenuItem-Aux-Hover,
+SPAN.egcs-crm-CMsub-MenuItem-Aux-Hover,
+SPAN.egcs-crm-MenuItem-Label-Opened,
+SPAN.egcs-crm-MenuItem-Label-Hovered,
+SPAN.egcs-crm-MenuItem-Label-Opened,
+SPAN.egcs-crm-MenuItem-Label-Hovered,
+NOBR.egcs-crm-VS-MenuItem-Title-Hover,
+A.egcs-crm-RS-MenuItem-Anchor-Hover,
+LI.egcs-crm-RV-MenuItem-Hover,
+LI.egcs-crm-RV-view-item-MenuItem-Hover,
+A.egcs-crm-RV-MenuItem-Aux-Hover,
+A.egcs-crm-RV-view-item-MenuItem-Aux-Hover,
+LI.egcs-crm-MS-MenuItem-Hover,
+A.egcs-crm-MS-MenuItem-Aux-Hover,
+A.egcs-crm-MS-MenuItem-Anchor-Hover-qrk,
+NOBR.egcs-crm-in-CM-MenuItem-Title-Hover,
+NOBR.egcs-crm-CM-MenuItem-Title-Hover,
+NOBR.egcs-crm-CM-MenuItem-Title-Hover-qrk
+{
+	border-top-color:#FFFFFF;
+	border-bottom-color:#FFFFFF;
+	border-right-color:#FFFFFF;
+
+}
+
+span.egcs-crm-POPUP-MenuItem-Sep-Hover,
+span.egcs-crm-AVS-MenuItem-Sep-Hover,
+NOBR.egcs-crm-AVS-MenuItem-Title-Hover,
+NOBR.egcs-crm-CMsub-MenuItem-Title-Hover,
+span.egcs-crm-CMsub-MenuItem-Sep-Hover,
+span.egcs-crm-VS-MenuItem-Sep-Hover,
+LI.egcs-crm-RV-MenuItem-Hover,
+LI.egcs-crm-RV-view-item-MenuItem-Hover,
+span.egcs-crm-in-CM-MenuItem-Sep-Hover,
+span.egcs-crm-CM-MenuItem-Sep-Hover,
+span.egcs-crm-CM-MenuItem-Sep-Hover-qrk
+{
+	border-top-color:#FFFFFF;
+	border-bottom-color:#FFFFFF;
+
+}
+SPAN.egcs-crm-POPUP-MenuItem-Separator-hm,
+SPAN.egcs-crm-POPUP-MenuItem-Separator-hl,
+SPAN.egcs-crm-POPUP-header-MenuItem-Sep,
+SPAN.egcs-crm-POPUP-MenuItem-Sep-Rest,
+span.egcs-crm-CMsub-MenuItem-Sep,
+SPAN.egcs-crm-AVS-MenuItem-Separator-hm,
+SPAN.egcs-crm-AVS-MenuItem-Separator-hl,
+SPAN.egcs-crm-AVS-header-MenuItem-Sep-qrk,
+SPAN.egcs-crm-AVS-MenuItem-Sep-Rest,
+SPAN.egcs-crm-VS-MenuItem-Separator-hm,
+SPAN.egcs-crm-VS-MenuItem-Separator-hl,
+span.egcs-crm-TVS-MenuItem-Sep-Hover-qrk,
+span.egcs-crm-BVS-MenuItem-Sep-Hover-qrk,
+span.egcs-crm-SVS-MenuItem-Sep-Hover-qrk,
+SPAN.egcs-crm-VS-header-MenuItem-Sep,
+SPAN.egcs-crm-SVS-MenuItem-Sep-Rest-qrk,
+SPAN.egcs-crm-BVS-MenuItem-Sep-Rest-qrk,
+SPAN.egcs-crm-TVS-MenuItem-Sep-Rest-qrk,
+SPAN.egcs-crm-VS-MenuItem-Sep-Rest,
+SPAN.egcs-crm-CM-MenuItem-Separator-hl,
+span.egcs-crm-CM-header-MenuItem-Sep-Rest,
+span.egcs-crm-CM-header-MenuItem-Sep-Hover,
+SPAN.egcs-crm-in-CM-MenuItem-Sep-Rest,
+span.egcs-crm-CM-MenuItem-Sep-Rest,
+span.egcs-crm-CM-MenuItem-Sep-Rest-qrk,
+SPAN.egcs-crm-CM-MenuItem-Separator-hm
+{
+	background-color:#E2E4E7;
+
+}
+
+SPAN.egcs-crm-POPUP-MenuItem-Icon-Selected,
+NOBR.egcs-crm-POPUP-MenuItem-Title-Selected,
+SPAN.egcs-crm-POPUP-MenuItem-Sep-Selected,
+LI.egcs-crmAVS-MenuItem-Selected-qrk,
+LI.egcs-crmAVS-MenuItem-Selected,
+TD.egcs-crm-CalendarView-Selected,
+LI.egcs-crm-CalendarView-Selected,
+span.egcs-crm-CMsub-MenuItem-Sep-Selected,
+NOBR.egcs-crm-CMsub-MenuItem-Title-Selected,
+SPAN.egcs-crm-CMsub-MenuItem-Icon-Selected,
+SPAN.egcs-crm-CMsub-MenuItem-Aux-Selected,
+SPAN.egcs-crm-AVS-MenuItem-Icon-Selected,
+NOBR.egcs-crm-AVS-MenuItem-Title-Selected,
+SPAN.egcs-crm-AVS-MenuItem-Sep-Selected,
+SPAN.egcs-crm-VS-MenuItem-Icon-Selected,
+NOBR.egcs-crm-VS-MenuItem-Title-Selected,
+SPAN.egcs-crm-VS-MenuItem-Sep-Selected,
+A.egcs-crm-RS-MenuItem-Anchor-Selected,
+.egcs-crm-FS-Menu A.egcs-crm-FS-MenuItem-Anchor-Selected,
+A.egcs-crm-FS-MenuItem-Anchor-Selected-qrk
+{
+	background-color:#B1D6F0;
+	border-color:#B1D6F0;
+
+}
+
+A.egcs-crm-Nav-Subitem-Link,
+A.egcs-crm-Nav-Subitem-Link:link,
+A.egcs-crm-Nav-Subitem-Link:visited,
+A.egcs-crm-Nav-Subitem-Link:active
+{
+	color:#111111;
+
+}
+
+A.egcs-crm-Nav-Subarea-Selected,
+A.egcs-crm-Nav-Subarea-Selected:link,
+A.egcs-crm-Nav-Subarea-Selected:visited,
+A.egcs-crm-Nav-Subarea-Selected:active
+{
+	background-color:#E0E0E0;
+	border-color:#E0E0E0;
+
+}
+
+A.egcs-crm-Nav-Subitem-Selected,
+A.egcs-crm-Nav-Subitem-Selected:link,
+A.egcs-crm-Nav-Subitem-Selected:visited,
+A.egcs-crm-Nav-Subitem-Selected:active
+{
+	background-color:#CEE7F8;
+	border-color:#CEE7F8;
+
+}
+
+LI.egcs-crm-NavBar-Subarea-Hovered,
+A.egcs-crm-Nav-Subarea-Hovered,
+ul.egcs-crm-Home-Cal-Views-Items li:hover,
+ul.egcs-crm-Home-Cal-CreateNew-Items li:hover
+{
+	border-color:#D7EBF9;
+	background-image:url(/_imgs/theme/Outlook15White/nav_hover_highlight.png?ver=1399901605);
+
+}
+
+A.egcs-crm-Nav-Subitem-Hovered,
+A.egcs-crm-Nav-Subitem-Link:hover,
+A.egcs-crm-Nav-Subitem-Selected:hover
+{
+	border-color:#111111;
+	background-image:url(/_imgs/theme/Outlook15White/nav_hover_highlight.png?ver=1399901605);
+
+}
+
+TD.egcs-crm-Dialog-Header,
+DIV.egcs-crm-Dialog-Header
+{
+	background-color:#FFFFFF;
+	border-bottom-color:#A4ABB2;
+
+}
+
+table.egcs-crm-MiniCampaign-Header,
+tr.egcs-crm-MiniCampaign-Header
+{
+	background-color:#FFFFFF;
+	border-bottom-color:#A4ABB2;
+
+	color:#262626;
+
+}
+
+.egcs-crm-WizardForm-Header-Title h2,
+DIV.egcs-crm-Dialog-Header-Title
+{
+	color:#262626;
+
+}
+
+DIV.egcs-crm-StrictDialog-Header-Desc,
+DIV.egcs-crm-Dialog-Header-Desc
+{
+	color:#444444;
+
+}
+
+td.egcs-crm-MiniCampaign-Main,
+DIV.egcs-crm-WizardForm-Main,
+TD.egcs-crm-Dialog-Main,
+DIV.egcs-crm-Dialog-Main,
+DIV.egcs-crm-DialogStrict-Main,
+DIV.egcs-crm-DialogStrict-Main-HeaderLess,
+body.egcs-crm-ErrorDialog,
+body.egcs-crm-Dialog-Body
+{
+	color:#000000;
+	background-color:#E9EDF1;
+	border-bottom-color:#A4ABB2;
+
+}
+
+TD.egcs-crm-Dialog-Buttons,
+TD.egcs-crm-Dialog-Footer,
+DIV.egcs-crm-Dialog-Footer,
+.egcs-crm-DialogFooter
+{
+	background-color:#F8F8F8;
+	border-top-color:#FFFFFF;
+
+}
+
+DIV.wizHead
+{
+	color:#000000;
+	background-color:#FFFFFF;
+
+}
+
+DIV.egcs-crm-GridActionBar,
+DIV.egcs-crm-ActionBar
+{
+	border-color:#FFFFFF;
+	background-image:url(/_imgs/theme/Outlook15White/GridToolbarBkgd.png?ver=1399901605);
+
+}
+
+.egcs-crm-List-Index
+{
+	color:#444444;
+	background-color:#FFFFFF;
+	border-top-color:#FFFFFF;
+
+}
+
+.egcs-crm-ListControl
+{
+	border-color:#FFFFFF;
+
+}
+
+.egcs-crm-List-IndexItem,
+.egcs-crm-List-SelectedIndex
+{
+	color:#0072C6;
+
+}
+
+SPAN.egcs-crm-Menu-FilterImgWrapper,
+DIV.egcs-crm-Menu-FilterImgWrapper
+{
+	border-top-color:#FFFFFF;
+	border-bottom-color:#FFFFFF;
+	border-left-color:#FFFFFF;
+	border-right-color:#FFFFFF;
+
+}
+
+table.egcs-crm-List-StatusBar
+{
+	background-color:#FFFFFF;
+	border-top-color:#D6D6D6;
+	border-bottom-color:#FFFFFF;
+
+}
+
+.egcs-crm-List-StatusBar-Label
+{
+	color:#444444;
+	border-top-color:#849DBD;
+	border-bottom-color:#FFFFFF;
+
+}
+
+.egcs-crm-List-Paging
+{
+	color:#444444;
+	border-top-color:#849DBD;
+	border-bottom-color:#FFFFFF;
+
+}
+
+.egcs-crm-List-DataArea,
+.egcs-crm-List-DataAreaEx,
+.egcs-crm-List-DataAreaEx-Lite
+{
+	background-color:#FFFFFF;
+	border-bottom-color:#FFFFFF;
+
+}
+
+.egcs-crm-List-Data,
+.egcs-crm-List-Data A.egcs-crm-List-Link,
+.egcs-crm-List-Data A.egcs-crm-gridurl,
+.egcs-crm-List-Data a.egcs-crm-Phone
+{
+	color:#000000;
+
+}
+
+.egcs-crm-List-DeleteContainer,
+.egcs-crm-List-DataCell,
+.egcs-crm-List-Row
+{
+	border-bottom-color:#FFFFFF;
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+
+}
+
+.egcs-crm-ListAreaEx
+{
+	border-top-color:#FFFFFF;
+
+}
+
+.egcs-crm-List-Header
+{
+	background-color:#FFFFFF;
+	border-top-color:#D6D6D6;
+	border-bottom-color:#D6D6D6;
+	background-image:url(/_imgs/theme/Outlook15White/GridColumnGradient.png?ver=1399901605);
+
+}
+
+.egcs-crm-List-Title
+{
+	background-color:#FFFFFF;
+
+}
+
+.egcs-crm-list-TitleFilter
+{
+	background-color:#FFFFFF;
+
+}
+.egcs-crm-list-Separator-line
+{
+	background-image:url(/_imgs/theme/Outlook15White/GridTitleBarHorzLine.png?ver=1399901605);
+
+}
+
+TABLE#AppGridFilterContainer
+{
+	background-color:#FFFFFF;
+	border-top-color:#C4D9F6;
+
+}
+
+TR.egcs-crm-List-SelectedMultilineRow,
+TR.egcs-crm-List-SelectedRow,
+TR.egcs-crm-List-SelectedRow-Lite,
+.egcs-crm-List-FilterButton-Selected
+{
+	background-color:#B1D6F0;
+
+}
+
+TR.egcs-crm-List-SelectedRow-Lite-HighContrast > TD
+{
+	border-color:#B1D6F0;
+
+}
+
+TR.egcs-crm-List-Row:hover,
+TR.egcs-crm-List-Row-Lite:hover
+{
+	background-color:#D7EBF9;
+
+
+}
+
+TR.egcs-crm-List-HoveredMultilineRow,
+TR.egcs-crm-List-HoveredRow
+{
+	background-color:#FFFFFF;
+
+}
+
+DIV.egcs-crm-Grid-Title,
+div.egcs-crm-grid-Title-Data-Lite
+{
+	color:#666666;
+
+}
+
+.egcs-crm-DataCell-Lite
+{
+	color:#444444;
+
+}
+
+span.egcs-crm-Viz-Name,
+span.egcs-crm-View-Entity-Name
+{
+	color:#444444;
+
+}
+
+span.egcs-crm-View-Name
+{
+	color:#262626;
+
+}
+span.egcs-crm-View-Name-hover
+{
+	background-color:#FFFFFF;
+
+}
+
+col.egcs-crm-List-SortedColumn
+{
+	background-color:#FFFFFF !important;
+
+}
+
+td.home_camps_td_Label,
+td.home_cases_td_Label,
+td.home_minicamps_td_Label,
+td.home_reports_td_ViewSelector
+{
+	color:#000000;
+
+}
+
+.egcs-crm-Form-AreaContainer-qrk,
+.egcs-crm-Form-LeftBar
+{
+	border-top-color:#FFFFFF;
+	border-left-color:#FFFFFF;
+	border-right-color:#FFFFFF;
+
+}
+
+div.linkhelp
+{
+	color:#111111;
+
+}
+
+A.egcs-crm-Link:hover
+{
+
+}
+
+A.egcs-crm-Link,
+A.egcs-crm-Link:link,
+A.egcs-crm-Link:visited,
+A.egcs-crm-Link:active
+{
+	color:#111111;
+
+}
+
+.egcs-crm-NavHeader-Title,
+.egcs-crm-ContextHeader-Title
+{
+	color:#000000;
+	background-color:#FFFFFF;
+	border-bottom-color:#C4D9F6;
+
+}
+
+.egcs-crm-Setting-ContextHeader-Title
+{
+	color:#666666;
+	background-color:#FFFFFF;
+
+}
+
+.content
+{
+	background-color:#FFFFFF;
+	border-color:#849DBD;
+
+}
+
+.navigationsubtitle
+{
+	color:#111111;
+	border-bottom-color:#92AFCD;
+
+}
+div.RelatedInformationPane-qrk,
+div.RelatedInformationPane
+{
+	background-color:#F3F3F3;
+	border-color:#FFFFFF;
+
+}
+
+A.egcs-crm-FormSelector,
+DIV.egcs-crm-FormSelector
+{
+	color:#111111;
+
+}
+
+A.egcs-crm-FormSelector,
+A.egcs-crm-FormSelector:link,
+A.egcs-crm-FormSelector:visited
+{
+	border-color:#D6D6D6;
+	border-width:1px;
+	border-style:solid;
+
+}
+
+A.egcs-crm-FormSelector:hover
+{
+	background-color:#D7EBF9;
+	border-color:#D7EBF9;
+	border-width:1px;
+	border-style:solid;
+
+}
+
+A.egcs-crm-FormSelector-Opened,
+A.egcs-crm-FormSelector-Opened:link,
+A.egcs-crm-FormSelector-Opened:visited,
+A.egcs-crm-FormSelector-Opened:hover
+{
+	background-color:#B1D6F0;
+	border-color:#B1D6F0;
+	border-width:1px;
+	border-style:solid;
+
+}
+
+NOBR.egcs-crm-FormSelector-SubItem
+{
+	color:#0072C6;
+
+}
+
+A.egcs-crm-FormSelector-SubItem-Selected,
+A.egcs-crm-FormSelector-SubItem-Selected:link,
+A.egcs-crm-FormSelector-SubItem-Selected:visited,
+A.egcs-crm-FormSelector-SubItem-Selected:active
+{
+	background-color:#E0E0E0;
+	border-color:#E0E0E0;
+
+}
+
+A.egcs-crm-FormSelector-SubItem-Hovered
+{
+	border-color:#D7EBF9;
+	background-image:url(/_imgs/theme/Outlook15White/FormTabLinkGradient.png?ver=1399901605);
+
+}
+
+UL.egcs-crm-Nav-LeftBar,
+DIV.egcs-crm-Form-Container,
+.egcs-crm-FormLeftNav-TabLinksRow,
+.egcs-crm-Form-LeftBar-Header,
+.egcs-crm-Form-LeftBar
+{
+	background-color:#F3F3F3;
+
+}
+
+DIV.egcs-crm-FormLeftNav-RelatedRow
+{
+	border-top-color:#F3F3F3;
+
+}
+
+DIV.egcs-crm-RS-Header-Title
+{
+	color:#444444;
+	background-color:#EEEEEE;
+
+}
+
+LI.egcs-crm-RS-MenuItem
+{
+	border-bottom-color:#FFFFFF;
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+
+}
+
+UL.egcs-crm-RS-Menu
+{
+	border-color:#FFFFFF;
+	border-width:1px;
+	border-style:solid;
+
+}
+
+DIV.egcs-crm-RS-Column-Title
+{
+	background-color:#FFFFFF;
+	border-top-color:#FFFFFF;
+	border-top-width:1px;
+	border-top-style:solid;
+	border-left-color:#FFFFFF;
+	border-left-width:1px;
+	border-left-style:solid;
+	border-right-color:#FFFFFF;
+	border-right-width:1px;
+	border-right-style:solid;
+
+}
+
+DIV.egcs-crm-RecordSelector-Header,
+DIV.egcs-crm-RS-Menu,
+DIV.egcs-crm-RecordSelector-Footer
+{
+	background-color:#FFFFFF;
+	border-left-color:#C6C6C6;
+	border-left-width:1px;
+	border-left-style:solid;
+	border-right-color:#C6C6C6;
+	border-right-width:1px;
+	border-right-style:solid;
+
+}
+
+DIV.egcs-crm-RecordSelector-Header
+{
+	border-top-color:#C6C6C6;
+	border-top-width:1px;
+	border-top-style:solid;
+
+}
+
+DIV.egcs-crm-RecordSelector-Footer
+{
+	color:#666666;
+	background-color:#FFFFFF;
+	border-top-color:#D6D6D6;
+	border-top-width:1px;
+	border-top-style:solid;
+
+}
+.egcs-crm-Form-Nav-Container
+{
+	background-color:#F3F3F3;
+
+}
+
+A.recnav-up,
+A.recnav-down,
+A.recnav-dropdown
+{
+	border-color:#AAB3BD;
+
+}
+
+A.linktitle,
+A.linktitle:link,
+A.linktitle:visited,
+A.linktitle:active,
+A.linktitle:hover
+{
+	color:#000000;
+
+}
+
+DIV.egcs-crm-Splitter-Fixed
+{
+	color:#FFFFFF;
+	background-color:#F3F3F3;
+	background-image:url(/_imgs/theme/Outlook15White/app_back.png?ver=1399901605);
+
+}
+
+DIV.egcs-crm-RecentlyViewed-Header
+{
+	background-color:#EEEEEE;
+	border-top-color:#C6C6C6;
+	border-top-width:1px;
+	border-top-style:solid;
+	border-left-color:#C6C6C6;
+	border-left-width:1px;
+	border-left-style:solid;
+	border-right-color:#C6C6C6;
+	border-right-width:1px;
+	border-right-style:solid;
+
+}
+NOBR.egcs-crm-RV-Header-Title,
+NOBR.egcs-crm-RS-Column-Title,
+SPAN.egcs-crm-RV-MenuItem-Title,
+SPAN.egcs-crm-FS-MenuItem-Title
+{
+	color:#444444;
+
+}
+SPAN.egcs-crm-RV-view-header-MenuItem-Title,
+SPAN.egcs-crm-RS-MenuItem-Title,
+SPAN.egcs-crm-RV-view-item-MenuItem-Title
+{
+	color:#444444;
+
+}
+DIV.egcs-crm-RV-Menu,
+DIV.egcs-crm-VS-Menu
+{
+	border-color:#C6C6C6;
+	border-width:1px;
+	border-style:solid;
+
+}
+DIV.egcs-crm-modalDialog-shadow
+{
+	background-color:#DFDFDF;
+
+}
+SPAN.egcs-crm-RV-MenuItem-Separator-vm
+{
+	background-color:#E0E0E0;
+
+}
+A IMG.egcs-crm-MastHead-Button:hover
+{
+	background-color:#D7EBF9;
+	border-color:#D7EBF9;
+
+}
+A IMG.egcs-crm-MastHead-Button-Selected,
+A IMG.egcs-crm-MastHead-Button-Selected:hover
+{
+	background-color:#B1D6F0;
+	border-color:#B1D6F0;
+
+}
+
+SPAN.egcs-crm-NavBar-Title-Icon A.egcs-crm-NavBar-Title-Icon-Hovered
+{
+	background-color:#D7EBF9;
+	border-color:#D7EBF9;
+	border-width:1px;
+	border-style:solid;
+
+}
+
+SPAN.egcs-crm-NavBar-Title-Icon A.egcs-crm-NavBar-Title-Icon-Selected
+{
+	background-color:#B1D6F0;
+	border-color:#B1D6F0;
+	border-width:1px;
+	border-style:solid;
+
+}
+
+div.egcs-crm-NavBar-Title
+{
+	border-bottom-color:#F3F3F3;
+	border-bottom-width:1px;
+	border-bottom-style:dotted;
+
+}
+
+div.egcs-crm-NavBar-Areas
+{
+	border-top-color:#D4D4D4;
+	border-top-width:1px;
+	border-top-style:solid;
+	border-bottom-color:#D4D4D4;
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+
+}
+label.egcs-crm-List-Sortable
+{
+	color:#444444;
+
+}
+.egcs-crm-List-MessageText,
+.egcs-crm-List-MessageText-Lite
+{
+	color:#666666;
+	background-color:#FFFFFF;
+
+}
+NOBR.egcs-crm-NavBar-Subarea-Title,
+NOBR.egcs-crm-navtree-subarea-title,
+NOBR.egcs-crm-navtree-node-title
+{
+	color:#444444;
+
+}
+TR.egcs-crm-Form-SubGrid-viewRow
+{
+	background-color:#FFFFFF;
+
+}
+.egcs-crm-Form-SubGrid-Layout
+{
+	border-color:#D6D6D7;
+	border-width:1px;
+	border-style:solid;
+
+}
+
+.egcs-crm-Input-Container,
+DIV.egcs-crm-Lookup-Party,
+DIV.egcs-crm-Lookup,
+INPUT.egcs-crm-Dialog-Lookup-QuickFind
+{
+	border-top-color:#C6C6C6;
+	border-top-width:1px;
+	border-top-style:solid;
+	border-bottom-color:#C6C6C6;
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+	border-left-color:#C6C6C6;
+	border-left-width:1px;
+	border-left-style:solid;
+	border-right-color:#C6C6C6;
+	border-right-width:1px;
+	border-right-style:solid;
+
+}
+
+SELECT.egcs-crm-SelectBox
+{
+	border-top-color:#C6C6C6;
+	border-top-width:1px;
+	border-top-style:solid;
+	border-bottom-color:#C6C6C6;
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+	border-left-color:#C6C6C6;
+	border-left-width:1px;
+	border-left-style:solid;
+	border-right-color:#C6C6C6;
+	border-right-width:1px;
+	border-right-style:solid;
+
+}
+
+IFRAME.noteData
+{
+	background-color:#FFFFFF;
+	border-width:1px;
+	border-style:solid;
+	border-top-color:#D6D6D6;
+	border-bottom-color:#D6D6D6;
+	border-left-color:#D6D6D6;
+	border-right-color:#D6D6D6;
+
+}
+
+TD.noteCreatedField,
+TD.noteEditedField
+{
+	color:#777777;
+
+}
+
+INPUT.egcs-crm-ReadOnly,
+TEXTAREA.egcs-crm-ReadOnly,
+DIV.egcs-crm-ReadOnly,
+SPAN.egcs-crm-ReadOnly
+{
+	color:#666666;
+
+}
+a.newNoteButton,
+a.newNoteButton:link,
+a.newNoteButton:visited,
+a.newNoteButton:hover,
+newNoteButton,
+a.newNoteButton:active,
+a.newNoteButtonSelected
+{
+	color:#0072C6;
+
+}
+.ms-cui-jewel-label,
+.ms-cui-tt-span,
+.ms-cui-cg-t-i
+{
+	text-transform:Uppercase;
+
+}
+.ms-cui-tt-a
+{
+	color:#666666 !important;
+
+}
+.ms-cui-tt-s > .ms-cui-tt-a,
+.ms-cui-tt-s .ms-cui-tt-a:hover,
+.ms-cui-tt-a:hover,
+.ms-cui-cg-s .ms-cui-tt-a,
+.ms-cui-cg-s .ms-cui-tt-a:hover
+{
+	color:#0072C6 !important;
+
+}
+.ms-cui-tt-a:hover
+{
+	border-color:#FFFFFF;
+
+}
+.ms-cui-cg-lb .ms-cui-tt-a:hover,
+.ms-cui-cg-lb.ms-cui-cg-s .ms-cui-tt-s .ms-cui-tt-a:hover
+{
+	background-color:#FFFFFF;
+
+}
+.egcs-crm-msgbar_button_cold
+{
+	background-color:#FFFFFF;
+
+}
+.egcs-crm-msgbar_button_hover
+{
+	background-color:#F0F0F0;
+
+}
+.egcs-crm-msgbar_button_click
+{
+	background-color:#C5C5C5;
+
+}
+.egcs-crm-control-SideStrip-Hovered,
+.egcs-crm-recnav-hover,
+#popoutButton:hover,
+#popoutButton:focus,
+#hierarchyButton:hover,
+#hierarchyButton:focus
+{
+	background-color:#D7EBF9;
+
+}
+.egcs-crm-recnav-selected
+{
+	background-color:#B1D6F0;
+
+}
+.egcs-crm-control-SideStrip
+{
+	background-color:#F3F3F3;
+
+}
+.egcs-crm-CompCntrlBrdr
+{
+	border-top-color:#FFFFFF;
+	border-bottom-color:#FFFFFF;
+	border-left-color:#D6D6D6;
+	border-right-color:#D6D6D6;
+
+}
+.egcs-crm-CC-splitter
+{
+	background-color:#FFFFFF;
+	background-image:none;
+
+}
+#crmInAppContent
+{
+	border-color:#D6D6D6;
+	border-width:1px;
+	border-style:solid;
+
+}
+.egcs-crm-SelectOn
+{
+	background-color:#D7EBF9;
+
+}
+.egcs-crm-GlowOn
+{
+	background-color:#B1D6F0;
+
+}
+span.CategoryHeadingText
+{
+	color:#444444;
+
+}
+.ms-cui-ctl-large:hover,
+.ms-cui-ctl-light-hoveredOver,
+.ms-cui-ctl-medium:hover,
+.ms-cui-ctl:hover,
+.ms-cui-mrusb-selecteditem.ms-cui-ctl-light-hoveredOver a,
+.ms-cui-ctl-thin:hover
+{
+	background-color:#D7EBF9;
+	border-color:#D7EBF9 !important;
+
+}
+.ms-cui-ctl-on,
+.ms-cui-ctl-dark-highlight,
+.ms-cui-ctl-a2.ms-cui-ctl-dark-highlight:hover,
+.ms-cui-ctl-a1.ms-cui-ctl-dark-highlight:hover,
+.ms-cui-mrusb-selecteditem a:hover,
+.ms-cui-ctl-hoveredOver
+{
+	background-color:#B1D6F0;
+	border-color:#B1D6F0 !important;
+
+}
+.ms-cui-ctl-split-hover,
+.ms-cui-mrusb-selecteditem.ms-cui-ctl-split-hover > *
+{
+	background-color:#FFFFFF;
+	border-color:#D7EBF9 !important;
+
+}
+.ms-cui-ctl-mousedown,
+.ms-cui-ctl-large:active,
+.ms-cui-ctl-medium:active,
+.ms-cui-ctl:active,
+.ms-cui-ctl-a1:active,
+.ms-cui-ctl-a2:active,
+.ms-cui-ctl-thin:active,
+.ms-cui-ctl-on:hover
+{
+	background-color:#B1D6F0 !important;
+	border-color:#B1D6F0 !important;
+
+}
+.egcs-crm-stripLeftRight
+{
+	color:#444444;
+
+}
+NOBR.egcs-crm-FS-MenuItem-Title-Hover,
+NOBR.egcs-crm-FS-MenuItem-Title-Hover-qrk
+{
+	border-color:#D7EBF9;
+	border-width:1px;
+	border-style:solid;
+
+}
+DIV.listEdit_valuelist
+{
+	border-color:#C6C6C6;
+	border-width:1px;
+	border-style:solid;
+
+}
+div.editPage,
+TD.egcs-crm-Email-Body,
+DIV.editor
+{
+	border-color:#C6C6C6;
+
+}
+.egcs-crm-WizardForm-Footer,
+.egcs-crm-WizardForm-Main,
+body.egcs-crm-workflow-template-page,
+body.egcs-crm-solution-wizard,
+tr.egcs-crm-solution-wizard
+{
+	background-color:#E9EDF1;
+
+}
+.egcs-crm-lightbox
+{
+	background-color:#FFFFFF;
+
+}
+.jstree-default .jstree-hovered
+{
+	background-color:#D7EBF9;
+
+}
+
+.mscrm-globalqc-actionbutton
+{
+	color:#444444;
+	background-color:#FFFFFF;
+
+}
+
+IMG.egcs-crm-ImageStrip-grid_refresh_hover,
+IMG.egcs-crm-ImageStrip-grid_refresh,
+IMG.egcs-crm-GridRefreshImage
+{
+	background-color:#FFFFFF;
+
+}
+
+.egcs-crm-RefreshDialog-Button
+{
+	color:#444444;
+	background-color:#FFFFFF;
+
+}
+.egcs-crm-RefreshDialog-Main,
+.egcs-crm-RefreshDialog-Main-HeaderLess
+{
+	color:#444444;
+	background-color:#FFFFFF;
+	border-bottom-color:#A4ABB2;
+
+}
+.egcs-crm-RefreshDialog-Header
+{
+	background-color:#FFFFFF;
+	border-bottom-color:#A4ABB2;
+
+}
+.egcs-crm-RefreshDialog-Header-Title,
+TD.egcs-crm-RefreshDialog-Error-Title
+{
+	color:#262626;
+
+}
+.egcs-crm-RefreshDialog-Header-Desc
+{
+	color:#444444;
+
+}
+.egcs-crm-RefreshDialog-Footer
+{
+	background-color:#F8F8F8;
+	border-top-color:#FFFFFF;
+
+}

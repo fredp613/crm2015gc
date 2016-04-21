@@ -17,7 +17,7 @@ var entityId = Xrm.Page.data.entity.getId()
 
 // 	 function toggleNextStage() {
 // 		 console.log("body has changed")
-// 		 var errors = $(".ms-crm-Inline-WarningIcon:visible")
+// 		 var errors = $(".egcs-crm-Inline-WarningIcon:visible")
 // 		 console.log(errors.length)
 // 			 if (errors.length > 0) {
 // 				console.log("unbind")
@@ -39,7 +39,7 @@ $("#stageBackActionContainer").unbind("click");
 $(document).on("click", "#stageAdvanceActionContainer", function(e) {
 
 	console.log("next stage clicked")
-	var errors = $(".ms-crm-Inline-WarningIcon:visible")
+	var errors = $(".egcs-crm-Inline-WarningIcon:visible")
 	 console.log(errors.length)
 	 if (errors.length > 0) {
 		console.log("unbind")
@@ -63,7 +63,7 @@ $(document).on("click", "#stageAdvanceActionContainer", function(e) {
 $(document).on("click", "#stageBackActionContainer", function(e) {
 	
 	console.log("back stage clicked")
-	var errors = $(".ms-crm-Inline-WarningIcon:visible")
+	var errors = $(".egcs-crm-Inline-WarningIcon:visible")
 	 
 	 console.log(errors.length)
 	 if (errors.length > 0) {
