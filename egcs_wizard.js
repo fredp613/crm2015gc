@@ -59,25 +59,26 @@ function handler() {
 			var tabsForStep = steps[i].split(":")[1].split(",");
 			
 			for (var y in tabsForStep) {			
-				if (selectedStage.getName().indexOf(step) != -1) {										
-					if (Xrm.Page.ui.tabs.get(tabsForStep[y])) {																								
-
+				var tab = Xrm.Page.ui.tabs.get(tabsForStep[y]) 										
+				if (selectedStage.getName().indexOf(step) != -1) {					
+					if (tab) {																								
 						if (activeStage.getName() === selectedStage.getName()) {					
-							Xrm.Page.ui.clearFormNotification("1");							
+							Xrm.Page.ui.clearFormNotification("1");	
+							disableControlsInsideTab(tab, false);
+
 						} else {
 							Xrm.Page.ui.setFormNotification(generateLocalizedMessage("inactive tab"),"WARNING", "1");							
 							//disable controls inside this tab	
-
-
+							disableControlsInsideTab(tab, true);
 						}
 
-						Xrm.Page.ui.tabs.get(tabsForStep[y]).setVisible(true);
+						tab.setVisible(true);
 						
 					} 
 									
 				} else {					
-					if (Xrm.Page.ui.tabs.get(tabsForStep[y])) {
-						Xrm.Page.ui.tabs.get(tabsForStep[y]).setVisible(false);
+					if (tab) {
+						tab.setVisible(false);
 					}
 				}
 			}			
@@ -85,6 +86,19 @@ function handler() {
 	}
 	
 
+}
+
+function disableControlsInsideTab(tabObject, disabled) {
+	tabObject.sections.forEach(function(section){
+		section.controls.forEach(function(control) {
+			console.log(control.getControlType())
+			if (control.getControlType() === "optionset" || 
+				control.getControlType() === "standard"  || 
+				control.getControlType() === "lookup") {
+				disabled ? control.setDisabled(true) : control.setDisabled(false);				
+			}
+		})
+	})
 }
 
 function stageIsActive(stage) {
