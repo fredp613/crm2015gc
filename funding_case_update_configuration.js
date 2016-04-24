@@ -13,9 +13,9 @@ function formLoad() {
 			console.log("PPPP", processId);
 			Xrm.Page.data.process.setActiveProcess(processId, function() {
 				console.log("PROCESS SET")
-				disableHeaderFields()
-				Xrm.Page.data.process.addOnStageChange(disableHeaderFields);
-				Xrm.Page.data.process.addOnStageSelected(disableHeaderFields);
+				// disableHeaderFields()
+				// Xrm.Page.data.process.addOnStageChange(disableHeaderFields);
+				// Xrm.Page.data.process.addOnStageSelected(disableHeaderFields);
 			})
 		}
 	})
@@ -102,17 +102,17 @@ function errorHandler(error) {
 
 
 
-function disableHeaderFields() {
-	 var fieldContainers = document.getElementsByClassName("processStepLabel")
-	  for(var i=0; i < fieldContainers.length; i++) {
-	     str = fieldContainers[i].id
-	     strClean = str.slice(0, str.lastIndexOf('_c'))
+// function disableHeaderFields() {
+// 	 var fieldContainers = document.getElementsByClassName("processStepLabel")
+// 	  for(var i=0; i < fieldContainers.length; i++) {
+// 	     str = fieldContainers[i].id
+// 	     strClean = str.slice(0, str.lastIndexOf('_c'))
 
-	    if (Xrm.Page.getControl(strClean) != null) {
-	       Xrm.Page.getControl(strClean).setDisabled(true);
-	     } 
-	 }
-}
+// 	    if (Xrm.Page.getControl(strClean) != null) {
+// 	       Xrm.Page.getControl(strClean).setDisabled(true);
+// 	     } 
+// 	 }
+// }
 
 
 
