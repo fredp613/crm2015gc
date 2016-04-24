@@ -21,7 +21,6 @@ function activateWizard(params) {
 						Xrm.Page.data.process.addOnStageSelected(handler);
 					});						  			  	
 			   }  	 
-
 	  	}
 	}  
 }	
@@ -52,31 +51,29 @@ function handler() {
 	})
 	if (activeStage != null) {
 
-		console.log("current stage is:" + activeStage);
-
+		
 		for (var i in steps) {
 
 			var step = steps[i].split(":")[0];
 			
 			var tabsForStep = steps[i].split(":")[1].split(",");
-			console.log(selectedStage.getName())
-			for (var y in tabsForStep) {
-				console.log(tabsForStep[y])
-				console.log(activeStage.getName().indexOf(step))
-				if (selectedStage.getName().indexOf(step) != -1) {
-										
+			
+			for (var y in tabsForStep) {			
+				if (selectedStage.getName().indexOf(step) != -1) {										
+					if (Xrm.Page.ui.tabs.get(tabsForStep[y])) {																								
 
-					if (Xrm.Page.ui.tabs.get(tabsForStep[y])) {
+						if (activeStage.getName() === selectedStage.getName()) {					
+							Xrm.Page.ui.clearFormNotification("1");							
+						} else {
+							Xrm.Page.ui.setFormNotification(generateLocalizedMessage("inactive tab"),"WARNING", "1");							
+							//disable controls inside this tab	
+
+
+						}
 
 						Xrm.Page.ui.tabs.get(tabsForStep[y]).setVisible(true);
-					
-						if (activeStage.getName() === selectedStage.getName()) {					
-							Xrm.Page.ui.clearFormNotification("1");
-						} else {
-							Xrm.Page.ui.setFormNotification(generateLocalizedMessage("inactive tab"),"WARNING", "1");
-						}
 						
-					}
+					} 
 									
 				} else {					
 					if (Xrm.Page.ui.tabs.get(tabsForStep[y])) {
