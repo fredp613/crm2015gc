@@ -4,7 +4,6 @@ var fiscalYears = [];
 
 
 
-
 function onLoad() {
 	Xrm.Page.getAttribute("gcbase_startdate").setSubmitMode("always")
 	Xrm.Page.getAttribute("gcbase_enddate").setSubmitMode("always")
@@ -12,42 +11,74 @@ function onLoad() {
 
 
 function toggleYears() {
-	console.log("event fired")
-	fiscalYears = [];
-	
+	var inputedFiscalYearData = [];		
+	var fiscalYears = [];		
 	var startdate = Xrm.Page.getAttribute("gcbase_startdate").getValue()
 	var enddate = Xrm.Page.getAttribute("gcbase_enddate").getValue()
-
+	var doc = top.document.getElementById('NavBarGloablQuickCreate').contentWindow.document
+	var tableBody = doc.getElementsByName("tab_1_column_2_section_1")[0].getElementsByTagName("tbody")[0];
+	var rowCount = tableBody.rows.length; 
+	while(--rowCount) tableBody.deleteRow(rowCount);
+		
 	if (startdate && enddate) {
 
-		var existingFiscalYears = [];
-		$(document).find(".currency").each(function(index, element) {
-			var year = $(element).attr("id")
-			var intYear = parseInt(year)
-			existingFiscalYears.push(intYear)			
-		})
-
 		fiscalYears = FiscalYear.getYears(startdate, enddate)
-		console.log(fiscalYears)
-		
-		var toAdd = $(fiscalYears).not(existingFiscalYears).get();
-		var toDelete = $(existingFiscalYears).not(fiscalYears).get();
-
-		var fyObjects = [];
 		fiscalYears.forEach(function(fy) {
-			fyObjects.push({
-				"FY": fy,
-				"Amount": $("#"+fy).val()
-			})
-		})
-		fyObjects.forEach(function(value, index) {
-			console.log(value["FY"] + ": " + value["Amount"]);	
+						
+			var newRow = tableBody.insertRow(tableBody.rows.length);
+			var newCell = newRow.insertCell(0);						
+			var newCellInput = newRow.insertCell(1);
+			var newLabelText = doc.createTextNode(fy);
+			var newText = doc.createElement("input");			
+			newText.type = "text";
+			newText.onblur = function() {	
+				
+				if (inputedFiscalYearData.length == 0) {
+					inputedFiscalYearData.push({
+							fiscalyear: fy,
+							value: newText.value,
+					})
+				}
+
+				for(var i in inputedFiscalYearData) {
+				    if (inputedFiscalYearData[i].fiscalyear == fy) {				        
+				        inputedFiscalYearData[i].value = newText.value;
+				    } else {
+				    	inputedFiscalYearData.push({
+							fiscalyear: fy,
+							value: newText.value,
+						})
+				    }
+				    // break;
+				}
+	
+				var arrayForServer = [];
+				for (var i = 0;i < inputedFiscalYearData.length; i++) {
+					console.log("araay for server")
+					var record = inputedFiscalYearData[i]					
+					arrayForServer.push("FY" + record.fiscalyear + "-" + record.value)
+				}
+				console.log(arrayForServer)
+				Xrm.Page.getAttribute("gcbase_amountsbyfiscalyearserver").setValue(arrayForServer.toString());						
+			}
+			
+			newCell.appendChild(newLabelText);
+			newCellInput.appendChild(newText)
+
+
+			
 		})
 		
-		generateBudgetForm(fyObjects);		
+		// <label for="gcbase_applicationtype_label" 
+		// id="Application Type_label">
+		// <div class="ms-crm-div-NotVisible">
+		// Application Type Main</div>Main<div 
+		// class="ms-crm-Inline-GradientMask"></div>
+		// </label>
+		
 	}
 
-	updateAnticipatedAmountByYearServer()	
+	// updateAnticipatedAmountByYearServer()	
 }
 
 function generateBudgetForm(fiscalYears) {
