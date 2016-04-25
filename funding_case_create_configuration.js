@@ -18,10 +18,19 @@ function toggleYears() {
 	var doc = top.document.getElementById('NavBarGloablQuickCreate').contentWindow.document
 	var tableBody = doc.getElementsByName("tab_1_column_2_section_1")[0].getElementsByTagName("tbody")[0];
 	var rowCount = tableBody.rows.length; 
+
+	
 	while(--rowCount) tableBody.deleteRow(rowCount);
 		
-	if (startdate && enddate) {
 
+		// console.log($(this).val())
+	// if (/^\s*$/.test($(this).val()) || /[a-zA-Z]/.test($(this).val())) {
+	// 	$(this).val("0.00")
+	// }
+	// var amount = parseInt($(this).val()).format(2,3,',','.') 
+	// $(this).val(amount)	
+	if (startdate && enddate) {
+		Xrm.Page.getAttribute("gcbase_amountsbyfiscalyearserver").setValue("");
 		fiscalYears = FiscalYear.getYears(startdate, enddate)
 		fiscalYears.forEach(function(fy) {
 						
@@ -29,106 +38,45 @@ function toggleYears() {
 			var newCell = newRow.insertCell(0);						
 			var newCellInput = newRow.insertCell(1);
 			var newLabelText = doc.createTextNode(fy);
-			var newText = doc.createElement("input");			
+			var newText = doc.createElement("input");						
+			newText.value = formatNumberToCurrency(parseInt("0"),2,3,',','.');		
 			newText.type = "text";
 			newText.onblur = function() {	
 				
-				if (inputedFiscalYearData.length == 0) {
-					inputedFiscalYearData.push({
-							fiscalyear: fy,
-							value: newText.value,
-					})
-				}
-
-				for(var i in inputedFiscalYearData) {
-				    if (inputedFiscalYearData[i].fiscalyear == fy) {				        
-				        inputedFiscalYearData[i].value = newText.value;
-				    } else {
-				    	inputedFiscalYearData.push({
-							fiscalyear: fy,
-							value: newText.value,
-						})
-				    }
-				    // break;
-				}
-	
-				var arrayForServer = [];
-				for (var i = 0;i < inputedFiscalYearData.length; i++) {
-					console.log("araay for server")
-					var record = inputedFiscalYearData[i]					
-					arrayForServer.push("FY" + record.fiscalyear + "-" + record.value)
-				}
-				console.log(arrayForServer)
-				Xrm.Page.getAttribute("gcbase_amountsbyfiscalyearserver").setValue(arrayForServer.toString());						
+				var amount = formatNumberToCurrency(parseInt(this.value),2,3,',','.');												
+				this.value = amount;		
+				
+				inputedFiscalYearData.push({
+					fiscalyear: fy,
+					value: this.value,
+				})
+				updateServerValue(inputedFiscalYearData);						
 			}
-			
 			newCell.appendChild(newLabelText);
-			newCellInput.appendChild(newText)
-
-
-			
-		})
-		
-		// <label for="gcbase_applicationtype_label" 
-		// id="Application Type_label">
-		// <div class="ms-crm-div-NotVisible">
-		// Application Type Main</div>Main<div 
-		// class="ms-crm-Inline-GradientMask"></div>
-		// </label>
-		
-	}
-
-	// updateAnticipatedAmountByYearServer()	
-}
-
-function generateBudgetForm(fiscalYears) {
-	//remove all rows from table
-	$("[name='tab_1_column_2_section_1'] tr").remove()
-  	for (var i = 0; i < fiscalYears.length; i++) { 	
-  		var textAmount = generateTableRowWithTextField(fiscalYears[i])
-  		$("[name='tab_1_column_2_section_1'] tbody").append(textAmount);
-  	// textAmount.insertBefore("[name='tab_1_column_2_section_1'] tbody > tr:last")
-  	}
-}
-
-$(document).on("blur", ".currency", function() {
-	// console.log($(this).val())
-	if (/^\s*$/.test($(this).val()) || /[a-zA-Z]/.test($(this).val())) {
-		$(this).val("0.00")
-	}
-	var amount = parseInt($(this).val()).format(2,3,',','.') 
-	$(this).val(amount)	
-
-	if (amountsValidated() == true) {
-		Xrm.Page.getAttribute("gcbase_anticipatedbudgetbyfiscalyearvalidated").setValue(1)
-	} else {
-		Xrm.Page.getAttribute("gcbase_anticipatedbudgetbyfiscalyearvalidated").setValue(0)
+			newCellInput.appendChild(newText);
+		});
 
 	}
-	Xrm.Page.getAttribute("gcbase_anticipatedbudgetbyfiscalyearvalidated").fireOnChange()
-
-	updateAnticipatedAmountByYearServer()
-
-
-})
-
-function updateAnticipatedAmountByYearServer() {
-	var arrayForServer = [];
-	var numberOfCurrencyFields = $(".currency").length;
-	Xrm.Page.getAttribute("gcbase_amountsbyfiscalyearserver").setValue(null);
-	$(".currency").each(function(index, element) {		
-		if ($(element).val() != undefined) {
-			if (index === numberOfCurrencyFields - 1) {
-				arrayForServer.push("FY" + $(element).attr("id") + "-" + $(element).val())
-			} else {
-				arrayForServer.push("FY" + $(element).attr("id") + "-" + $(element).val() + ';')
-			}
-			
-		}
-	})
 	
-	Xrm.Page.getAttribute("gcbase_amountsbyfiscalyearserver").setValue(arrayForServer.toString());
 }
+
+function updateServerValue(inputedFiscalYearData) {
+	//ONLY DO THIS IF VALID
+		var arrayForServer = [];
+		for (var i = 0;i <= inputedFiscalYearData.length - 1; i++) {					
+			var record = inputedFiscalYearData[i]		
+			if (i == (inputedFiscalYearData.length - 1)) {	
+				arrayForServer.push("FY" + record.fiscalyear + "-" + record.value)
+			} else {
+				arrayForServer.push("FY" + record.fiscalyear + "-" + record.value + ";")	
+			}			
+			
+		}				
+		Xrm.Page.getAttribute("gcbase_amountsbyfiscalyearserver").setValue(arrayForServer.toString());
+}
+
+
+
 
 function amountsValidated() {
 	var validationArr = []
@@ -159,11 +107,22 @@ function generateTableRowWithTextField(fiscalYear) {
 	return newRow
 }
 
-Number.prototype.format = function(n, x, s, c) {
-    var re = '\\d(?=(\\d{' + (x || 3) + '})+' + (n > 0 ? '\\D' : '$') + ')',
-        num = this.toFixed(Math.max(0, ~~n));
+// Number.prototype.format = function(n, x, s, c) {
+// 	console.log("formatting");
+//     var re = '\\d(?=(\\d{' + (x || 3) + '})+' + (n > 0 ? '\\D' : '$') + ')',
+//         num = this.toFixed(Math.max(0, ~~n));
+    
+//     return (c ? num.replace('.', c) : num).replace(new RegExp(re, 'g'), '$&' + (s || ','));
+// }
+
+function formatNumberToCurrency(num,n, x, s, c) {
+	  var re = '\\d(?=(\\d{' + (x || 3) + '})+' + (n > 0 ? '\\D' : '$') + ')',
+        num = num.toFixed(Math.max(0, ~~n));
     
     return (c ? num.replace('.', c) : num).replace(new RegExp(re, 'g'), '$&' + (s || ','));
 }
+
+
+
 
 
