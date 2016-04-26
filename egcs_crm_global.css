@@ -61,7 +61,7 @@ color: #000000;
 
 
 
-.ms-cui-ct-ul .ms-cui-tt-a
+.ms_egcs_cui-ct-ul .ms_egcs_cui-tt-a
 {
 border-top: none !important;
 padding-top:1px;
@@ -71,7 +71,7 @@ padding-top:1px;
 
 
 
-.ms-cui-ribbon a:focus
+.ms_egcs_cui-ribbon a:focus
 {
 outline-width:1px;
 outline-color:black;

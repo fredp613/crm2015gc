@@ -598,7 +598,7 @@ div.tree_container
 
 }
 
-.ms-cui-tabBody
+.ms_egcs_cui-tabBody
 {
 	background-image:none;
 
@@ -757,7 +757,7 @@ SPAN.egcs-crm-Menu-FilterImgWrapper-Open,
 SPAN.egcs-crm-Menu-Label-Opened,
 DIV.egcs-crm-Menu-FilterImgWrapper-Open,
 DIV.egcs-crm-Menu-Label-Opened,
-a.ms-cui-ctl-menu-on
+a.ms_egcs_cui-ctl-menu-on
 {
 	background-color:#B1D6F0;
 	border-color:#B1D6F0;
@@ -768,7 +768,7 @@ SPAN.egcs-crm-Menu-FilterImgWrapper-Hover,
 SPAN.egcs-crm-Menu-Label-Hovered,
 DIV.egcs-crm-Menu-FilterImgWrapper-Hover,
 DIV.egcs-crm-Menu-Label-Hovered,
-a.ms-cui-ctl-menu:hover
+a.ms_egcs_cui-ctl-menu:hover
 {
 	background-color:#D7EBF9;
 	border-color:#D7EBF9;
@@ -1762,34 +1762,34 @@ a.newNoteButtonSelected
 	color:#0072C6;
 
 }
-.ms-cui-jewel-label,
-.ms-cui-tt-span,
-.ms-cui-cg-t-i
+.ms_egcs_cui-jewel-label,
+.ms_egcs_cui-tt-span,
+.ms_egcs_cui-cg-t-i
 {
 	text-transform:Uppercase;
 
 }
-.ms-cui-tt-a
+.ms_egcs_cui-tt-a
 {
 	color:#666666 !important;
 
 }
-.ms-cui-tt-s > .ms-cui-tt-a,
-.ms-cui-tt-s .ms-cui-tt-a:hover,
-.ms-cui-tt-a:hover,
-.ms-cui-cg-s .ms-cui-tt-a,
-.ms-cui-cg-s .ms-cui-tt-a:hover
+.ms_egcs_cui-tt-s > .ms_egcs_cui-tt-a,
+.ms_egcs_cui-tt-s .ms_egcs_cui-tt-a:hover,
+.ms_egcs_cui-tt-a:hover,
+.ms_egcs_cui-cg-s .ms_egcs_cui-tt-a,
+.ms_egcs_cui-cg-s .ms_egcs_cui-tt-a:hover
 {
 	color:#0072C6 !important;
 
 }
-.ms-cui-tt-a:hover
+.ms_egcs_cui-tt-a:hover
 {
 	border-color:#FFFFFF;
 
 }
-.ms-cui-cg-lb .ms-cui-tt-a:hover,
-.ms-cui-cg-lb.ms-cui-cg-s .ms-cui-tt-s .ms-cui-tt-a:hover
+.ms_egcs_cui-cg-lb .ms_egcs_cui-tt-a:hover,
+.ms_egcs_cui-cg-lb.ms_egcs_cui-cg-s .ms_egcs_cui-tt-s .ms_egcs_cui-tt-a:hover
 {
 	background-color:#FFFFFF;
 
@@ -1865,43 +1865,43 @@ span.CategoryHeadingText
 	color:#444444;
 
 }
-.ms-cui-ctl-large:hover,
-.ms-cui-ctl-light-hoveredOver,
-.ms-cui-ctl-medium:hover,
-.ms-cui-ctl:hover,
-.ms-cui-mrusb-selecteditem.ms-cui-ctl-light-hoveredOver a,
-.ms-cui-ctl-thin:hover
+.ms_egcs_cui-ctl-large:hover,
+.ms_egcs_cui-ctl-light-hoveredOver,
+.ms_egcs_cui-ctl-medium:hover,
+.ms_egcs_cui-ctl:hover,
+.ms_egcs_cui-mrusb-selecteditem.ms_egcs_cui-ctl-light-hoveredOver a,
+.ms_egcs_cui-ctl-thin:hover
 {
 	background-color:#D7EBF9;
 	border-color:#D7EBF9 !important;
 
 }
-.ms-cui-ctl-on,
-.ms-cui-ctl-dark-highlight,
-.ms-cui-ctl-a2.ms-cui-ctl-dark-highlight:hover,
-.ms-cui-ctl-a1.ms-cui-ctl-dark-highlight:hover,
-.ms-cui-mrusb-selecteditem a:hover,
-.ms-cui-ctl-hoveredOver
+.ms_egcs_cui-ctl-on,
+.ms_egcs_cui-ctl-dark-highlight,
+.ms_egcs_cui-ctl-a2.ms_egcs_cui-ctl-dark-highlight:hover,
+.ms_egcs_cui-ctl-a1.ms_egcs_cui-ctl-dark-highlight:hover,
+.ms_egcs_cui-mrusb-selecteditem a:hover,
+.ms_egcs_cui-ctl-hoveredOver
 {
 	background-color:#B1D6F0;
 	border-color:#B1D6F0 !important;
 
 }
-.ms-cui-ctl-split-hover,
-.ms-cui-mrusb-selecteditem.ms-cui-ctl-split-hover > *
+.ms_egcs_cui-ctl-split-hover,
+.ms_egcs_cui-mrusb-selecteditem.ms_egcs_cui-ctl-split-hover > *
 {
 	background-color:#FFFFFF;
 	border-color:#D7EBF9 !important;
 
 }
-.ms-cui-ctl-mousedown,
-.ms-cui-ctl-large:active,
-.ms-cui-ctl-medium:active,
-.ms-cui-ctl:active,
-.ms-cui-ctl-a1:active,
-.ms-cui-ctl-a2:active,
-.ms-cui-ctl-thin:active,
-.ms-cui-ctl-on:hover
+.ms_egcs_cui-ctl-mousedown,
+.ms_egcs_cui-ctl-large:active,
+.ms_egcs_cui-ctl-medium:active,
+.ms_egcs_cui-ctl:active,
+.ms_egcs_cui-ctl-a1:active,
+.ms_egcs_cui-ctl-a2:active,
+.ms_egcs_cui-ctl-thin:active,
+.ms_egcs_cui-ctl-on:hover
 {
 	background-color:#B1D6F0 !important;
 	border-color:#B1D6F0 !important;

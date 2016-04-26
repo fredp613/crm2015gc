@@ -3,43 +3,74 @@
 	 <script src="ClientGlobalContext.js.aspx"></script>
 	 <script src="gcbase_SDK_MetaData" type="text/javascript"></script>
 	 <script src="gcbase_SDK_rest" type="text/javascript"></script>
+	 
 	 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js" type="text/javascript"></script>
 	 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js" type="text/javascript"></script>
 
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<!-- Latest compiled and minified CSS -->
-	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	 <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
 	<!-- Optional theme -->
-	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	 <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> -->
+	 <!-- MS CRM CSS -->
+	 <link rel="stylesheet" type=text/css href="egcs_crm_glocal.css">
+	 <link rel="stylesheet" type=text/css href="egcs_crm_theme.css">
+	  <link rel="stylesheet" type=text/css href="egcs_crm_fonts.css">
+	  <link rel="stylesheet" type=text/css href="egcs_crm_cui.css">
+	   <!-- <LINK rel=stylesheet type=text/css href="CSS/Styles.css"> -->
 	<!-- Latest compiled and minified JavaScript -->
 	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<style type="text/css">
+
+
+.egcs_th {
+	border: 1px solid #d6d6d6;
+	padding: 5px;
+	font-size: 12px;
+}
+
+.egcs_td {	
+	padding: 5px;
+	font-size: 12px;
+}
+
+.tblRow:hover {
+	background-color: #e6f3ff;
+}
+
+
+
+
+</style>
+
+
 </head>
 
 <body style="font-family: Segoe UI;">	
 		<script id="some-template" type="text/x-handlebars-template"> 
-		<fieldset>
-		<legend>Program Template</legend>
-			 <table id="programTemplateTable" class='table table-bordered table-hover table-condensed' style='margin-top:-25px'>
+
+	
+			 <table id="programTemplateTable" style='margin-left:-10px;border-collapse: collapse;' >
 			    <thead> 
-			        <th>Name</th> 
-			        <th>Status</th> 
-			        <th>Created On</th> 
-			        <th>Modified On</th> 
+			        <th class='egcs_th' style='width:100px'>Name</th> 
+			        <th class='egcs_th' style='width:100px' >Status</th> 
+			        <th class='egcs_th' style='width:100px'>Created On</th> 
+			        <th class='egcs_th' style='width:100px'>Modified On</th> 
 			    </thead> 
 			    <tbody> 
 			        {{#templates}} 
 			        <tr class='tblRow' data-entityname={{entityName}} value={{gcbase_id}}>
-			        	<td>{{gcbase_name}}</td> 
-			        	<td>{{statuscode}}</td>  
-			            <td>{{dateFormat CreatedOn format="MMMM YYYY"}}</td> 
-			            <td>{{dateFormat ModifiedOn format="MMMM YYYY"}}</td> 
+			        	<td class="egcs_td">{{gcbase_name}}</td> 
+			        	<td class="egcs_td">{{statusLabel}}</td>  
+			            <td class="egcs_td">{{dateFormat CreatedOn format="MMMM YYYY"}}</td> 
+			            <td class="egcs_td">{{dateFormat ModifiedOn format="MMMM YYYY"}}</td> 
 			        </tr> 
 			        {{/templates}} 
 			    </tbody> 
 			</table> 
 
 		
-				</fieldset>
+		
 
 		</script>
 
@@ -48,8 +79,6 @@
 
 	
 <br>
-
-
 
 <script type="text/javascript">
 
@@ -61,6 +90,8 @@ window.onload = initialize(function() {
 	// 	webResArea.setSrc(webResArea.getSrc());
 	// }, 3000);
 	// return;
+	// getStatusCodeLabel();
+	 
 	Xrm.Page.data.save();
 });
 
@@ -90,15 +121,25 @@ function initialize(callback) {
 								console.log("something went wrong when creating the program template records")
 								return;
 							}
-							console.log("we made it")							
-							generateTable(newData, callback);
+							console.log("we made it")	
+							retrieveStatusCodeLabels(newData[0].statuscode, function(lbl) {
+								console.log(lbl)
+								newData[0].statusLabel = lbl;
+								generateTable(newData, callback);
+							})						
+							
 						})
 						
 					} else {
 						//fetch and create table
 						console.log("a template record exists");
 						console.log(data);
-						generateTable(data, callback)
+						retrieveStatusCodeLabels(data[0].statuscode, function(lbl) {
+								console.log(lbl)
+								data[0].statusLabel = lbl;
+								generateTable(data, callback)
+						})	
+						
 						
 					}
 				})
@@ -113,7 +154,7 @@ function initialize(callback) {
 	
 }
 function generateTable(data, callback) {
-	console.log("generating table");
+	console.log(data);
 	var source = $("#some-template").html(); 
 	var template = Handlebars.compile(source); 
 	var data1 = {
@@ -164,20 +205,82 @@ function getEntityTemplate(program, callback) {
      "gcbase_fundcentrefundingcasetemplate",
       ODATA_options,
      function (results) { 
-     	if (results.length > 0) {
-     		console.log(results);    	
+     	if (results.length > 0) {     		 	
 	     	entityName = results[0]["gcbase_RealName"]
 	     	success = true;
      	}
      	         
      },
      errorHandler,
-     function () { 
+     function () {
+     	 var labels = []; 
+     	
      	callback(entityName, success)
 		console.log("completed");              
       }
     );
 }
+
+
+function getStatusCodeLabel() {
+	
+	SDK.MetaData.RetrieveAttribute("gcbase_fundcentrefundingcasetemplate", "statuscode", null, false,
+		function(result) {
+			console.log(result)
+		},
+		function(error) {}
+		);
+}
+
+function retrieveStatusCodeLabels(statuscode, callback) {
+  
+    var entityLogicalName = "gcbase_fundcentrefundingcasetemplate";
+  	var sc = statuscode
+    SDK.Metadata.RetrieveEntity(SDK.Metadata.EntityFilters.Attributes,
+    entityLogicalName,
+    null,
+    false,
+    function (entityMetadata) {     	
+    	entityMetadata.Attributes.forEach(function(attr) {
+    		// console.log(attr)
+    			if (attr.AttributeType == "Status") {
+    				// var labels = [];
+    				// attr.OptionSet.Options.forEach(function(option){ 
+    				// 	console.log(option)
+    				// 	if (1 == 1) {
+    				// 		return option.Label.UserLocalizedLabel.Label; 
+    				// 	}   					
+    				// 	return null;  					
+    				// });
+
+    				for (var i in attr.OptionSet.Options) {
+    					var option = attr.OptionSet.Options[i];
+    					console.log(option)
+    					// console.log(statuscode)
+    					console.log(option.Value)
+    					if (option.Value == sc) {
+    						console.log(option.Value)
+    						option.Label.UserLocalizedLabel.Label
+    						return callback(option.Label.UserLocalizedLabel.Label);  
+    					}
+    					return callback(null);
+    				}
+    				
+    			}
+    			
+    	});
+    	
+    },
+    function(error) {} 
+    );
+
+
+  // }
+  // this.attributesRetrieved = true;
+   // this.title = "";
+  }
+
+
 
 
 
@@ -196,7 +299,9 @@ function checkIfProgramTemplateExists(fundingCaseId, templateEntityName, callbac
 	     		result.statuscode = results[0].statuscode.Value;
 	     		result.entityName = templateEntityName
 	     		result.gcbase_id = results[0][templateEntityName+"Id"]
+	     		
 	     	})
+
 	     	templateObjects = results;
 
      	} 
