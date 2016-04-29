@@ -122,7 +122,7 @@ function initialize(callback) {
 								return;
 							}
 							console.log("we made it")	
-							retrieveStatusCodeLabels(newData[0].statuscode, function(lbl) {
+							retrieveStatusCodeLabels(newData[0].statuscode, entity, function(lbl) {
 								console.log(lbl)
 								newData[0].statusLabel = lbl;
 								generateTable(newData, callback);
@@ -134,7 +134,7 @@ function initialize(callback) {
 						//fetch and create table
 						console.log("a template record exists");
 						console.log(data);
-						retrieveStatusCodeLabels(data[0].statuscode, function(lbl) {
+						retrieveStatusCodeLabels(data[0].statuscode, data[0].entityName, function(lbl) {
 								console.log(lbl)
 								data[0].statusLabel = lbl;
 								generateTable(data, callback)
@@ -208,13 +208,10 @@ function getEntityTemplate(program, callback) {
      	if (results.length > 0) {     		 	
 	     	entityName = results[0]["gcbase_RealName"]
 	     	success = true;
-     	}
-     	         
+     	}     	         
      },
      errorHandler,
-     function () {
-     	 var labels = []; 
-     	
+     function () {          	
      	callback(entityName, success)
 		console.log("completed");              
       }
@@ -222,19 +219,9 @@ function getEntityTemplate(program, callback) {
 }
 
 
-function getStatusCodeLabel() {
-	
-	SDK.MetaData.RetrieveAttribute("gcbase_fundcentrefundingcasetemplate", "statuscode", null, false,
-		function(result) {
-			console.log(result)
-		},
-		function(error) {}
-		);
-}
 
-function retrieveStatusCodeLabels(statuscode, callback) {
-  
-    var entityLogicalName = "gcbase_fundcentrefundingcasetemplate";
+function retrieveStatusCodeLabels(statuscode, entityLogicalName, callback) {
+    
   	var sc = statuscode
     SDK.Metadata.RetrieveEntity(SDK.Metadata.EntityFilters.Attributes,
     entityLogicalName,
@@ -329,6 +316,7 @@ function createProgramTemplateRecord(fundingCaseId, entity, callback) {
 		 entity,
 		 function (templateRecord) {		  
 		 	console.log(templateRecord)
+
 		  	//retrieveAccount(templateRecords[0])
 		  	newTemplateObject.entityName = entity;
 		  	newTemplateObject.gcbase_id = templateRecord[entity+"Id"];
