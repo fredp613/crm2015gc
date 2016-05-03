@@ -1,8 +1,3 @@
-// ms-crm-FormSection-Container
-
-var fiscalYears = [];
-
-
 
 function onLoad() {
 	Xrm.Page.getAttribute("gcbase_startdate").setSubmitMode("always")
@@ -31,6 +26,7 @@ function toggleYears() {
 	// $(this).val(amount)	
 	if (startdate && enddate) {
 		Xrm.Page.getAttribute("gcbase_amountsbyfiscalyearserver").setValue("");
+		Xrm.Page.getAttribute("gcbase_totalrequested").setValue(null);
 		fiscalYears = FiscalYear.getYears(startdate, enddate)
 		fiscalYears.forEach(function(fy) {
 						
@@ -42,14 +38,31 @@ function toggleYears() {
 			newText.value = formatNumberToCurrency(parseInt("0"),2,3,',','.');		
 			newText.type = "text";
 			newText.onblur = function() {	
-				
+				var rawValue = this.value;
 				var amount = formatNumberToCurrency(parseInt(this.value),2,3,',','.');												
 				this.value = amount;		
+				// only push if new, otherwise find and update value
+				var found = false;
+				if (inputedFiscalYearData.length > 0) {
+					for (var i in inputedFiscalYearData) {
+						var record = inputedFiscalYearData[i]
+						if (fy == record.fiscalyear) {
+							record.value = this.value;
+							record.rawValue = rawValue;
+							found = true;
+							console.log(found)
+						}
+					}
+				}
+				if (!found) {
+					console.log(found)
+					inputedFiscalYearData.push({
+						fiscalyear: fy,
+						value: this.value,	
+						rawValue: rawValue,				
+					})
+				}
 				
-				inputedFiscalYearData.push({
-					fiscalyear: fy,
-					value: this.value,
-				})
 				updateServerValue(inputedFiscalYearData);						
 			}
 			newCell.appendChild(newLabelText);
@@ -63,6 +76,7 @@ function toggleYears() {
 function updateServerValue(inputedFiscalYearData) {
 	//ONLY DO THIS IF VALID
 		var arrayForServer = [];
+		var totalRequested = 0;
 		for (var i = 0;i <= inputedFiscalYearData.length - 1; i++) {					
 			var record = inputedFiscalYearData[i]		
 			if (i == (inputedFiscalYearData.length - 1)) {	
@@ -70,9 +84,11 @@ function updateServerValue(inputedFiscalYearData) {
 			} else {
 				arrayForServer.push("FY" + record.fiscalyear + "-" + record.value + ";")	
 			}			
-			
+			totalRequested += parseInt(record.rawValue);		
 		}				
 		Xrm.Page.getAttribute("gcbase_amountsbyfiscalyearserver").setValue(arrayForServer.toString());
+		Xrm.Page.getAttribute("gcbase_totalrequested").setValue(totalRequested)
+
 }
 
 

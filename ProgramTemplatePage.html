@@ -116,7 +116,7 @@ function initialize(callback) {
 						//create record //create table
 						console.log("a template record does not exist");
 
-						createProgramTemplateRecord(fundingCaseId, entity, function(success, newData) {
+						createProgramTemplateRecord(fundingCaseId, program, entity, function(success, newData) {
 							if (!success) {
 								console.log("something went wrong when creating the program template records")
 								return;
@@ -302,13 +302,14 @@ function checkIfProgramTemplateExists(fundingCaseId, templateEntityName, callbac
     );
 }
 
-function createProgramTemplateRecord(fundingCaseId, entity, callback) {
+function createProgramTemplateRecord(fundingCaseId, fundCentreId, entity, callback) {
 	//Create the Account
 	console.log("creating template .....................")
 	var success = false;
 	var template = {};
 	template.gcbase_name = "Template for: " + Xrm.Page.getAttribute("gcbase_name").getValue();
 	template.gcbase_FundingCase = {Id:fundingCaseId, LogicalName: "gcbase_fundingcase"};
+	template.gcbase_HelperFundCentre = {Id:fundCentreId, LogicalName: "gcbase_fundcentre"};
 	var newTemplateObjects = [];
 	var newTemplateObject = {};
 	SDK.REST.createRecord(
@@ -321,6 +322,7 @@ function createProgramTemplateRecord(fundingCaseId, entity, callback) {
 		  	newTemplateObject.entityName = entity;
 		  	newTemplateObject.gcbase_id = templateRecord[entity+"Id"];
 		  	newTemplateObject.gcbase_name = templateRecord.gcbase_name;
+		  	// newTemplateObject.gcbase_helperfundcentre = templateRecord.gcbase_fundcentre
 		  	newTemplateObject.statuscode = templateRecord.statuscode.Value;
 		  	newTemplateObject.CreatedOn = templateRecord.CreatedOn;
 		  	newTemplateObject.ModifiedOn = templateRecord.ModifiedOn;
