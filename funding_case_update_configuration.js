@@ -7,12 +7,15 @@ Xrm.Page.getAttribute("statuscode").setSubmitMode("always");
 function formLoad() {
 	
 
-	if (document.readyState == "complete") {  
+	// if (document.readyState == "complete") {  
+	setTimeout(function() {
 		triggerWorkflow();
 		 registerGridHandlers(function() {
 		 	console.log("grid handlers registered");
-		 });				
-	}		
+		 });
+		}, 300)
+						
+	// }		
 }
 
 function registerGridHandlers(callback) {
@@ -35,6 +38,7 @@ function registerGridHandlers(callback) {
 				
 			}
 			Xrm.Page.data.save();
+			callback()
 			
 		})		
 		

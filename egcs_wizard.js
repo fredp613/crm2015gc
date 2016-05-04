@@ -7,11 +7,11 @@ function activateWizard(params) {
 	if (document.readyState == "complete") {   
 		if (params) {
 			wizardParams = params;	
-			setTimeout(function() {
-				$("#processStepsContainer").find('*').attr('disabled', true);
-				$("#header_process_gcbase_clientinformationcomplete").attr('disabled', 'disabled')
-				$("#header_process_gcbase_clientinformationcomplete").attr('class', 'ms-crm-Inline-Locked')
-			}, 500);
+			// setTimeout(function() {
+			// 	$("#processStepsContainer").find('*').attr('disabled', true);
+			// 	$("#header_process_gcbase_clientinformationcomplete").attr('disabled', 'disabled')
+			// 	$("#header_process_gcbase_clientinformationcomplete").attr('class', 'ms-crm-Inline-Locked')
+			// }, 500);
 			
 			handler();	
 			   if (Xrm.Page.getAttribute("processid") != null){
