@@ -1,5 +1,4 @@
 
-
 Xrm.Page.getAttribute("statuscode").setSubmitMode("always");
 // Xrm.Page.getAttribute("statuscode").addOnChange(toggleForm);
 
@@ -13,23 +12,21 @@ function formLoad() {
 		 registerGridHandlers(function() {
 		 	console.log("grid handlers registered");
 		 });
-		}, 300)
+	}, 100)
 						
 	// }		
 }
 
 function registerGridHandlers(callback) {
 
-	var grid = document.getElementById("grid_contacts")
+	var grid = Xrm.Page.getControl("grid_contacts") //document.getElementById("grid_contacts")
 	var completed = false;
 
-	if (grid == null) {
-       setTimeout(function () { registerGridHandlers() }, 2000);
-	       return;
-	   }
-	grid.control.add_onRefresh(function() {
-		// var uuid = generateUUID();
-		// Xrm.Page.getAttribute("gcbase_hiddentogglehelper").setValue(uuid);
+	// if (grid == null) {
+ //       setTimeout(function () { registerGridHandlers() }, 2000);
+	//        return;
+	//    }
+	grid.addOnLoad(function() {
 		validateContacts(function(success) {
 			if (success) {
 				console.log("success");
@@ -40,9 +37,24 @@ function registerGridHandlers(callback) {
 			Xrm.Page.data.save();
 			callback()
 			
-		})		
-		
+		})	
 	})
+	// grid.control.add_onRefresh(function() {
+	// 	// var uuid = generateUUID();
+	// 	// Xrm.Page.getAttribute("gcbase_hiddentogglehelper").setValue(uuid);
+	// 	validateContacts(function(success) {
+	// 		if (success) {
+	// 			console.log("success");
+	// 		} else {
+	// 			console.log("failed");
+				
+	// 		}
+	// 		Xrm.Page.data.save();
+	// 		callback()
+			
+	// 	})		
+		
+	// })
 }
 
 function validateContacts(callback) {
